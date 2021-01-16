@@ -123,6 +123,36 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &817633099
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 817633100}
+  m_Layer: 0
+  m_Name: END
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &817633100
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817633099}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.44, y: -2.72, z: -8.411405}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &884857974
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,6 +338,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1564323467}
   - component: {fileID: 1564323466}
+  - component: {fileID: 1564323468}
   m_Layer: 0
   m_Name: NAV_TEST
   m_TagString: Untagged
@@ -340,14 +371,28 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 5.391106, y: 2.515313}
-      - {x: 4.914895, y: 4.30449}
-      - {x: -2.738115, y: 2.48899}
-      - {x: -2.5252895, y: 0.49417737}
-      - {x: -4.514606, y: -1.1095349}
-      - {x: -0.9537351, y: -3.2998266}
-      - {x: 4.1137915, y: -2.1196156}
-      - {x: 3.6297765, y: 1.9573803}
+    - - {x: 11.2928, y: 2.4071128}
+      - {x: 12.373278, y: 9.478028}
+      - {x: 18.55876, y: 6.535985}
+      - {x: 19.398514, y: 0.49511528}
+      - {x: 27.449455, y: -0.55971336}
+      - {x: 27.305986, y: 9.956492}
+      - {x: 11.522337, y: 17.866402}
+      - {x: -7.405508, y: 20.104593}
+      - {x: -17.08524, y: 17.235037}
+      - {x: -13.866784, y: 10.076956}
+      - {x: -3.5358744, y: 12.08523}
+      - {x: 5.9520006, y: 7.312086}
+      - {x: -2.16771, y: 7.0522413}
+      - {x: -2.3178687, y: 4.5907316}
+      - {x: -6.0111113, y: 4.763606}
+      - {x: -6.7051635, y: 7.18142}
+      - {x: -11.538218, y: 7.3773203}
+      - {x: -12.353084, y: -6.41873}
+      - {x: -2.094549, y: -6.6185536}
+      - {x: 3.9063706, y: -6.4754453}
+      - {x: 4.643189, y: -1.7441556}
+      - {x: 11.143459, y: -1.7761889}
 --- !u!4 &1564323467
 Transform:
   m_ObjectHideFlags: 0
@@ -356,12 +401,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1564323465}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.44, y: -0.32, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1564323468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564323465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4512618450ae7954a9b60187e1c8f45d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drawVisibilityLines: 0
+  playerTest: {fileID: 1973519948}
+  endTest: {fileID: 817633100}
 --- !u!1 &1919395823
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,13 +515,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1919395823}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.02, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.017, y: 0.78, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1973519948}
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Children: []
+  m_Father: {fileID: 1973519948}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1973519947
 GameObject:
@@ -487,12 +546,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1973519947}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.017, y: -0.78, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.017, y: -0.76, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1919395826}
-  m_RootOrder: 0
+  m_Children:
+  - {fileID: 1919395826}
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1973519949
 MonoBehaviour:
@@ -509,3 +569,4 @@ MonoBehaviour:
   enableTestController: 1
   animator: {fileID: 1919395824}
   compass: {fileID: 1973519948}
+  mouseMagnet: {fileID: 817633100}

@@ -11,6 +11,7 @@ public class TestMouseController : MonoBehaviour
     private Vector2 lastMousePos;
     public Animator animator;
     public Transform compass;
+    public Transform mouseMagnet;
     
     
     // Update is called once per frame
@@ -18,9 +19,10 @@ public class TestMouseController : MonoBehaviour
     {
         if (!enableTestController) return;
 
+        lastMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        
         if (Input.GetMouseButton(0))
         {
-            lastMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             float currentAngle = 0;
 
             Vector2 v2CompassPos = new Vector2(compass.position.x, compass.position.y);
@@ -38,7 +40,7 @@ public class TestMouseController : MonoBehaviour
             else
                 dir.y = -1;
             
-            Debug.Log(currentAngle + ", " + dir);
+            //Debug.Log(currentAngle + ", " + dir);
 
             if (dir.y < 0)
             {
@@ -75,7 +77,9 @@ public class TestMouseController : MonoBehaviour
                 }
             }
         }
-        
+
+        mouseMagnet.position = lastMousePos;
+
     }
 
     private void OnDrawGizmos()
@@ -100,7 +104,5 @@ public class TestMouseController : MonoBehaviour
         Gizmos.DrawRay(compass.position, ( rotatedCrossed + -rotatedRight) * 0.3f);
         Gizmos.DrawRay(compass.position, (-rotatedCrossed +  rotatedRight) * 0.3f);
         Gizmos.DrawRay(compass.position, (-rotatedCrossed + -rotatedRight) * 0.3f);
-        
-        Gizmos.DrawLine(compass.position, lastMousePos);
     }
 }

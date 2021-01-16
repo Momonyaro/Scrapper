@@ -20,8 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b667d6b-b66a-4052-a784-3d234f051598" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animations/Animation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animations/Animation.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerControl/TestMouseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerControl/TestMouseController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,6 +47,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Animations/AnimBranch.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Animations/Animation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerControl/TestMouseController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Pathfinding/PolygonalNavMesh.cs" />
       </list>
     </option>
   </component>
@@ -87,7 +90,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1610745002133</updated>
-      <workItem from="1610745006074" duration="9666000" />
+      <workItem from="1610745006074" duration="11769000" />
+      <workItem from="1610808976465" duration="2500000" />
     </task>
     <servers />
   </component>
@@ -106,6 +110,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
