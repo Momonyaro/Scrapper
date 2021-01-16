@@ -21,7 +21,12 @@ public class TestMouseController : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             lastMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            float currentAngle = Vector2.Angle(new Vector2(compass.position.x, compass.position.y), lastMousePos);
+            float currentAngle = 0;
+
+            Vector2 v2CompassPos = new Vector2(compass.position.x, compass.position.y);
+            lastMousePos = v2CompassPos + lastMousePos;
+            float cos = Vector2.Dot(lastMousePos, v2CompassPos) / (lastMousePos.magnitude * v2CompassPos.magnitude);
+            currentAngle = Mathf.Rad2Deg * Mathf.Acos(cos);
 
             Vector2 dir = new Vector2(0, 0);
             if (compass.position.x < lastMousePos.x) //The mouse is to the left.
@@ -33,15 +38,15 @@ public class TestMouseController : MonoBehaviour
             else
                 dir.y = -1;
             
-            //Debug.Log(currentAngle + ", " + dir);
+            Debug.Log(currentAngle + ", " + dir);
 
             if (dir.y < 0)
             {
                 if (dir.x > 0)
                 {
-                    if (currentAngle < 50)
+                    if (currentAngle < 53)
                         animator.currentFacing = Animation.BranchFacing.S;
-                    if (currentAngle >= 50)
+                    if (currentAngle >= 53)
                         animator.currentFacing = Animation.BranchFacing.SE;
                 }
                 else
@@ -56,16 +61,16 @@ public class TestMouseController : MonoBehaviour
             {
                 if (dir.x > 0)
                 {
-                    if (currentAngle < 105)
+                    if (currentAngle < 114)
                         animator.currentFacing = Animation.BranchFacing.E;
-                    if (currentAngle >= 105)
+                    if (currentAngle >= 114)
                         animator.currentFacing = Animation.BranchFacing.NE;
                 }
                 else
                 {
-                    if (currentAngle < 105)
+                    if (currentAngle < 110)
                         animator.currentFacing = Animation.BranchFacing.NW;
-                    if (currentAngle >= 105)
+                    if (currentAngle >= 110)
                         animator.currentFacing = Animation.BranchFacing.N;
                 }
             }
@@ -75,19 +80,26 @@ public class TestMouseController : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        Gizmos.color = Color.green;
+        Gizmos.DrawRay(compass.position, compass.up * 0.2f);
+        Gizmos.DrawRay(compass.position, -compass.up * 0.2f);
+        Gizmos.DrawRay(compass.position, compass.right * 0.2f);
+        Gizmos.DrawRay(compass.position, -compass.right * 0.2f);
+        
         Gizmos.color = Color.blue;
         Vector3 crossed = Vector3.Cross(compass.forward, -compass.right);
-        Vector3 rotatedCross = Quaternion.Euler(0, 0, 60) * crossed;
-        Vector3 rotatedRight = Quaternion.Euler(0, 0, 30) * compass.right;
-        Gizmos.DrawRay(compass.position, rotatedCross);
-        Gizmos.DrawRay(compass.position, -rotatedCross);
-        Gizmos.DrawRay(compass.position,  rotatedRight);
-        Gizmos.DrawRay(compass.position, -rotatedRight);
+        Quaternion rotDeg = Quaternion.Euler(0, 0, 30);
+        Vector3 rotatedRight = rotDeg * compass.right;
+        Vector3 rotatedCrossed = rotDeg * crossed;
+        Gizmos.DrawRay(compass.position,  rotatedCrossed * 0.5f);
+        Gizmos.DrawRay(compass.position, -rotatedCrossed * 0.5f);
+        Gizmos.DrawRay(compass.position,  rotatedRight * 0.5f);
+        Gizmos.DrawRay(compass.position, -rotatedRight * 0.5f);
         
-        Gizmos.DrawRay(compass.position, ( rotatedCross +  rotatedRight) * .6f);
-        Gizmos.DrawRay(compass.position, (-rotatedCross +  rotatedRight) * .6f);
-        Gizmos.DrawRay(compass.position, ( rotatedCross + -rotatedRight) * .6f);
-        Gizmos.DrawRay(compass.position, (-rotatedCross + -rotatedRight) * .6f);
+        Gizmos.DrawRay(compass.position, ( rotatedCrossed +  rotatedRight) * 0.3f);
+        Gizmos.DrawRay(compass.position, ( rotatedCrossed + -rotatedRight) * 0.3f);
+        Gizmos.DrawRay(compass.position, (-rotatedCrossed +  rotatedRight) * 0.3f);
+        Gizmos.DrawRay(compass.position, (-rotatedCrossed + -rotatedRight) * 0.3f);
         
         Gizmos.DrawLine(compass.position, lastMousePos);
     }

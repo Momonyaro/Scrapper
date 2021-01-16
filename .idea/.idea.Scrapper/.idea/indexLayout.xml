@@ -19,6 +19,7 @@
       <Path>.git</Path>
       <Path>.idea</Path>
       <Path>Extras</Path>
+      <Path>FMOD_Scrapper</Path>
       <Path>Library</Path>
       <Path>Logs</Path>
       <Path>Temp</Path>

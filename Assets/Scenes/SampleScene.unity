@@ -373,7 +373,6 @@ GameObject:
   - component: {fileID: 1919395826}
   - component: {fileID: 1919395825}
   - component: {fileID: 1919395824}
-  - component: {fileID: 1919395827}
   m_Layer: 0
   m_Name: TestSprite
   m_TagString: Untagged
@@ -464,21 +463,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1919395827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1919395823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b69e38354122a2843af0e7a6ecbdd341, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enableTestController: 1
-  animator: {fileID: 1919395824}
-  compass: {fileID: 1973519948}
 --- !u!1 &1973519947
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,8 +472,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1973519948}
+  - component: {fileID: 1973519949}
   m_Layer: 0
-  m_Name: Compass
+  m_Name: Motor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -509,3 +494,18 @@ Transform:
   m_Father: {fileID: 1919395826}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1973519949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973519947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b69e38354122a2843af0e7a6ecbdd341, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableTestController: 1
+  animator: {fileID: 1919395824}
+  compass: {fileID: 1973519948}
