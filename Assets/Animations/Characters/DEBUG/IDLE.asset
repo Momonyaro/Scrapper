@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f171f80afa685e4991c5d45893bafc2, type: 3}
+  m_Name: IDLE
+  m_EditorClassIdentifier: 
+  displayWeapons: 0
+  branches:
+  - name: S
+    facing: 0
+    branch:
+      weaponOrdering: 0
+      frames:
+      - frameDuration: 1
+        frameSprite: {fileID: 2101769110263864022, guid: 12b3337c38070fd40913be9b49de9185, type: 3}
+  - name: SE
+    facing: 1
+    branch:
+      weaponOrdering: 0
+      frames:
+      - frameDuration: 1
+        frameSprite: {fileID: -8987663339259129995, guid: 12b3337c38070fd40913be9b49de9185, type: 3}
+  - name: E
+    facing: 2
+    branch:
+      weaponOrdering: 0
+      frames:
+      - frameDuration: 1
+        frameSprite: {fileID: 944279200071428551, guid: 12b3337c38070fd40913be9b49de9185, type: 3}
+  - name: NE
+    facing: 3
+    branch:
+      weaponOrdering: 0
+      frames:
+      - frameDuration: 1
+        frameSprite: {fileID: -5100767736063467222, guid: 12b3337c38070fd40913be9b49de9185, type: 3}
+  - name: N
+    facing: 4
+    branch:
+      weaponOrdering: 0
+      frames:
+      - frameDuration: 0
+        frameSprite: {fileID: 515429866362074765, guid: 12b3337c38070fd40913be9b49de9185, type: 3}
+  - name: NW
+    facing: 5
+    branch:
+      weaponOrdering: 0
+      frames:
+      - frameDuration: 1
+        frameSprite: {fileID: 5214843084132513004, guid: 12b3337c38070fd40913be9b49de9185, type: 3}
+  - name: W
+    facing: 6
+    branch:
+      weaponOrdering: 0
+      frames:
+      - frameDuration: 1
+        frameSprite: {fileID: 5603373076910919243, guid: 12b3337c38070fd40913be9b49de9185, type: 3}
+  - name: SW
+    facing: 7
+    branch:
+      weaponOrdering: 0
+      frames:
+      - frameDuration: 1
+        frameSprite: {fileID: 5047342361356805082, guid: 12b3337c38070fd40913be9b49de9185, type: 3}
