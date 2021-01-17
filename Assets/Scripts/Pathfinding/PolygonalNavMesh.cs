@@ -10,11 +10,8 @@ namespace Scrapper.Pathfinding
     public class PolygonalNavMesh : MonoBehaviour
     {
         private PolygonCollider2D polyCollider;
-        public bool calculateTestPath = false;
         public bool drawVisibilityLines = true;
         public bool drawNavMesh = true;
-        public Transform playerTest;
-        public Transform endTest;
         
         [SerializeField] private Vector2[] path = new Vector2[0];
     
@@ -143,6 +140,7 @@ namespace Scrapper.Pathfinding
 
             if (drawVisibilityLines)
             {
+                drawVisibilityLines = false;
                 List<Vector2> points = polyCollider.points.ToList();
                 List<Vector2> concavePoints = new List<Vector2>();
                 for (int i = 0; i < points.Count; i++)
@@ -152,9 +150,6 @@ namespace Scrapper.Pathfinding
                         concavePoints.Add(points[i]);
                     }
                 }
-            
-                concavePoints.Add(playerTest.position);
-                concavePoints.Add(endTest.position);
                 
                 for (int i = 0; i < concavePoints.Count; i++)
                 {
@@ -168,12 +163,6 @@ namespace Scrapper.Pathfinding
                         }
                     }
                 }
-            }
-
-            if (calculateTestPath)
-            {
-                calculateTestPath = false;
-                path = GetShortestPath(playerTest.position, endTest.position);
             }
             
             Gizmos.color = Color.green;
