@@ -26,7 +26,6 @@ public class TestMouseController : MonoBehaviour
             float currentAngle = 0;
 
             Vector2 v2CompassPos = new Vector2(compass.position.x, compass.position.y);
-            lastMousePos = v2CompassPos + lastMousePos;
             float cos = Vector2.Dot(lastMousePos, v2CompassPos) / (lastMousePos.magnitude * v2CompassPos.magnitude);
             currentAngle = Mathf.Rad2Deg * Mathf.Acos(cos);
 

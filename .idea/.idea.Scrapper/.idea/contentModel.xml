@@ -17,7 +17,9 @@
             <e p="PolygonalNavMesh.cs" t="Include" />
           </e>
           <e p="PlayerControl" t="Include">
+            <e p="Pathfinder.cs" t="Include" />
             <e p="TestMouseController.cs" t="Include" />
+            <e p="TrackingCamera.cs" t="Include" />
           </e>
         </e>
       </e>

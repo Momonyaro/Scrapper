@@ -135,7 +135,7 @@ GameObject:
   m_Layer: 0
   m_Name: END
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -147,7 +147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 817633099}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.44, y: -2.72, z: -8.411405}
+  m_LocalPosition: {x: 33.5, y: -19.1, z: -8.411405}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -164,6 +164,7 @@ GameObject:
   - component: {fileID: 884857977}
   - component: {fileID: 884857976}
   - component: {fileID: 884857975}
+  - component: {fileID: 884857978}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -236,6 +237,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &884857978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884857974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95a398e1a9dcf948be6ecddf1524b2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camTarget: {fileID: 1973519948}
+  minDistance: 0.5
+  lerpSpeed: 0.86
 --- !u!1 &1185670667
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,7 +360,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 8
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!60 &1564323466
 PolygonCollider2D:
@@ -372,10 +388,29 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 11.2928, y: 2.4071128}
-      - {x: 12.373278, y: 9.478028}
+      - {x: 14.712137, y: 2.03061}
       - {x: 18.55876, y: 6.535985}
-      - {x: 19.398514, y: 0.49511528}
-      - {x: 27.449455, y: -0.55971336}
+      - {x: 24.31108, y: -2.466319}
+      - {x: 28.602787, y: -12.18917}
+      - {x: 46.26837, y: -12.086049}
+      - {x: 46.2587, y: -12.943131}
+      - {x: 28.528042, y: -13.102852}
+      - {x: 28.608154, y: -22.024536}
+      - {x: 46.163696, y: -21.504868}
+      - {x: 59.327538, y: -20.916805}
+      - {x: 59.147957, y: -12.037323}
+      - {x: 58.535034, y: 0.006141901}
+      - {x: 46.244953, y: -0.32616472}
+      - {x: 53.542, y: 14.299286}
+      - {x: 56.93632, y: 26.949873}
+      - {x: 50.456375, y: 36.132065}
+      - {x: 29.962694, y: 38.652054}
+      - {x: 25.391342, y: 26.803291}
+      - {x: 38.522797, y: 23.458553}
+      - {x: 40.795506, y: 14.619404}
+      - {x: 34.739166, y: 17.97874}
+      - {x: 27.113798, y: 14.470655}
+      - {x: 29.805132, y: 7.465249}
       - {x: 27.305986, y: 9.956492}
       - {x: 11.522337, y: 17.866402}
       - {x: -7.405508, y: 20.104593}
@@ -389,7 +424,17 @@ PolygonCollider2D:
       - {x: -6.7051635, y: 7.18142}
       - {x: -11.538218, y: 7.3773203}
       - {x: -12.353084, y: -6.41873}
-      - {x: -2.094549, y: -6.6185536}
+      - {x: -3.4751358, y: -7.9125137}
+      - {x: -3.6116476, y: -13.680536}
+      - {x: 4.4606266, y: -14.181403}
+      - {x: 4.3847303, y: -15.188971}
+      - {x: -4.785452, y: -14.683403}
+      - {x: -4.719301, y: -9.721633}
+      - {x: -13.271702, y: -8.784124}
+      - {x: -13.631392, y: -20.450811}
+      - {x: 11.965652, y: -21.16643}
+      - {x: 12.066773, y: -14.653348}
+      - {x: 11.853267, y: -8.697731}
       - {x: 3.9063706, y: -6.4754453}
       - {x: 4.643189, y: -1.7441556}
       - {x: 11.143459, y: -1.7761889}
@@ -419,9 +464,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4512618450ae7954a9b60187e1c8f45d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  calculateTestPath: 0
   drawVisibilityLines: 0
+  drawNavMesh: 1
   playerTest: {fileID: 1973519948}
   endTest: {fileID: 817633100}
+  path: []
 --- !u!1 &1919395823
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,6 +580,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1973519948}
   - component: {fileID: 1973519949}
+  - component: {fileID: 1973519950}
   m_Layer: 0
   m_Name: Motor
   m_TagString: Untagged
@@ -547,7 +596,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1973519947}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.017, y: -0.76, z: 0}
+  m_LocalPosition: {x: -9.54, y: -12.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1919395826}
@@ -561,7 +610,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1973519947}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b69e38354122a2843af0e7a6ecbdd341, type: 3}
   m_Name: 
@@ -570,3 +619,20 @@ MonoBehaviour:
   animator: {fileID: 1919395824}
   compass: {fileID: 1973519948}
   mouseMagnet: {fileID: 817633100}
+--- !u!114 &1973519950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973519947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eb56e2b6c34ae84aba5d166b7f04c20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableController: 1
+  playerControlled: 1
+  characterAnimator: {fileID: 1919395824}
+  playerSpeed: 2.5
+  minNodeDistance: 0.16

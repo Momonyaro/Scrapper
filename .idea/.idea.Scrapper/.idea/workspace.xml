@@ -23,8 +23,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animations/Animation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animations/Animation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pathfinding/PolygonalNavMesh.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pathfinding/PolygonalNavMesh.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerControl/TestMouseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerControl/TestMouseController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +37,8 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerControl/TestMouseController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerControl/TrackingCamera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Animations/AnimFrame.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -48,6 +51,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Animations/Animation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerControl/TestMouseController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pathfinding/PolygonalNavMesh.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerControl/TrackingCamera.cs" />
       </list>
     </option>
   </component>
@@ -57,6 +62,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -91,7 +97,8 @@
       <option name="presentableId" value="Default" />
       <updated>1610745002133</updated>
       <workItem from="1610745006074" duration="11769000" />
-      <workItem from="1610808976465" duration="2500000" />
+      <workItem from="1610808976465" duration="4009000" />
+      <workItem from="1610905951372" duration="12359000" />
     </task>
     <servers />
   </component>
