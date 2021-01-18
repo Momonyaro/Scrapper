@@ -34,5 +34,10 @@ namespace Scrapper.Animation
             
             return frameSprite;
         }
+
+        public void SetSpriteNoFuss(Sprite newSprite)
+        {
+            frameSprite = newSprite;
+        }
     }
 }

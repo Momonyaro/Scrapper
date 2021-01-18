@@ -20,20 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b667d6b-b66a-4052-a784-3d234f051598" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animations/AnimFrame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animations/AnimFrame.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animations/Animation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animations/Animation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Extras/Jeffrey/Jeffrey_Data/StreamingAssets/Input/0001.png" beforeDir="false" afterPath="$PROJECT_DIR$/Extras/Jeffrey/Jeffrey_Data/StreamingAssets/Input/0001.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Extras/Jeffrey/Jeffrey_Data/StreamingAssets/Input/0002.png" beforeDir="false" afterPath="$PROJECT_DIR$/Extras/Jeffrey/Jeffrey_Data/StreamingAssets/Input/0002.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Extras/Jeffrey/Jeffrey_Data/StreamingAssets/Input/0003.png" beforeDir="false" afterPath="$PROJECT_DIR$/Extras/Jeffrey/Jeffrey_Data/StreamingAssets/Input/0003.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Extras/Jeffrey/Jeffrey_Data/StreamingAssets/Input/0004.png" beforeDir="false" afterPath="$PROJECT_DIR$/Extras/Jeffrey/Jeffrey_Data/StreamingAssets/Input/0004.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Extras/Jeffrey/Jeffrey_Data/StreamingAssets/Input/0005.png" beforeDir="false" afterPath="$PROJECT_DIR$/Extras/Jeffrey/Jeffrey_Data/StreamingAssets/Input/0005.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Extras/Jeffrey/Jeffrey_Data/StreamingAssets/Input/0006.png" beforeDir="false" afterPath="$PROJECT_DIR$/Extras/Jeffrey/Jeffrey_Data/StreamingAssets/Input/0006.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Extras/Jeffrey/Jeffrey_Data/StreamingAssets/Input/0007.png" beforeDir="false" afterPath="$PROJECT_DIR$/Extras/Jeffrey/Jeffrey_Data/StreamingAssets/Input/0007.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Extras/Jeffrey/Jeffrey_Data/StreamingAssets/Input/0008.png" beforeDir="false" afterPath="$PROJECT_DIR$/Extras/Jeffrey/Jeffrey_Data/StreamingAssets/Input/0008.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Extras/Jeffrey/Jeffrey_Data/StreamingAssets/Input/0009.png" beforeDir="false" afterPath="$PROJECT_DIR$/Extras/Jeffrey/Jeffrey_Data/StreamingAssets/Input/0009.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Extras/Jeffrey/Jeffrey_Data/StreamingAssets/Output/_atlas0.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,14 +44,15 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/PathTest.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Animations/AnimFrame.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Animations/Animator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Animations/AnimBranch.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerControl/TestMouseController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerControl/TrackingCamera.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pathfinding/PolygonalNavMesh.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Animations/Animation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Animations/Animation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Animations/AnimFrame.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/Animator/AnimatorGraphEditor.cs" />
       </list>
     </option>
   </component>
@@ -108,7 +100,8 @@
       <workItem from="1610745006074" duration="11769000" />
       <workItem from="1610808976465" duration="4009000" />
       <workItem from="1610905951372" duration="13522000" />
-      <workItem from="1610931747718" duration="694000" />
+      <workItem from="1610931747718" duration="1034000" />
+      <workItem from="1610960560626" duration="2388000" />
     </task>
     <servers />
   </component>

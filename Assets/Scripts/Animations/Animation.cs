@@ -63,5 +63,10 @@ namespace Scrapper.Animation
         {
             return branch;
         }
+
+        public void SetBranch(AnimBranch branch)
+        {
+            this.branch = branch;
+        }
     }
 }
