@@ -20,20 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b667d6b-b66a-4052-a784-3d234f051598" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animations/Animator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animations/Animator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/Animator/AnimatorGraphEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/Animator/AnimatorGraphEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pathfinding/PolygonalNavMesh.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pathfinding/PolygonalNavMesh.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Characters/DEBUG/DEBUG_RUN_0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Characters/DEBUG/DEBUG_RUN_0.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Characters/DEBUG/DEBUG_RUN_1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Characters/DEBUG/DEBUG_RUN_1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Characters/DEBUG/DEBUG_RUN_2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Characters/DEBUG/DEBUG_RUN_2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Characters/DEBUG/DEBUG_RUN_3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Characters/DEBUG/DEBUG_RUN_3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,9 +48,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Animations/AnimFrame.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pathfinding/PolyNavObstacle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/Animator/AnimatorGraphEditor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Animations/Animator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pathfinding/PolygonalNavMesh.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" />
       </list>
     </option>
   </component>
@@ -121,7 +108,7 @@
       <workItem from="1610905951372" duration="13522000" />
       <workItem from="1610931747718" duration="1034000" />
       <workItem from="1610960560626" duration="12573000" />
-      <workItem from="1610975152415" duration="6153000" />
+      <workItem from="1610975152415" duration="6354000" />
     </task>
     <servers />
   </component>

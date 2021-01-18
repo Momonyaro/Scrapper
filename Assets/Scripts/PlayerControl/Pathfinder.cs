@@ -5,6 +5,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using UnityEngine;
 using Scrapper.Pathfinding;
+using UnityEngine.EventSystems;
 using Animation = Scrapper.Animation.Animation;
 using Animator = Scrapper.Animation.Animator;
 
@@ -28,7 +29,7 @@ public class Pathfinder : MonoBehaviour
 
     private void Update()
     {
-        if (playerControlled && Input.GetMouseButtonDown(0))
+        if (playerControlled && Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition + new Vector3(0, 0, -10));
             // Casts the ray and get the first game object hit
@@ -44,6 +45,7 @@ public class Pathfinder : MonoBehaviour
                 
                 //Set Movement end point to hit.point and calculate path
                 Vector2[] path = polyMesh.GetShortestPath(transform.position, hit2D.point);
+                currentPath.Clear();
                 StopCoroutine("FollowPath");
                 StartCoroutine(nameof(FollowPath), path);
             }
