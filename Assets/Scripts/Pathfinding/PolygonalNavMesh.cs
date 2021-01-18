@@ -12,6 +12,7 @@ namespace Scrapper.Pathfinding
         private PolygonCollider2D polyCollider;
         public bool drawVisibilityLines = true;
         public bool drawNavMesh = true;
+        public List<PolyNavObstacle> obstacles;
         
         [SerializeField] private Vector2[] path = new Vector2[0];
     
@@ -23,6 +24,17 @@ namespace Scrapper.Pathfinding
 
         public Vector2[] GetShortestPath(Vector2 start, Vector2 end)
         {
+
+            for (int i = 0; i < obstacles.Count; i++)
+            {
+                if (Inside(obstacles[i].polyCollider.points.ToList(), end))
+                    return new Vector2[0];
+                if (Inside(obstacles[i].polyCollider.points.ToList(), start))
+                {
+                    //Find the nearest node?
+                }
+            }
+            
             List<DijkstraNode> vertexSet = new List<DijkstraNode>();
             List<DijkstraNode> graph = BuildGraph(start, end);
 
@@ -98,6 +110,18 @@ namespace Scrapper.Pathfinding
                     concavePoints.Add(points[i]);
                 }
             }
+
+            for (int i = 0; i < obstacles.Count; i++)
+            {
+                for (int j = 0; j < obstacles[i].polyCollider.points.Length; j++)
+                {
+                    if (IsVertexConvex(obstacles[i].polyCollider.points.ToList(), j))
+                    {
+                        concavePoints.Add(obstacles[i].polyCollider.points[j]);
+                    }
+                }
+            }
+            
             concavePoints.Add(end);
             
             //Convert to dijkstra nodes.
@@ -136,6 +160,16 @@ namespace Scrapper.Pathfinding
                     Gizmos.DrawLine(polyCollider.points[i], (i == 0) ? polyCollider.points[polyCollider.points.Length - 1] 
                         : polyCollider.points[i - 1]);
                 }
+                
+                for (int i = 0; i < obstacles.Count; i++)
+                {
+                    Vector2[] obstaclePoints = obstacles[i].polyCollider.points;
+                    for (int j = 0; j < obstaclePoints.Length; j++)
+                    {
+                        Gizmos.DrawLine(obstaclePoints[j], (j == 0) ? obstaclePoints[obstaclePoints.Length - 1] 
+                            : obstaclePoints[j - 1]);
+                    }
+                }
             }
 
             if (drawVisibilityLines)
@@ -148,6 +182,17 @@ namespace Scrapper.Pathfinding
                     if (IsVertexConcave(points, i))
                     {
                         concavePoints.Add(points[i]);
+                    }
+                }
+                
+                for (int i = 0; i < obstacles.Count; i++)
+                {
+                    for (int j = 0; j < obstacles[i].polyCollider.points.Length; j++)
+                    {
+                        if (IsVertexConvex(obstacles[i].polyCollider.points.ToList(), j))
+                        {
+                            concavePoints.Add(obstacles[i].polyCollider.points[j]);
+                        }
                     }
                 }
                 
@@ -177,14 +222,54 @@ namespace Scrapper.Pathfinding
             // Not in LOS if any of the ends is outside the polygon
             if (!Inside(new List<Vector2>(polyCollider.points), start) || !Inside(new List<Vector2>(polyCollider.points), end)) return false;
 
+            //Not in LOS if any of the ends is inside a hole
+            //This is acting strange, perhaps check if the positions match up?
+            for (int i = 0; i < obstacles.Count; i++)
+            {
+                bool foundStart = false;
+                bool foundEnd = false;
+                for (int j = 0; j < obstacles[i].polyCollider.points.Length; j++)
+                {
+                    if (start == obstacles[i].polyCollider.points[j])
+                        foundStart = true;
+                    if (end == obstacles[i].polyCollider.points[j])
+                        foundEnd = true;
+
+
+                    if (start == obstacles[i].polyCollider.points[j] && end == obstacles[i].polyCollider
+                        .points[(j + 1) % obstacles[i].polyCollider.points.Length])
+                        return true;
+                    else if (end == obstacles[i].polyCollider.points[j] && start == obstacles[i].polyCollider
+                        .points[(j + 1) % obstacles[i].polyCollider.points.Length])
+                        return true;
+                }
+                
+
+                if (foundStart && Inside(obstacles[i].polyCollider.points.ToList(), end)) return false;
+                if (foundEnd && Inside(obstacles[i].polyCollider.points.ToList(), start)) return false;
+            }
+            
             // In LOS if it's the same start and end location
             if (Vector2.Distance(start, end) < float.Epsilon) return true;
 
             // Not in LOS if any edge is intersected by the start-end line segment
+            List<Vector2> points = polyCollider.points.ToList();
+            
             int n = polyCollider.points.Length;
             for (int i = 0; i < n; i++)
                 if (LineSegmentsCross(start, end, polyCollider.points[i], polyCollider.points[(i+1)%n]))
                     return false;
+
+            for (int i = 0; i < obstacles.Count; i++)
+            {
+                n = obstacles[i].polyCollider.points.Length;
+                for (int j = 0; j < n; j++)
+                {
+                    if (LineSegmentsCross(start, end, obstacles[i].polyCollider.points[j],
+                        obstacles[i].polyCollider.points[(j + 1) % n]))
+                        return false;
+                }
+            }
 
             // Finally the middle point in the segment determines if in LOS or not
             return Inside(polyCollider.points.ToList(), (start + end) / 2f);
@@ -195,6 +280,20 @@ namespace Scrapper.Pathfinding
             Vector2 current = vertices[vertex];
             Vector2 next = vertices[(vertex + 1) % vertices.Count];
             Vector2 previous = vertices[vertex == 0 ? vertices.Count - 1 : vertex - 1];
+
+            Vector2 left = new Vector2(current.x - previous.x, current.y - previous.y);
+            Vector2 right = new Vector2(next.x - current.x, next.y - current.y);
+
+            float cross = (left.x * right.y) - (left.y * right.x);
+
+            return cross < 0;
+        }
+        
+        public static bool IsVertexConvex(List<Vector2> vertices, int vertex)
+        {
+            Vector2 current = vertices[vertex];
+            Vector2 previous = vertices[(vertex + 1) % vertices.Count];
+            Vector2 next = vertices[vertex == 0 ? vertices.Count - 1 : vertex - 1];
 
             Vector2 left = new Vector2(current.x - previous.x, current.y - previous.y);
             Vector2 right = new Vector2(next.x - current.x, next.y - current.y);

@@ -21,6 +21,7 @@
           </e>
           <e p="Pathfinding" t="Include">
             <e p="PolygonalNavMesh.cs" t="Include" />
+            <e p="PolyNavObstacle.cs" t="Include" />
           </e>
           <e p="PlayerControl" t="Include">
             <e p="Pathfinder.cs" t="Include" />

@@ -49,7 +49,7 @@ public class Pathfinder : MonoBehaviour
         if (Mathf.Abs(currentAngle - cachedAngle) > 1f)
         {
             //Check if we should rotate the player sprite
-            Debug.Log(currentAngle);
+            //Debug.Log(currentAngle);
             RotatePlayerFacing();
             cachedAngle = currentAngle;
         }
