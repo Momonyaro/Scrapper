@@ -13,7 +13,9 @@ public class Pathfinder : MonoBehaviour
     public bool drawDebugPath = false;
     public bool enableController = true;
     public bool playerControlled = false;
+    public bool useLineRenderer = false;
     public Animator characterAnimator;
+    public UnityEngine.LineRenderer lineRenderer;
     public float playerSpeed = 2.5f;
     public float minNodeDistance = 0.2f;
     private bool haltAllMovement = false;
@@ -76,7 +78,18 @@ public class Pathfinder : MonoBehaviour
                     currentAngle = AngleBetweenVector2(magicZeroVector, targetDir); //Give it a direction that results in 30deg being the new "0"
                 }
             }
-            
+
+            if (useLineRenderer)
+            {
+                List<Vector3> vec3Casted = new List<Vector3>() { transform.position };
+                for (int i = 0; i < currentPath.Count; i++)
+                {
+                    vec3Casted.Add(currentPath[i]);
+                }
+
+                lineRenderer.positionCount = currentPath.Count + 1;
+                lineRenderer.SetPositions(vec3Casted.ToArray());
+            }
             yield return new WaitForEndOfFrame();
         }
         characterAnimator.PlayAnimFromKeyword("_idle");
