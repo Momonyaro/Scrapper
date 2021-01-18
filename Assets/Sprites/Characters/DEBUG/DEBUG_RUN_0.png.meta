@@ -4,31 +4,31 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -1574191247434516276
-    second: DEBUG_RUN_0_0
+    second: DEBUG_RUN_0_W
   - first:
       213: -8673288523822120938
-    second: DEBUG_RUN_0_1
+    second: DEBUG_RUN_0_SW
   - first:
       213: -8536600995505836976
-    second: DEBUG_RUN_0_2
+    second: DEBUG_RUN_0_F
   - first:
       213: -8187004985708364068
-    second: DEBUG_RUN_0_3
+    second: DEBUG_RUN_0_NE
   - first:
       213: -2106676642406308643
-    second: DEBUG_RUN_0_4
+    second: DEBUG_RUN_0_N
   - first:
       213: 7210796532638780212
-    second: DEBUG_RUN_0_5
+    second: DEBUG_RUN_0_NW
   - first:
       213: 7545847621374866370
-    second: DEBUG_RUN_0_6
+    second: DEBUG_RUN_0_S
   - first:
       213: -4240456906859068710
-    second: DEBUG_RUN_0_7
+    second: DEBUG_RUN_0_SE
   - first:
       213: 7709138515797732567
-    second: DEBUG_RUN_0_8
+    second: DEBUG_RUN_0_E
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -128,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DEBUG_RUN_0_0
+      name: DEBUG_RUN_0_W
       rect:
         serializedVersion: 2
         x: 0
@@ -136,7 +136,7 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -149,7 +149,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DEBUG_RUN_0_1
+      name: DEBUG_RUN_0_SW
       rect:
         serializedVersion: 2
         x: 256
@@ -157,7 +157,7 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -170,7 +170,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DEBUG_RUN_0_2
+      name: DEBUG_RUN_0_F
       rect:
         serializedVersion: 2
         x: 512
@@ -178,7 +178,7 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -191,7 +191,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DEBUG_RUN_0_3
+      name: DEBUG_RUN_0_NE
       rect:
         serializedVersion: 2
         x: 0
@@ -199,7 +199,7 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -212,7 +212,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DEBUG_RUN_0_4
+      name: DEBUG_RUN_0_N
       rect:
         serializedVersion: 2
         x: 256
@@ -220,7 +220,7 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -233,7 +233,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DEBUG_RUN_0_5
+      name: DEBUG_RUN_0_NW
       rect:
         serializedVersion: 2
         x: 512
@@ -241,7 +241,7 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -254,7 +254,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DEBUG_RUN_0_6
+      name: DEBUG_RUN_0_S
       rect:
         serializedVersion: 2
         x: 0
@@ -262,7 +262,7 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -275,7 +275,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DEBUG_RUN_0_7
+      name: DEBUG_RUN_0_SE
       rect:
         serializedVersion: 2
         x: 256
@@ -283,7 +283,7 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -296,7 +296,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DEBUG_RUN_0_8
+      name: DEBUG_RUN_0_E
       rect:
         serializedVersion: 2
         x: 512
@@ -304,7 +304,7 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

@@ -37,9 +37,10 @@ public class Pathfinder : MonoBehaviour
             if (hit2D.collider != null)
             {
                 if (hit2D.collider.GetComponent<PolygonCollider2D>() == null) return;
+                if (hit2D.collider.GetComponent<PolygonalNavMesh>() == null) return; 
                 
                 PolygonalNavMesh polyMesh = hit2D.collider.GetComponent<PolygonalNavMesh>();
-                Debug.Log("Hit the navmesh!");
+                //Debug.Log("Hit the navmesh!");
                 
                 //Set Movement end point to hit.point and calculate path
                 Vector2[] path = polyMesh.GetShortestPath(transform.position, hit2D.point);

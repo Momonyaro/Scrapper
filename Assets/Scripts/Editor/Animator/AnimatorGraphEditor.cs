@@ -11,6 +11,7 @@ namespace Scrapper.Editor
     public class AnimatorEditor : UnityEditor.Editor
     {
         public Animation.Animation.BranchFacing currentEditorFacing = Animation.Animation.BranchFacing.S;
+        public int deleteIndex = -1;
         
         public override void OnInspectorGUI()
         {
@@ -43,11 +44,17 @@ namespace Scrapper.Editor
 
             for (int i = 0; i < currentBranch.frames.Count; i++)
             {
-                currentBranch.frames[i] = DrawFrameObj(currentBranch.frames[i]);
+                currentBranch.frames[i] = DrawFrameObj(currentBranch.frames[i], i);
             }
-            
-            EditorGUILayout.EndVertical();
-            
+
+            for (int i = 0; i < currentBranch.frames.Count; i++)
+            {
+                for (int j = 0; j < currentAnim.branches.Length; j++)
+                {
+                    currentAnim.branches[j].GetBranch().frames[i].frameDuration = currentBranch.frames[i].frameDuration;
+                }
+            }
+
             for (int i = 0; i < currentAnim.branches.Length; i++)
             {
                 if (currentAnim.branches[i].GetFacing() == currentEditorFacing)
@@ -57,15 +64,52 @@ namespace Scrapper.Editor
                 }
             }
             
+            if (GUILayout.Button("Add Frame To Branches"))
+            {
+                for (int i = 0; i < currentAnim.branches.Length; i++)
+                {
+                    AnimBranch branch = currentAnim.branches[i].GetBranch();
+                    branch.frames.Add(new AnimFrame()
+                    {
+                        frameDuration = 0.2f
+                    });
+                    currentAnim.branches[i].SetBranch(branch);
+                }
+            }
+
+            if (deleteIndex >= 0)
+            {
+                for (int i = 0; i < currentAnim.branches.Length; i++)
+                {
+                    AnimBranch branch = currentAnim.branches[i].GetBranch();
+                    branch.frames.RemoveAt(deleteIndex);
+                    currentAnim.branches[i].SetBranch(branch);
+                }
+                deleteIndex = -1;
+            }
+            
+            EditorGUILayout.EndVertical();
+            
+            
             //base.OnInspectorGUI();
         }
 
-        private AnimFrame DrawFrameObj(AnimFrame frame)
+        private AnimFrame DrawFrameObj(AnimFrame frame, int index)
         {
-            EditorGUILayout.BeginVertical("HelpBox");
+            EditorGUILayout.BeginHorizontal("HelpBox");
+            EditorGUILayout.BeginVertical();
             frame.frameDuration = EditorGUILayout.Slider("Frame Duration", frame.frameDuration, 0, 2);
             frame.SetSpriteNoFuss((Sprite)EditorGUILayout.ObjectField("Sprite", frame.GetSprite(), typeof(Sprite), allowSceneObjects: true));
             EditorGUILayout.EndVertical();
+            EditorGUILayout.BeginVertical();
+            GUILayout.FlexibleSpace();
+            if (GUILayout.Button("Delete Frame"))
+            {
+                deleteIndex = index;
+            }
+            GUILayout.FlexibleSpace();
+            EditorGUILayout.EndVertical();
+            EditorGUILayout.EndHorizontal();
             return frame;
         }
     }
