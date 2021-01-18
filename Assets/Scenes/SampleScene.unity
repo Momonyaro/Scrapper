@@ -627,6 +627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eb56e2b6c34ae84aba5d166b7f04c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drawDebugPath: 1
   enableController: 1
   playerControlled: 1
   characterAnimator: {fileID: 1919395824}

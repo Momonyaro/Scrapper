@@ -10,6 +10,7 @@ using Animator = Scrapper.Animation.Animator;
 
 public class Pathfinder : MonoBehaviour
 {
+    public bool drawDebugPath = false;
     public bool enableController = true;
     public bool playerControlled = false;
     public Animator characterAnimator;
@@ -20,6 +21,7 @@ public class Pathfinder : MonoBehaviour
     private float currentAngle = 0;
     private float cachedAngle = 0;
     private Vector2 magicZeroVector = new Vector2(0.578f, -1);
+    private List<Vector2> currentPath = new List<Vector2>();
 
 
     private void Update()
@@ -55,22 +57,22 @@ public class Pathfinder : MonoBehaviour
 
     private IEnumerator FollowPath(Vector2[] path)
     {
-        List<Vector2> pathList = path.ToList();
+        currentPath = path.ToList();
         characterAnimator.PlayAnimFromKeyword("_run");
-        while (pathList.Count > 0) //While we have not reached the last
+        while (currentPath.Count > 0) //While we have not reached the last
         {
             if (haltAllMovement) yield break;
 
-            if (Vector2.Distance(transform.position, pathList[0]) > minNodeDistance)
+            if (Vector2.Distance(transform.position, currentPath[0]) > minNodeDistance)
             {
-                transform.position = Vector2.MoveTowards(transform.position, pathList[0], playerSpeed * Time.deltaTime);
+                transform.position = Vector2.MoveTowards(transform.position, currentPath[0], playerSpeed * Time.deltaTime);
             }
             else
             {
-                pathList.RemoveAt(0);
-                if (pathList.Count > 0)
+                currentPath.RemoveAt(0);
+                if (currentPath.Count > 0)
                 {
-                    Vector2 targetDir = pathList[0] - new Vector2(transform.position.x, transform.position.y);
+                    Vector2 targetDir = currentPath[0] - new Vector2(transform.position.x, transform.position.y);
                     currentAngle = AngleBetweenVector2(magicZeroVector, targetDir); //Give it a direction that results in 30deg being the new "0"
                 }
             }
@@ -118,5 +120,23 @@ public class Pathfinder : MonoBehaviour
                 characterAnimator.currentFacing = Animation.BranchFacing.N;
         }
     }
-    
+
+    private void OnDrawGizmos()
+    {
+        if (drawDebugPath)
+        {
+            if (currentPath.Count > 0)
+            {
+                Gizmos.DrawLine(transform.position, currentPath[0]);
+                
+                Gizmos.DrawLine(currentPath[currentPath.Count - 1] + new Vector2(-0.5f, -0.5f), currentPath[currentPath.Count - 1] + new Vector2(0.5f, 0.5f));
+                Gizmos.DrawLine(currentPath[currentPath.Count - 1] + new Vector2(-0.5f, 0.5f), currentPath[currentPath.Count - 1] + new Vector2(0.5f, -0.5f));
+            }
+            
+            for (int i = 1; i < currentPath.Count; i++)
+            {
+                Gizmos.DrawLine(currentPath[i - 1], currentPath[i]);
+            }
+        }
+    }
 }
