@@ -56,6 +56,7 @@ public class Pathfinder : MonoBehaviour
     private IEnumerator FollowPath(Vector2[] path)
     {
         List<Vector2> pathList = path.ToList();
+        characterAnimator.PlayAnimFromKeyword("_run");
         while (pathList.Count > 0) //While we have not reached the last
         {
             if (haltAllMovement) yield break;
@@ -76,7 +77,7 @@ public class Pathfinder : MonoBehaviour
             
             yield return new WaitForEndOfFrame();
         }
-        
+        characterAnimator.PlayAnimFromKeyword("_idle");
         yield break;
     }
     

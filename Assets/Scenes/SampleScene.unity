@@ -511,10 +511,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51132fdb4fc17864fbd18adea305ea76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentFacing: 2
+  currentFacing: 0
   animations:
   - key: _idle
     animation: {fileID: 11400000, guid: 14c5d63e645f7a644b17bf84c6468ed2, type: 2}
+  - key: _run
+    animation: {fileID: 11400000, guid: 888c51aec58896c43a5a9d0be64a73b7, type: 2}
   renderer: {fileID: 1919395825}
 --- !u!212 &1919395825
 SpriteRenderer:

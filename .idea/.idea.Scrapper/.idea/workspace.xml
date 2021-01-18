@@ -20,7 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b667d6b-b66a-4052-a784-3d234f051598" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pathfinding/PolygonalNavMesh.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pathfinding/PolygonalNavMesh.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animations/Animation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animations/Animation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Extras/Jeffrey/Jeffrey_Data/StreamingAssets/Input/0001.png" beforeDir="false" afterPath="$PROJECT_DIR$/Extras/Jeffrey/Jeffrey_Data/StreamingAssets/Input/0001.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Extras/Jeffrey/Jeffrey_Data/StreamingAssets/Input/0002.png" beforeDir="false" afterPath="$PROJECT_DIR$/Extras/Jeffrey/Jeffrey_Data/StreamingAssets/Input/0002.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Extras/Jeffrey/Jeffrey_Data/StreamingAssets/Input/0003.png" beforeDir="false" afterPath="$PROJECT_DIR$/Extras/Jeffrey/Jeffrey_Data/StreamingAssets/Input/0003.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Extras/Jeffrey/Jeffrey_Data/StreamingAssets/Input/0004.png" beforeDir="false" afterPath="$PROJECT_DIR$/Extras/Jeffrey/Jeffrey_Data/StreamingAssets/Input/0004.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Extras/Jeffrey/Jeffrey_Data/StreamingAssets/Input/0005.png" beforeDir="false" afterPath="$PROJECT_DIR$/Extras/Jeffrey/Jeffrey_Data/StreamingAssets/Input/0005.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Extras/Jeffrey/Jeffrey_Data/StreamingAssets/Input/0006.png" beforeDir="false" afterPath="$PROJECT_DIR$/Extras/Jeffrey/Jeffrey_Data/StreamingAssets/Input/0006.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Extras/Jeffrey/Jeffrey_Data/StreamingAssets/Input/0007.png" beforeDir="false" afterPath="$PROJECT_DIR$/Extras/Jeffrey/Jeffrey_Data/StreamingAssets/Input/0007.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Extras/Jeffrey/Jeffrey_Data/StreamingAssets/Input/0008.png" beforeDir="false" afterPath="$PROJECT_DIR$/Extras/Jeffrey/Jeffrey_Data/StreamingAssets/Input/0008.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Extras/Jeffrey/Jeffrey_Data/StreamingAssets/Input/0009.png" beforeDir="false" afterPath="$PROJECT_DIR$/Extras/Jeffrey/Jeffrey_Data/StreamingAssets/Input/0009.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Extras/Jeffrey/Jeffrey_Data/StreamingAssets/Output/_atlas0.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,11 +56,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Animations/AnimFrame.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Animations/Animator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Animations/AnimBranch.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Animations/Animation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerControl/TestMouseController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerControl/TrackingCamera.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pathfinding/PolygonalNavMesh.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Animations/Animation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" />
       </list>
     </option>
   </component>
@@ -61,6 +74,7 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -93,7 +107,8 @@
       <updated>1610745002133</updated>
       <workItem from="1610745006074" duration="11769000" />
       <workItem from="1610808976465" duration="4009000" />
-      <workItem from="1610905951372" duration="12983000" />
+      <workItem from="1610905951372" duration="13522000" />
+      <workItem from="1610931747718" duration="694000" />
     </task>
     <servers />
   </component>
@@ -116,5 +131,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="461" y="199" key="SettingsEditor" timestamp="1610926938430">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="461" y="199" key="SettingsEditor/-1680.56.1680.1020/0.30.1920.1050@0.30.1920.1050" timestamp="1610926938430" />
   </component>
 </project>
