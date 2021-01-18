@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.Burst;
 using UnityEditor;
 using UnityEngine;
 
@@ -13,6 +14,8 @@ namespace Scrapper.Pathfinding
         public bool drawVisibilityLines = true;
         public bool drawNavMesh = true;
         public List<PolyNavObstacle> obstacles;
+        private List<DijkstraNode> cachedMapGraph;
+        public bool mapBaked = false;
         
         [SerializeField] private Vector2[] path = new Vector2[0];
     
@@ -20,8 +23,11 @@ namespace Scrapper.Pathfinding
         void Start()
         {
             if (polyCollider == null) polyCollider = GetComponent<PolygonCollider2D>();
+            cachedMapGraph = BuildGraph(Vector2.zero, Vector2.one, true);
+            if (cachedMapGraph.Count > 0) mapBaked = true;
         }
 
+        [BurstCompile]
         public Vector2[] GetShortestPath(Vector2 start, Vector2 end)
         {
 
@@ -36,7 +42,7 @@ namespace Scrapper.Pathfinding
             }
             
             List<DijkstraNode> vertexSet = new List<DijkstraNode>();
-            List<DijkstraNode> graph = BuildGraph(start, end);
+            List<DijkstraNode> graph = UseCachedGraph(start, end);
 
             for (int i = 0; i < graph.Count; i++)
             {
@@ -94,7 +100,35 @@ namespace Scrapper.Pathfinding
             return new Vector2[0];
         }
 
-        private List<DijkstraNode> BuildGraph(Vector2 start, Vector2 end)
+        private List<DijkstraNode> UseCachedGraph(Vector2 start, Vector2 end)
+        {
+            if (!mapBaked) Debug.LogError("MAP GRAPH NOT BAKED! CHECK WITH SEBASTIAN!");
+            List<DijkstraNode> toReturn = cachedMapGraph;
+
+            DijkstraNode startNode = new DijkstraNode(start, new List<DijkstraNode>());
+            DijkstraNode endNode =   new DijkstraNode(end,   new List<DijkstraNode>());
+
+            for (int i = 0; i < toReturn.Count; i++)
+            {
+                if (InLineOfSight(toReturn[i].GetPosition(), startNode.GetPosition()))
+                {
+                    toReturn[i].AddNeighbor(startNode);
+                    startNode.AddNeighbor(toReturn[i]);
+                }
+                if (InLineOfSight(toReturn[i].GetPosition(), endNode.GetPosition()))
+                {
+                    toReturn[i].AddNeighbor(endNode);
+                    endNode.AddNeighbor(toReturn[i]);
+                }
+            }
+            
+            toReturn.Add(startNode);
+            toReturn.Add(endNode);
+            
+            return toReturn;
+        }
+
+        private List<DijkstraNode> BuildGraph(Vector2 start, Vector2 end, bool buildForCache)
         {
             List<DijkstraNode> toReturn = new List<DijkstraNode>();
 
@@ -102,7 +136,9 @@ namespace Scrapper.Pathfinding
 
             List<Vector2> concavePoints = new List<Vector2>();
             
-            concavePoints.Add(start);
+            if (!buildForCache)
+                concavePoints.Add(start);
+            
             for (int i = 0; i < points.Count; i++)
             {
                 if (IsVertexConcave(points, i))
@@ -122,7 +158,8 @@ namespace Scrapper.Pathfinding
                 }
             }
             
-            concavePoints.Add(end);
+            if (!buildForCache)
+                concavePoints.Add(end);
             
             //Convert to dijkstra nodes.
             for (int i = 0; i < concavePoints.Count; i++)
