@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Scrapper.Animation
 {
-    [CreateAssetMenu(fileName = "Animation", menuName = "Animation/Animation", order = 0)]
+    [CreateAssetMenu(fileName = "Animation", menuName = "Scrapper/Animation", order = 0)]
     public class Animation : ScriptableObject
     {
         public enum BranchFacing
@@ -62,6 +62,11 @@ namespace Scrapper.Animation
         public AnimBranch GetBranch()
         {
             return branch;
+        }
+
+        public void SetBranch(AnimBranch branch)
+        {
+            this.branch = branch;
         }
     }
 }

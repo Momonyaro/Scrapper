@@ -4,8 +4,33 @@
     <e p="C:\Users\Sebastian\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
     <e p="C:\Users\Sebastian\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Scrapper.-2143809896.00" t="ExcludeRecursive" />
     <e p="C:\Users\Sebastian\Documents\GitHub\Kraken\Scrapper" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Editor" t="Include">
+          <e p="Graph" t="Include">
+            <e p="NodeSearchWindow.cs" t="Include" />
+            <e p="StoryGraph.cs" t="Include" />
+            <e p="StoryGraphView.cs" t="Include" />
+          </e>
+          <e p="GraphSaveUtility.cs" t="Include" />
+          <e p="Nodes" t="Include">
+            <e p="DialogueNode.cs" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="NarrativeGraph.uss" t="Include" />
+            <e p="Node.uss" t="Include" />
+          </e>
+          <e p="Subtegral.DialogueSystem.Editor.asmdef" t="Include" />
+        </e>
+        <e p="Runtime" t="Include">
+          <e p="CommentBlockData.cs" t="Include" />
+          <e p="DialogueContainer.cs" t="Include" />
+          <e p="DialogueNodeData.cs" t="Include" />
+          <e p="ExposedProperty.cs" t="Include" />
+          <e p="NodeLinkData.cs" t="Include" />
+          <e p="Subtegral.DialogueSystem.Runtime.asmdef" t="Include" />
+        </e>
         <e p="Scripts" t="Include">
           <e p="Animations" t="Include">
             <e p="Animation.cs" t="Include" />
@@ -13,13 +38,26 @@
             <e p="AnimBranch.cs" t="Include" />
             <e p="AnimFrame.cs" t="Include" />
           </e>
+          <e p="Editor" t="Include">
+            <e p="Animator" t="Include">
+              <e p="AnimatorGraphEditor.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Pathfinding" t="Include">
+            <e p="PolygonalNavMesh.cs" t="Include" />
+            <e p="PolyNavObstacle.cs" t="Include" />
+          </e>
           <e p="PlayerControl" t="Include">
+            <e p="Pathfinder.cs" t="Include" />
             <e p="TestMouseController.cs" t="Include" />
+            <e p="TrackingCamera.cs" t="Include" />
           </e>
         </e>
       </e>
+      <e p="Editor.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
+      <e p="Runtime.csproj" t="IncludeRecursive" />
       <e p="Scrapper.sln" t="IncludeFlat" />
       <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
