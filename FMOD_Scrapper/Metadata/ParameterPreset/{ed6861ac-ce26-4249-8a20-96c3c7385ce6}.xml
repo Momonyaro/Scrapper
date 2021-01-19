@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{ed6861ac-ce26-4249-8a20-96c3c7385ce6}">
+		<property name="name">
+			<value>Blunt or Sharp</value>
+		</property>
+		<relationship name="folder">
+			<destination>{ad145f72-511a-4bd7-9591-9b4740d45e8d}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{3a12ae00-1142-408c-a67f-dba0dbe30718}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{3a12ae00-1142-408c-a67f-dba0dbe30718}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

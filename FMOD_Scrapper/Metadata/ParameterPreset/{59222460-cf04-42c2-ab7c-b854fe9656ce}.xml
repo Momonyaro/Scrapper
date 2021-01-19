@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{59222460-cf04-42c2-ab7c-b854fe9656ce}">
+		<property name="name">
+			<value>Crit</value>
+		</property>
+		<relationship name="folder">
+			<destination>{ad145f72-511a-4bd7-9591-9b4740d45e8d}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{225032d0-5be7-44ef-94e7-73e278699746}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{225032d0-5be7-44ef-94e7-73e278699746}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
