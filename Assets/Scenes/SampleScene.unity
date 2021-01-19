@@ -1228,7 +1228,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.4211463, g: 0.4621846, b: 0.5283019, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1289,7 +1289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camTarget: {fileID: 1973519948}
   minDistance: 0.5
-  lerpSpeed: 0.86
+  lerpSpeed: 1.13
 --- !u!1 &949005892
 GameObject:
   m_ObjectHideFlags: 0

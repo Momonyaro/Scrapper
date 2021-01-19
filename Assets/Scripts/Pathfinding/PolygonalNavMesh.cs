@@ -103,11 +103,17 @@ namespace Scrapper.Pathfinding
         private List<DijkstraNode> UseCachedGraph(Vector2 start, Vector2 end)
         {
             if (!mapBaked) Debug.LogError("MAP GRAPH NOT BAKED! CHECK WITH SEBASTIAN!");
-            List<DijkstraNode> toReturn = cachedMapGraph;
+            List<DijkstraNode> toReturn = new List<DijkstraNode>(cachedMapGraph);
 
             DijkstraNode startNode = new DijkstraNode(start, new List<DijkstraNode>());
             DijkstraNode endNode =   new DijkstraNode(end,   new List<DijkstraNode>());
 
+            if (InLineOfSight(endNode.GetPosition(), startNode.GetPosition()))
+            {
+                endNode.AddNeighbor(startNode);
+                startNode.AddNeighbor(endNode);
+            }
+            
             for (int i = 0; i < toReturn.Count; i++)
             {
                 if (InLineOfSight(toReturn[i].GetPosition(), startNode.GetPosition()))
