@@ -17,16 +17,17 @@ namespace Scrapper.Animation
         public WeaponOrdering weaponOrdering;
         public List<AnimFrame> frames;
 
-        public Sprite TickFrames(float deltaTime)
+        public Sprite TickFrames(float deltaTime, out bool newFrame)
         {
             if (!frames[currentFrame].TickFrame(deltaTime))
             {
                 currentFrame++;
                 if (currentFrame >= frames.Count)
                     currentFrame = 0;
+                newFrame = true;
                 return frames[currentFrame].SetActiveFrame();
             }
-
+            newFrame = false;
             return frames[currentFrame].GetSprite();
         }
         

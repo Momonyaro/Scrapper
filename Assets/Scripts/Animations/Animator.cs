@@ -28,6 +28,8 @@ namespace Scrapper.Animation
             if (renderer == null) return;
 
             renderer.sprite = animations[currentAnimIndex].animation.GetFrameOfCurrentBranch(currentFacing);
+            
+            //Based on the current animation's newFrame flag we can decide to execute frame-logic when it's first displayed!
         }
     }
 

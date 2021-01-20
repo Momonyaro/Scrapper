@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Scrapper.Animation;
 using UnityEditor;
+using UnityEditorInternal;
 using UnityEngine;
 using Animator = Scrapper.Animation.Animator;
 
@@ -52,6 +53,8 @@ namespace Scrapper.Editor
                 for (int j = 0; j < currentAnim.branches.Length; j++)
                 {
                     currentAnim.branches[j].GetBranch().frames[i].frameDuration = currentBranch.frames[i].frameDuration;
+                    currentAnim.branches[j].GetBranch().frames[i].audioActions = currentBranch.frames[i].audioActions;
+                    currentAnim.branches[j].GetBranch().frames[i].logicActions = currentBranch.frames[i].logicActions;
                 }
             }
 
@@ -96,7 +99,8 @@ namespace Scrapper.Editor
 
         private AnimFrame DrawFrameObj(AnimFrame frame, int index)
         {
-            EditorGUILayout.BeginHorizontal("HelpBox");
+            EditorGUILayout.BeginVertical("HelpBox");
+            EditorGUILayout.BeginHorizontal();
             EditorGUILayout.BeginVertical();
             frame.frameDuration = EditorGUILayout.Slider("Frame Duration", frame.frameDuration, 0, 2);
             frame.SetSpriteNoFuss((Sprite)EditorGUILayout.ObjectField("Sprite", frame.GetSprite(), typeof(Sprite), allowSceneObjects: true));
@@ -110,6 +114,45 @@ namespace Scrapper.Editor
             GUILayout.FlexibleSpace();
             EditorGUILayout.EndVertical();
             EditorGUILayout.EndHorizontal();
+            EditorGUILayout.BeginHorizontal("HelpBox");
+            EditorGUILayout.BeginVertical(new GUIStyle() {fixedWidth = EditorGUIUtility.currentViewWidth / 2.2f}); //audioActions
+            for (int i = 0; i < frame.audioActions.Count; i++)
+            {
+                EditorGUILayout.BeginHorizontal();
+                EditorGUILayout.TextField(frame.audioActions[i]);
+                if (GUILayout.Button("Delete"))
+                {
+                    frame.audioActions.RemoveAt(i);
+                    break;
+                }
+                EditorGUILayout.EndHorizontal();
+            }
+
+            if (GUILayout.Button("Add AudioAction"))
+            {
+                frame.audioActions.Add("New AudioAction");
+            }
+            EditorGUILayout.EndVertical();
+            EditorGUILayout.BeginVertical(new GUIStyle() {fixedWidth = EditorGUIUtility.currentViewWidth / 2.2f}); //logicActions
+            for (int i = 0; i < frame.logicActions.Count; i++)
+            {
+                EditorGUILayout.BeginHorizontal();
+                EditorGUILayout.TextField(frame.logicActions[i]);
+                if (GUILayout.Button("Delete"))
+                {
+                    frame.logicActions.RemoveAt(i);
+                    break;
+                }
+                EditorGUILayout.EndHorizontal();
+            }
+
+            if (GUILayout.Button("Add LogicAction"))
+            {
+                frame.logicActions.Add("New LogicAction");
+            }
+            EditorGUILayout.EndVertical();
+            EditorGUILayout.EndHorizontal();
+            EditorGUILayout.EndVertical();
             return frame;
         }
     }
