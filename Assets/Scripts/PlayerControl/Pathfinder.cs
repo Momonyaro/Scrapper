@@ -29,8 +29,17 @@ public class Pathfinder : MonoBehaviour
 
     private void Update()
     {
-        if (playerControlled && Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
+        if (playerControlled && Input.GetMouseButtonDown(0))
         {
+            if (!EventSystem.current.IsPointerOverGameObject())
+            {
+                if (EventSystem.current.currentSelectedGameObject != null
+                    && EventSystem.current.currentSelectedGameObject.GetComponent<PolygonalNavMesh>() == null)
+                {
+                    return;
+                }
+            }
+            
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition + new Vector3(0, 0, -10));
             // Casts the ray and get the first game object hit
             RaycastHit2D hit2D = Physics2D.GetRayIntersection(ray);

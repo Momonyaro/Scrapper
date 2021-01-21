@@ -5,31 +5,34 @@ using Scrapper.Pathfinding;
 using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(PolygonalNavMesh))]
-public class PolyNavEditor : Editor
+namespace Scrapper.Editor
 {
-    private PolygonalNavMesh navMesh;
-    
-    public override void OnInspectorGUI()
+    [CustomEditor(typeof(PolygonalNavMesh))]
+    public class PolyNavEditor : UnityEditor.Editor
     {
-        navMesh = (PolygonalNavMesh) target;
+        private PolygonalNavMesh navMesh;
 
-        if (GUILayout.Button("Generate Default Nodes"))
+        public override void OnInspectorGUI()
         {
-            //Generate a list of 2D vectors to be modified
-            navMesh.CreateNavNodes();
+            navMesh = (PolygonalNavMesh) target;
+
+            if (GUILayout.Button("Generate Default Nodes"))
+            {
+                //Generate a list of 2D vectors to be modified
+                navMesh.CreateNavNodes();
+            }
+
+            base.OnInspectorGUI();
         }
-        
-        base.OnInspectorGUI();
-    }
 
-    private void OnSceneGUI()
-    {
-        navMesh = (PolygonalNavMesh) target;
-
-        for (int i = 0; i < navMesh.navNodes.Count; i++)
+        private void OnSceneGUI()
         {
-            navMesh.navNodes[i] = Handles.PositionHandle(navMesh.navNodes[i], Quaternion.identity);
+            navMesh = (PolygonalNavMesh) target;
+
+            for (int i = 0; i < navMesh.navNodes.Count; i++)
+            {
+                navMesh.navNodes[i] = Handles.PositionHandle(navMesh.navNodes[i], Quaternion.identity);
+            }
         }
     }
 }

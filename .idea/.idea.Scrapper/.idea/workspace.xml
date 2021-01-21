@@ -24,7 +24,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animations/Animator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animations/Animator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pathfinding/PolygonalNavMesh.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pathfinding/PolygonalNavMesh.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/Animator/AnimatorGraphEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/Animator/AnimatorGraphEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/Pathfinding/PolyNavEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/Pathfinding/PolyNavEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerControl/TrackingCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerControl/TrackingCamera.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +43,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Pathfinding/PolyNavObstacle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerControl/TrackingCamera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/HoverOverEntity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Animations/AnimFrame.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -46,16 +51,19 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/PathTest.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerControl/TestMouseController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerControl/TrackingCamera.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pathfinding/PolyNavObstacle.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Animations/AnimFrame.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/Animator/AnimatorGraphEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Animations/AnimBranch.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Animations/Animation.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Animations/Animator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pathfinding/PolygonalNavMesh.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/Pathfinding/PolyNavEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerControl/TrackingCamera.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/HoverOverEntity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/SprLayerObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/LayerManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/Animator/AnimatorGraphEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Animations/Animator.cs" />
       </list>
     </option>
   </component>
@@ -116,7 +124,7 @@
       <workItem from="1610975152415" duration="6354000" />
       <workItem from="1611055975724" duration="319000" />
       <workItem from="1611184403613" duration="1685000" />
-      <workItem from="1611227866697" duration="1992000" />
+      <workItem from="1611227866697" duration="7949000" />
     </task>
     <servers />
   </component>
@@ -141,6 +149,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="762" y="255" key="RiderGenerateDialog" timestamp="1611233336978">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="762" y="255" key="RiderGenerateDialog/0.30.1920.1050/-1680.56.1680.1020@0.30.1920.1050" timestamp="1611233336978" />
     <state x="461" y="199" key="SettingsEditor" timestamp="1610926938430">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>

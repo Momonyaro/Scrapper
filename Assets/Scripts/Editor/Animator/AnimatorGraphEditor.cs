@@ -156,4 +156,21 @@ namespace Scrapper.Editor
             return frame;
         }
     }
+
+    [CustomEditor(typeof(Animator))]
+    public class AnimatorInspector : UnityEditor.Editor
+    {
+        public override void OnInspectorGUI()
+        {
+            Animation.Animator currentAnim = (Animation.Animator) target;
+
+            if (GUILayout.Button("Set Correct Animation Rotation"))
+            {
+                currentAnim.PlayAnimFromKeyword("_idle", 0);
+                currentAnim.sprRenderer.sprite = currentAnim.animations[currentAnim.currentAnimIndex].animation.GetFrameOfCurrentBranch(currentAnim.currentFacing);
+            }
+            
+            base.OnInspectorGUI();
+        }
+    }
 }

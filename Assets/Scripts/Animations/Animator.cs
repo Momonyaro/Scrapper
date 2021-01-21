@@ -8,7 +8,7 @@ namespace Scrapper.Animation
     public class Animator : MonoBehaviour
     {
         public Animation.BranchFacing currentFacing = Animation.BranchFacing.S;
-        private int currentAnimIndex = 0;
+        [HideInInspector] public int currentAnimIndex = 0;
         public List<AnimationBlock> animations;
         public SpriteRenderer sprRenderer;
 
