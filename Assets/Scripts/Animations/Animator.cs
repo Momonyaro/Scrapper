@@ -10,7 +10,7 @@ namespace Scrapper.Animation
         public Animation.BranchFacing currentFacing = Animation.BranchFacing.S;
         private int currentAnimIndex = 0;
         public List<AnimationBlock> animations;
-        public SpriteRenderer renderer;
+        public SpriteRenderer sprRenderer;
 
         public bool PlayAnimFromKeyword(string key, int frameOffset = 0)
         {
@@ -25,9 +25,9 @@ namespace Scrapper.Animation
 
         private void Update()
         {
-            if (renderer == null) return;
+            if (sprRenderer == null) return;
 
-            renderer.sprite = animations[currentAnimIndex].animation.GetFrameOfCurrentBranch(currentFacing);
+            sprRenderer.sprite = animations[currentAnimIndex].animation.GetFrameOfCurrentBranch(currentFacing);
             
             //Based on the current animation's newFrame flag we can decide to execute frame-logic when it's first displayed!
         }
