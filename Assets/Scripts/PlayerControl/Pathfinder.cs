@@ -5,6 +5,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using UnityEngine;
 using Scrapper.Pathfinding;
+using Srapper.Interaction;
 using UnityEngine.EventSystems;
 using Animation = Scrapper.Animation.Animation;
 using Animator = Scrapper.Animation.Animator;
@@ -23,6 +24,8 @@ public class Pathfinder : MonoBehaviour
     private Vector2 down = Vector2.down;
     private float currentAngle = 0;
     private float cachedAngle = 0;
+    private bool stopShort = false;
+    private float stopShortDist = 1.5f;
     private Vector2 magicZeroVector = new Vector2(0.578f, -1);
     private List<Vector2> currentPath = new List<Vector2>();
 
@@ -31,14 +34,16 @@ public class Pathfinder : MonoBehaviour
     {
         if (playerControlled && Input.GetMouseButtonDown(0))
         {
-            if (!EventSystem.current.IsPointerOverGameObject())
+            if (!IsPointerOverUIElement())
             {
-                if (EventSystem.current.currentSelectedGameObject != null
-                    && EventSystem.current.currentSelectedGameObject.GetComponent<PolygonalNavMesh>() == null)
+                if (EventSystem.current.currentSelectedGameObject != null)
                 {
-                    return;
+                    if (EventSystem.current.currentSelectedGameObject.GetComponent<PolygonalNavMesh>() == null)
+                        return;
                 }
             }
+            else
+                return;
             
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition + new Vector3(0, 0, -10));
             // Casts the ray and get the first game object hit
@@ -46,14 +51,24 @@ public class Pathfinder : MonoBehaviour
 
             if (hit2D.collider != null)
             {
-                if (hit2D.collider.GetComponent<PolygonCollider2D>() == null) return;
-                if (hit2D.collider.GetComponent<PolygonalNavMesh>() == null) return; 
+                Vector2[] path = new Vector2[0];
+                if (hit2D.collider.GetComponent<HoverOverEntity>() != null)
+                {
+                    path = FindObjectOfType<PolygonalNavMesh>().GetShortestPath(transform.position, hit2D.collider.transform.parent.position);
+                    stopShort = true;
+                }
+                else if (hit2D.collider.GetComponent<PolygonCollider2D>() == null) return;
+                else if (hit2D.collider.GetComponent<PolygonalNavMesh>() != null)
+                {
+                    
+                    PolygonalNavMesh polyMesh = hit2D.collider.GetComponent<PolygonalNavMesh>();
+                    path = polyMesh.GetShortestPath(transform.position, hit2D.point);
+                    stopShort = false;
+                }
                 
-                PolygonalNavMesh polyMesh = hit2D.collider.GetComponent<PolygonalNavMesh>();
                 //Debug.Log("Hit the navmesh!");
                 
                 //Set Movement end point to hit.point and calculate path
-                Vector2[] path = polyMesh.GetShortestPath(transform.position, hit2D.point);
                 currentPath.Clear();
                 StopCoroutine("FollowPath");
                 StartCoroutine(nameof(FollowPath), path);
@@ -77,7 +92,21 @@ public class Pathfinder : MonoBehaviour
         {
             if (haltAllMovement) yield break;
 
-            if (Vector2.Distance(transform.position, currentPath[0]) > minNodeDistance)
+            if (currentPath.Count == 1 && stopShort)
+            {
+                if (Vector2.Distance(transform.position, currentPath[0]) > stopShortDist)
+                {
+                    transform.position = Vector2.MoveTowards(transform.position, currentPath[0], playerSpeed * Time.deltaTime);
+                }
+                else
+                {
+                    currentPath.RemoveAt(0);
+                    stopShort = false;
+                    
+                    //We should trigger NPC interactions here since we've reached the NPC target if we're not aggro.
+                }
+            }
+            else if (Vector2.Distance(transform.position, currentPath[0]) > minNodeDistance)
             {
                 transform.position = Vector2.MoveTowards(transform.position, currentPath[0], playerSpeed * Time.deltaTime);
             }
@@ -163,5 +192,31 @@ public class Pathfinder : MonoBehaviour
                 Gizmos.DrawLine(currentPath[i - 1], currentPath[i]);
             }
         }
+    }
+    
+    ///Returns 'true' if we touched or hovering on Unity UI element.
+    public static bool IsPointerOverUIElement()
+    {
+        return IsPointerOverUIElement(GetEventSystemRaycastResults());
+    }
+    ///Returns 'true' if we touched or hovering on Unity UI element.
+    public static bool IsPointerOverUIElement(List<RaycastResult> eventSystemRaysastResults )
+    {
+        for(int index = 0;  index < eventSystemRaysastResults.Count; index ++)
+        {
+            RaycastResult curRaysastResult = eventSystemRaysastResults [index];
+            if (curRaysastResult.gameObject.layer == LayerMask.NameToLayer("UI"))
+                return true;
+        }
+        return false;
+    }
+    ///Gets all event systen raycast results of current mouse or touch position.
+    static List<RaycastResult> GetEventSystemRaycastResults()
+    {   
+        PointerEventData eventData = new PointerEventData(EventSystem.current);
+        eventData.position =  Input.mousePosition;
+        List<RaycastResult> raysastResults = new List<RaycastResult>();
+        EventSystem.current.RaycastAll( eventData, raysastResults );
+        return raysastResults;
     }
 }

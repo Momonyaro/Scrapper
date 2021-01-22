@@ -22,13 +22,11 @@
     <list default="true" id="4b667d6b-b66a-4052-a784-3d234f051598" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animations/Animator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animations/Animator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/Animator/AnimatorGraphEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/Animator/AnimatorGraphEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/Pathfinding/PolyNavEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/Pathfinding/PolyNavEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/HoverOverEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/HoverOverEntity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerControl/TrackingCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerControl/TrackingCamera.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,12 +37,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/EntityEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerControl/TestMouseController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Pathfinding/PolyNavObstacle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerControl/TrackingCamera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/HoverOverEntity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Animations/AnimFrame.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entities/Entity.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -58,12 +58,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Pathfinding/PolygonalNavMesh.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/Pathfinding/PolyNavEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerControl/TrackingCamera.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/HoverOverEntity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/SprLayerObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/LayerManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/Animator/AnimatorGraphEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Animations/Animator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/HoverOverEntity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entities/Entity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/EntityEditor.cs" />
       </list>
     </option>
   </component>
@@ -125,6 +127,7 @@
       <workItem from="1611055975724" duration="319000" />
       <workItem from="1611184403613" duration="1685000" />
       <workItem from="1611227866697" duration="7949000" />
+      <workItem from="1611320240618" duration="8142000" />
     </task>
     <servers />
   </component>
