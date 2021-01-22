@@ -34,8 +34,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/Weapons/Melee
   guid: 46491f18c1afe845a8d84b82a17754ed
-  Banks:
-  - {fileID: -6458359892927672315}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -121,7 +120,7 @@ MonoBehaviour:
   Path: FMOD_Scrapper/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637466767777498070
+  lastModified: 637469332370556947
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -139,8 +138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/Weapons/Guns/Pistol
   guid: 01b92fd1c06a794092344308c48d2110
-  Banks:
-  - {fileID: -6458359892927672315}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -164,8 +162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/UI/Back
   guid: 15192f50fffd6e42802710c08c07d14a
-  Banks:
-  - {fileID: -6458359892927672315}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -307,8 +304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/Weapons/Guns/Smg
   guid: d2995192dfbe7445b171fa75ecd5a0f6
-  Banks:
-  - {fileID: -6458359892927672315}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -455,8 +451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/Miscellaneous/Laser
   guid: 595ef22c0d253a46ba7c0220c17ea845
-  Banks:
-  - {fileID: -6458359892927672315}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -480,27 +475,14 @@ MonoBehaviour:
   - {fileID: 1531970464413922558}
   - {fileID: -6458359892927672315}
   EditorEvents:
-  - {fileID: -6021654290882104272}
-  - {fileID: 8586438771760128269}
-  - {fileID: -5191960183833881289}
   - {fileID: 8099436206561802885}
-  - {fileID: -9086521694409454981}
   - {fileID: -2413719455273196246}
-  - {fileID: -339876598473187646}
-  - {fileID: 2625107205910487393}
-  - {fileID: 2381102766686820912}
-  - {fileID: 1440835847809213114}
-  - {fileID: 1697706841740812632}
-  - {fileID: -2581096187855160802}
-  - {fileID: 2038323882954967342}
-  - {fileID: 5399412114917777963}
-  - {fileID: 2516518027192092461}
   EditorParameters: []
   MasterBanks:
   - {fileID: -6458359892927672315}
   StringsBanks:
   - {fileID: 1531970464413922558}
-  stringsBankWriteTime: 637466767777508062
+  stringsBankWriteTime: 637469332370646706
   cacheVersion: 6
 --- !u!114 &22882072560914956
 MonoBehaviour:
@@ -616,8 +598,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/Weapons/Guns/Rifle
   guid: b5c44fe0e4462e4c8802d712f7feabee
-  Banks:
-  - {fileID: -6458359892927672315}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -637,16 +618,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
+  m_Name: bank:/Desktop/Master.strings.bank
   m_EditorClassIdentifier: 
   Path: FMOD_Scrapper/Build/Desktop/Master.strings.bank
-  Name: Master.strings
+  Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637466767777508062
+  lastModified: 637469332370646706
   LoadResult: 0
   FileSizes:
-  - Name: Desktop
-    Value: 1646
+  - Name: 
+    Value: 1020
   Exists: 1
 --- !u!114 &1697706841740812632
 MonoBehaviour:
@@ -662,8 +643,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/Characters/Walking
   guid: d14aaca94d8c504d83c7ec8a00698c18
-  Banks:
-  - {fileID: -6458359892927672315}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -686,8 +666,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/Weapons/Guns/Shotgun
   guid: d9848e6422838046b2effaee1fd68afb
-  Banks:
-  - {fileID: -6458359892927672315}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -731,8 +710,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/Miscellaneous/Explosion
   guid: 7633ad7608298c41965946e15d56f38a
-  Banks:
-  - {fileID: -6458359892927672315}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -754,8 +732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/Weapons/Grenade
   guid: fb34760f18d6914e9da70fdad05a89e2
-  Banks:
-  - {fileID: -6458359892927672315}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -777,8 +754,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/Characters/Death
   guid: 5f4e97eef865fc42b0c1316c534788be
-  Banks:
-  - {fileID: -6458359892927672315}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -960,8 +936,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/UI/Select
   guid: e3fdf358fd0a7a4fa128442da5b8be7f
-  Banks:
-  - {fileID: -6458359892927672315}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1126,8 +1101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/Characters/Hurt
   guid: 0ddeb65c56ae6b4095966754100133d7
-  Banks:
-  - {fileID: -6458359892927672315}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
