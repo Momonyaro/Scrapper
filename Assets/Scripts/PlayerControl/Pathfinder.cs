@@ -32,6 +32,7 @@ public class Pathfinder : MonoBehaviour
 
     private void Update()
     {
+        if (!enableController) return;
         if (playerControlled && Input.GetMouseButtonDown(0))
         {
             if (!IsPointerOverUIElement())
@@ -65,8 +66,8 @@ public class Pathfinder : MonoBehaviour
                     path = polyMesh.GetShortestPath(transform.position, hit2D.point);
                     stopShort = false;
                 }
-                
-                //Debug.Log("Hit the navmesh!");
+
+                if (path.Length == 0) return; //It's an empty path, why use it?
                 
                 //Set Movement end point to hit.point and calculate path
                 currentPath.Clear();
@@ -97,6 +98,7 @@ public class Pathfinder : MonoBehaviour
                 if (Vector2.Distance(transform.position, currentPath[0]) > stopShortDist)
                 {
                     transform.position = Vector2.MoveTowards(transform.position, currentPath[0], playerSpeed * Time.deltaTime);
+                    transform.position = new Vector3(transform.position.x, transform.position.y, -0.1f);
                 }
                 else
                 {
@@ -109,6 +111,7 @@ public class Pathfinder : MonoBehaviour
             else if (Vector2.Distance(transform.position, currentPath[0]) > minNodeDistance)
             {
                 transform.position = Vector2.MoveTowards(transform.position, currentPath[0], playerSpeed * Time.deltaTime);
+                transform.position = new Vector3(transform.position.x, transform.position.y, -0.1f);
             }
             else
             {

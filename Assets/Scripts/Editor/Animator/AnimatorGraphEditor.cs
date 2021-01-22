@@ -25,6 +25,21 @@ namespace Scrapper.Editor
             currentAnim.displayWeapons = EditorGUILayout.Toggle("Display Weapons", currentAnim.displayWeapons);
             EditorGUILayout.EndHorizontal();
 
+            if (currentAnim.branches.Length < 8)
+            {
+                currentAnim.branches = new BranchStruct[8]
+                {
+                    new BranchStruct(new AnimBranch(), Animation.Animation.BranchFacing.S), 
+                    new BranchStruct(new AnimBranch(), Animation.Animation.BranchFacing.SE), 
+                    new BranchStruct(new AnimBranch(), Animation.Animation.BranchFacing.E), 
+                    new BranchStruct(new AnimBranch(), Animation.Animation.BranchFacing.NE), 
+                    new BranchStruct(new AnimBranch(), Animation.Animation.BranchFacing.N), 
+                    new BranchStruct(new AnimBranch(), Animation.Animation.BranchFacing.NW), 
+                    new BranchStruct(new AnimBranch(), Animation.Animation.BranchFacing.W), 
+                    new BranchStruct(new AnimBranch(), Animation.Animation.BranchFacing.SW) 
+                };
+            }
+
             AnimBranch currentBranch = currentAnim.branches[0].GetBranch();
 
             for (int i = 0; i < currentAnim.branches.Length; i++)
@@ -43,6 +58,9 @@ namespace Scrapper.Editor
             currentBranch.weaponOrdering =
                 (AnimBranch.WeaponOrdering) EditorGUILayout.EnumPopup("Weapon Ordering", currentBranch.weaponOrdering);
 
+            if (currentBranch.frames == null)
+                currentBranch.frames = new List<AnimFrame>();
+            
             for (int i = 0; i < currentBranch.frames.Count; i++)
             {
                 currentBranch.frames[i] = DrawFrameObj(currentBranch.frames[i], i);
@@ -119,7 +137,7 @@ namespace Scrapper.Editor
             for (int i = 0; i < frame.audioActions.Count; i++)
             {
                 EditorGUILayout.BeginHorizontal();
-                EditorGUILayout.TextField(frame.audioActions[i]);
+                frame.audioActions[i] = EditorGUILayout.TextField(frame.audioActions[i]);
                 if (GUILayout.Button("Delete"))
                 {
                     frame.audioActions.RemoveAt(i);
@@ -137,7 +155,7 @@ namespace Scrapper.Editor
             for (int i = 0; i < frame.logicActions.Count; i++)
             {
                 EditorGUILayout.BeginHorizontal();
-                EditorGUILayout.TextField(frame.logicActions[i]);
+                frame.logicActions[i] = EditorGUILayout.TextField(frame.logicActions[i]);
                 if (GUILayout.Button("Delete"))
                 {
                     frame.logicActions.RemoveAt(i);
