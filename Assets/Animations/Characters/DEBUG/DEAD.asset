@@ -19,39 +19,71 @@ MonoBehaviour:
     facing: 0
     branch:
       weaponOrdering: 0
-      frames: []
+      frames:
+      - frameDuration: 0.2
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 21300000, guid: 8f18b8c3bf7257a458862bb26d258091, type: 3}
   - name: SE
     facing: 1
     branch:
       weaponOrdering: 0
-      frames: []
+      frames:
+      - frameDuration: 0.2
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 21300000, guid: 8f18b8c3bf7257a458862bb26d258091, type: 3}
   - name: E
     facing: 2
     branch:
       weaponOrdering: 0
-      frames: []
+      frames:
+      - frameDuration: 0.2
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 21300000, guid: 8f18b8c3bf7257a458862bb26d258091, type: 3}
   - name: NE
     facing: 3
     branch:
       weaponOrdering: 0
-      frames: []
+      frames:
+      - frameDuration: 0.2
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 21300000, guid: 8f18b8c3bf7257a458862bb26d258091, type: 3}
   - name: N
     facing: 4
     branch:
       weaponOrdering: 0
-      frames: []
+      frames:
+      - frameDuration: 0.2
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 21300000, guid: 8f18b8c3bf7257a458862bb26d258091, type: 3}
   - name: NW
     facing: 5
     branch:
       weaponOrdering: 0
-      frames: []
+      frames:
+      - frameDuration: 0.2
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 21300000, guid: 8f18b8c3bf7257a458862bb26d258091, type: 3}
   - name: W
     facing: 6
     branch:
       weaponOrdering: 0
-      frames: []
+      frames:
+      - frameDuration: 0.2
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 21300000, guid: 8f18b8c3bf7257a458862bb26d258091, type: 3}
   - name: SW
     facing: 7
     branch:
       weaponOrdering: 0
-      frames: []
+      frames:
+      - frameDuration: 0.2
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 21300000, guid: 8f18b8c3bf7257a458862bb26d258091, type: 3}

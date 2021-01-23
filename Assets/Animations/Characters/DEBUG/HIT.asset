@@ -14,44 +14,78 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayWeapons: 0
   newFrame: 0
+  loopAnim: 0
+  transitionTo: _idle
   branches:
   - name: S
     facing: 0
     branch:
       weaponOrdering: 0
-      frames: []
+      frames:
+      - frameDuration: 0.52
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 21300000, guid: 0cd333d0c48acfe4fa61a6451964d0d1, type: 3}
   - name: SE
     facing: 1
     branch:
       weaponOrdering: 0
-      frames: []
+      frames:
+      - frameDuration: 0.52
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 21300000, guid: 0cd333d0c48acfe4fa61a6451964d0d1, type: 3}
   - name: E
     facing: 2
     branch:
       weaponOrdering: 0
-      frames: []
+      frames:
+      - frameDuration: 0.52
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 21300000, guid: 0cd333d0c48acfe4fa61a6451964d0d1, type: 3}
   - name: NE
     facing: 3
     branch:
       weaponOrdering: 0
-      frames: []
+      frames:
+      - frameDuration: 0.52
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 21300000, guid: 0cd333d0c48acfe4fa61a6451964d0d1, type: 3}
   - name: N
     facing: 4
     branch:
       weaponOrdering: 0
-      frames: []
+      frames:
+      - frameDuration: 0.52
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 21300000, guid: 0cd333d0c48acfe4fa61a6451964d0d1, type: 3}
   - name: NW
     facing: 5
     branch:
       weaponOrdering: 0
-      frames: []
+      frames:
+      - frameDuration: 0.52
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 21300000, guid: 0cd333d0c48acfe4fa61a6451964d0d1, type: 3}
   - name: W
     facing: 6
     branch:
       weaponOrdering: 0
-      frames: []
+      frames:
+      - frameDuration: 0.52
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 21300000, guid: 0cd333d0c48acfe4fa61a6451964d0d1, type: 3}
   - name: SW
     facing: 7
     branch:
       weaponOrdering: 0
-      frames: []
+      frames:
+      - frameDuration: 0.52
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 21300000, guid: 0cd333d0c48acfe4fa61a6451964d0d1, type: 3}

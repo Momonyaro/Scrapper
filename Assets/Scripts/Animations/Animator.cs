@@ -28,6 +28,11 @@ namespace Scrapper.Animation
             if (sprRenderer == null) return;
 
             sprRenderer.sprite = animations[currentAnimIndex].animation.GetFrameOfCurrentBranch(currentFacing);
+            if (animations[currentAnimIndex].animation.newFrame && !animations[currentAnimIndex].animation.loopAnim)
+            {
+                PlayAnimFromKeyword(animations[currentAnimIndex].animation.transitionTo);
+                sprRenderer.sprite = animations[currentAnimIndex].animation.GetFrameOfCurrentBranch(currentFacing);
+            }
             
             //Based on the current animation's newFrame flag we can decide to execute frame-logic when it's first displayed!
         }

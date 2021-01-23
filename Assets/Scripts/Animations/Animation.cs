@@ -14,6 +14,8 @@ namespace Scrapper.Animation
         
         public bool displayWeapons;
         public bool newFrame = false;
+        public bool loopAnim = true;
+        public string transitionTo = "";
         public BranchStruct[] branches = new BranchStruct[8]
         {
             new BranchStruct(new AnimBranch(), BranchFacing.S), 

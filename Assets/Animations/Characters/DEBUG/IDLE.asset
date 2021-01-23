@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: IDLE
   m_EditorClassIdentifier: 
   displayWeapons: 0
+  newFrame: 0
   branches:
   - name: S
     facing: 0
@@ -20,6 +21,8 @@ MonoBehaviour:
       weaponOrdering: 0
       frames:
       - frameDuration: 1
+        audioActions: []
+        logicActions: []
         frameSprite: {fileID: 2101769110263864022, guid: 12b3337c38070fd40913be9b49de9185, type: 3}
   - name: SE
     facing: 1
@@ -27,6 +30,8 @@ MonoBehaviour:
       weaponOrdering: 0
       frames:
       - frameDuration: 1
+        audioActions: []
+        logicActions: []
         frameSprite: {fileID: -8987663339259129995, guid: 12b3337c38070fd40913be9b49de9185, type: 3}
   - name: E
     facing: 2
@@ -34,6 +39,8 @@ MonoBehaviour:
       weaponOrdering: 0
       frames:
       - frameDuration: 1
+        audioActions: []
+        logicActions: []
         frameSprite: {fileID: 944279200071428551, guid: 12b3337c38070fd40913be9b49de9185, type: 3}
   - name: NE
     facing: 3
@@ -41,13 +48,17 @@ MonoBehaviour:
       weaponOrdering: 0
       frames:
       - frameDuration: 1
+        audioActions: []
+        logicActions: []
         frameSprite: {fileID: -5100767736063467222, guid: 12b3337c38070fd40913be9b49de9185, type: 3}
   - name: N
     facing: 4
     branch:
       weaponOrdering: 0
       frames:
-      - frameDuration: 0
+      - frameDuration: 1
+        audioActions: []
+        logicActions: []
         frameSprite: {fileID: 515429866362074765, guid: 12b3337c38070fd40913be9b49de9185, type: 3}
   - name: NW
     facing: 5
@@ -55,6 +66,8 @@ MonoBehaviour:
       weaponOrdering: 0
       frames:
       - frameDuration: 1
+        audioActions: []
+        logicActions: []
         frameSprite: {fileID: 5214843084132513004, guid: 12b3337c38070fd40913be9b49de9185, type: 3}
   - name: W
     facing: 6
@@ -62,6 +75,8 @@ MonoBehaviour:
       weaponOrdering: 0
       frames:
       - frameDuration: 1
+        audioActions: []
+        logicActions: []
         frameSprite: {fileID: 5603373076910919243, guid: 12b3337c38070fd40913be9b49de9185, type: 3}
   - name: SW
     facing: 7
@@ -69,4 +84,6 @@ MonoBehaviour:
       weaponOrdering: 0
       frames:
       - frameDuration: 1
+        audioActions: []
+        logicActions: []
         frameSprite: {fileID: 5047342361356805082, guid: 12b3337c38070fd40913be9b49de9185, type: 3}

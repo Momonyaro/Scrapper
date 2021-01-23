@@ -18,11 +18,24 @@ namespace Scrapper.Editor
         {
             Animation.Animation currentAnim = (Animation.Animation) target;
 
+            if (GUILayout.Button("Save Animation"))
+            {
+                EditorUtility.SetDirty(target);
+            }
+
             EditorGUILayout.BeginHorizontal();
             currentEditorFacing =
                 (Animation.Animation.BranchFacing) EditorGUILayout.EnumPopup("Current Editor Facing", currentEditorFacing);
             
             currentAnim.displayWeapons = EditorGUILayout.Toggle("Display Weapons", currentAnim.displayWeapons);
+            EditorGUILayout.EndHorizontal();
+            
+            EditorGUILayout.BeginHorizontal();
+            currentAnim.loopAnim = EditorGUILayout.Toggle("Loop Animation", currentAnim.loopAnim);
+            if (!currentAnim.loopAnim)
+            {
+                currentAnim.transitionTo = EditorGUILayout.TextField("Transition To", currentAnim.transitionTo);
+            }
             EditorGUILayout.EndHorizontal();
 
             if (currentAnim.branches.Length < 8)
@@ -184,7 +197,7 @@ namespace Scrapper.Editor
 
             if (GUILayout.Button("Set Correct Animation Rotation"))
             {
-                currentAnim.PlayAnimFromKeyword("_idle", 0);
+                currentAnim.PlayAnimFromKeyword(currentAnim.animations[currentAnim.currentAnimIndex].key, 0);
                 currentAnim.sprRenderer.sprite = currentAnim.animations[currentAnim.currentAnimIndex].animation.GetFrameOfCurrentBranch(currentAnim.currentFacing);
             }
             
