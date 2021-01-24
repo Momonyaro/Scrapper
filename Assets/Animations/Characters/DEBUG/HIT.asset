@@ -10,82 +10,82 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f171f80afa685e4991c5d45893bafc2, type: 3}
-  m_Name: IDLE
+  m_Name: HIT
   m_EditorClassIdentifier: 
-  displayWeapons: 0
-  newFrame: 0
-  loopAnim: 1
-  transitionTo: 
+  displayWeapons: 1
+  newFrame: 1
+  loopAnim: 0
+  transitionTo: _idle
   branches:
   - name: S
     facing: 0
     branch:
-      weaponOrdering: 0
+      weaponOrdering: 1
       frames:
-      - frameDuration: 1
+      - frameDuration: 0.36
         audioActions: []
         logicActions: []
-        frameSprite: {fileID: 948363782544610726, guid: 12b3337c38070fd40913be9b49de9185, type: 3}
+        frameSprite: {fileID: -7847660419660550892, guid: 9e9ce3cbe9dc1c2408973df31d8f997f, type: 3}
   - name: SE
     facing: 1
     branch:
-      weaponOrdering: 0
+      weaponOrdering: 1
       frames:
-      - frameDuration: 1
+      - frameDuration: 0.36
         audioActions: []
         logicActions: []
-        frameSprite: {fileID: 5040181295531836927, guid: 12b3337c38070fd40913be9b49de9185, type: 3}
+        frameSprite: {fileID: 3715671306972958958, guid: 9e9ce3cbe9dc1c2408973df31d8f997f, type: 3}
   - name: E
     facing: 2
     branch:
       weaponOrdering: 0
       frames:
-      - frameDuration: 1
+      - frameDuration: 0.36
         audioActions: []
         logicActions: []
-        frameSprite: {fileID: -5506039830066797341, guid: 12b3337c38070fd40913be9b49de9185, type: 3}
+        frameSprite: {fileID: 5332054203408768807, guid: 9e9ce3cbe9dc1c2408973df31d8f997f, type: 3}
   - name: NE
     facing: 3
     branch:
       weaponOrdering: 0
       frames:
-      - frameDuration: 1
+      - frameDuration: 0.36
         audioActions: []
         logicActions: []
-        frameSprite: {fileID: -2442995754030439991, guid: 12b3337c38070fd40913be9b49de9185, type: 3}
+        frameSprite: {fileID: 4955811605092530480, guid: 9e9ce3cbe9dc1c2408973df31d8f997f, type: 3}
   - name: N
     facing: 4
     branch:
       weaponOrdering: 0
       frames:
-      - frameDuration: 1
+      - frameDuration: 0.36
         audioActions: []
         logicActions: []
-        frameSprite: {fileID: 38257253530886936, guid: 12b3337c38070fd40913be9b49de9185, type: 3}
+        frameSprite: {fileID: -7392924801257841614, guid: 9e9ce3cbe9dc1c2408973df31d8f997f, type: 3}
   - name: NW
     facing: 5
     branch:
       weaponOrdering: 0
       frames:
-      - frameDuration: 1
+      - frameDuration: 0.36
         audioActions: []
         logicActions: []
-        frameSprite: {fileID: 7470070497570429743, guid: 12b3337c38070fd40913be9b49de9185, type: 3}
+        frameSprite: {fileID: 4761574233190512692, guid: 9e9ce3cbe9dc1c2408973df31d8f997f, type: 3}
   - name: W
     facing: 6
     branch:
-      weaponOrdering: 0
+      weaponOrdering: 1
       frames:
-      - frameDuration: 1
+      - frameDuration: 0.36
         audioActions: []
         logicActions: []
-        frameSprite: {fileID: -6445368277096037652, guid: 12b3337c38070fd40913be9b49de9185, type: 3}
+        frameSprite: {fileID: -1218663900099437348, guid: 9e9ce3cbe9dc1c2408973df31d8f997f, type: 3}
   - name: SW
     facing: 7
     branch:
-      weaponOrdering: 0
+      weaponOrdering: 1
       frames:
-      - frameDuration: 1
+      - frameDuration: 0.36
         audioActions: []
         logicActions: []
-        frameSprite: {fileID: 3740592527300647138, guid: 12b3337c38070fd40913be9b49de9185, type: 3}
+        frameSprite: {fileID: -1572986860304311046, guid: 9e9ce3cbe9dc1c2408973df31d8f997f, type: 3}

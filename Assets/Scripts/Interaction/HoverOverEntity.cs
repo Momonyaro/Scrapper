@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Scrapper.Entities;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -9,11 +10,14 @@ namespace Srapper.Interaction
     public class HoverOverEntity : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         public float lerpSpeed = 0.8f;
+        public Entity entityComponent;
         private Color ambientColor;
         private readonly Color activeColor = new Color(1.0f, 1.0f, 1.0f, 1.0f);
         private readonly Color aggroColor = new Color(1.0f, 0.0f, 0.0f, 1.0f);
-        [SerializeField] private bool activeHover = false;
-        [SerializeField] private bool debugAggroHover = false;
+        [SerializeField] public bool activeHover = false;
+        [SerializeField] public bool debugAggroHover = false;
+        [SerializeField] public bool disableTooltipForEntity = false;
+        private MouseHoverTooltip cachedMouseTooltip;
         
         [SerializeField] private SpriteRenderer circleRenderer;
 
@@ -23,23 +27,24 @@ namespace Srapper.Interaction
         private void Awake()
         {
             ambientColor = circleRenderer.color;
+            cachedMouseTooltip = FindObjectOfType<MouseHoverTooltip>();
         }
 
         private void FixedUpdate()
         {
             // Implement this later when combat is implemented, this should only be enabled when this NPC is aggro on the player
             // or when the player is hovering over this NPC in combatMode.
-            // if (debugAggroHover)
-            // {
-            //     if (circleRenderer.color != aggroColor)
-            //         circleRenderer.color = aggroColor;
-            //
-            //     float colorSin = Mathf.Abs(Mathf.Sin(Time.time * lerpSpeed)) * 0.5f;
-            //     colorSin += 0.5f; //This should be a range from 0.5 to 1.0;
-            //
-            //     circleRenderer.color = circleRenderer.color * new Color(1, 1, 1, colorSin);
-            // }
-            if (activeHover)
+            if (debugAggroHover)
+            {
+                if (circleRenderer.color != aggroColor)
+                    circleRenderer.color = aggroColor;
+            
+                float colorSin = Mathf.Abs(Mathf.Sin(Time.time * lerpSpeed)) * 0.5f;
+                colorSin += 0.5f; //This should be a range from 0.5 to 1.0;
+            
+                circleRenderer.color = circleRenderer.color * new Color(1, 1, 1, colorSin);
+            }
+            else if (activeHover)
             {
                 if (circleRenderer.color != activeColor)
                     circleRenderer.color = activeColor;
@@ -55,11 +60,23 @@ namespace Srapper.Interaction
 
         public void OnPointerEnter(PointerEventData eventData)
         {
+            GetComponent<Entity>().EntityTakeDamage(1);
+            
             activeHover = true;
+            string title = entityComponent.entityName;
+            if (entityComponent.entityAltTitle.Length > 0) title += ", " + entityComponent.entityAltTitle;
+            string content = entityComponent.GetHealthPercentageStatus();
+
+            if (!disableTooltipForEntity)
+            {
+                cachedMouseTooltip.CreateTooltip(title, content);
+                cachedMouseTooltip.gameObject.SetActive(true);
+            }
         }
 
         public void OnPointerExit(PointerEventData eventData)
         {
+            cachedMouseTooltip.DestroyTooltip();
             activeHover = false;
         }
     }

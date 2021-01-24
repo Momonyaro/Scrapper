@@ -141,9 +141,13 @@ MonoBehaviour:
   Name: Master
   StudioPath: bank:/Master
 <<<<<<< HEAD
+<<<<<<< HEAD
   lastModified: 637466764262261559
 =======
   lastModified: 637469301187794513
+>>>>>>> dev
+=======
+  lastModified: 637469419656411750
 >>>>>>> dev
   LoadResult: 0
   FileSizes: []
@@ -627,9 +631,13 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 1531970464413922558}
 <<<<<<< HEAD
+<<<<<<< HEAD
   stringsBankWriteTime: 637466764262391683
 =======
   stringsBankWriteTime: 637469301187814504
+>>>>>>> dev
+=======
+  stringsBankWriteTime: 637469419656431870
 >>>>>>> dev
   cacheVersion: 6
 --- !u!114 &22882072560914956
@@ -772,9 +780,13 @@ MonoBehaviour:
   Name: Master.strings
   StudioPath: bank:/Master.strings
 <<<<<<< HEAD
+<<<<<<< HEAD
   lastModified: 637466764262391683
 =======
   lastModified: 637469301187814504
+>>>>>>> dev
+=======
+  lastModified: 637469419656431870
 >>>>>>> dev
   LoadResult: 0
   FileSizes:
