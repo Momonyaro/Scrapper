@@ -28,7 +28,7 @@ namespace Scrapper.Animation
             if (sprRenderer == null) return;
 
             sprRenderer.sprite = animations[currentAnimIndex].animation.GetFrameOfCurrentBranch(currentFacing);
-            if (animations[currentAnimIndex].animation.newFrame && !animations[currentAnimIndex].animation.loopAnim)
+            if (animations[currentAnimIndex].animation.loopFrame && !animations[currentAnimIndex].animation.loopAnim)
             {
                 PlayAnimFromKeyword(animations[currentAnimIndex].animation.transitionTo);
                 sprRenderer.sprite = animations[currentAnimIndex].animation.GetFrameOfCurrentBranch(currentFacing);

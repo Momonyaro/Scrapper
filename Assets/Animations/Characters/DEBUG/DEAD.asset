@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayWeapons: 0
   newFrame: 0
+  loopAnim: 1
+  transitionTo: 
   branches:
   - name: S
     facing: 0
@@ -23,7 +25,7 @@ MonoBehaviour:
       - frameDuration: 0.2
         audioActions: []
         logicActions: []
-        frameSprite: {fileID: 21300000, guid: 8f18b8c3bf7257a458862bb26d258091, type: 3}
+        frameSprite: {fileID: 5504609564245305671, guid: f499439c4025d0b4094b9801773ad2e2, type: 3}
   - name: SE
     facing: 1
     branch:
@@ -32,7 +34,7 @@ MonoBehaviour:
       - frameDuration: 0.2
         audioActions: []
         logicActions: []
-        frameSprite: {fileID: 21300000, guid: 8f18b8c3bf7257a458862bb26d258091, type: 3}
+        frameSprite: {fileID: 4408621797799669356, guid: f499439c4025d0b4094b9801773ad2e2, type: 3}
   - name: E
     facing: 2
     branch:
@@ -41,7 +43,7 @@ MonoBehaviour:
       - frameDuration: 0.2
         audioActions: []
         logicActions: []
-        frameSprite: {fileID: 21300000, guid: 8f18b8c3bf7257a458862bb26d258091, type: 3}
+        frameSprite: {fileID: -1926685085238327952, guid: f499439c4025d0b4094b9801773ad2e2, type: 3}
   - name: NE
     facing: 3
     branch:
@@ -50,7 +52,7 @@ MonoBehaviour:
       - frameDuration: 0.2
         audioActions: []
         logicActions: []
-        frameSprite: {fileID: 21300000, guid: 8f18b8c3bf7257a458862bb26d258091, type: 3}
+        frameSprite: {fileID: 1458052294990732975, guid: f499439c4025d0b4094b9801773ad2e2, type: 3}
   - name: N
     facing: 4
     branch:
@@ -59,7 +61,7 @@ MonoBehaviour:
       - frameDuration: 0.2
         audioActions: []
         logicActions: []
-        frameSprite: {fileID: 21300000, guid: 8f18b8c3bf7257a458862bb26d258091, type: 3}
+        frameSprite: {fileID: -5544284184854764915, guid: f499439c4025d0b4094b9801773ad2e2, type: 3}
   - name: NW
     facing: 5
     branch:
@@ -68,7 +70,7 @@ MonoBehaviour:
       - frameDuration: 0.2
         audioActions: []
         logicActions: []
-        frameSprite: {fileID: 21300000, guid: 8f18b8c3bf7257a458862bb26d258091, type: 3}
+        frameSprite: {fileID: 7067906665633302220, guid: f499439c4025d0b4094b9801773ad2e2, type: 3}
   - name: W
     facing: 6
     branch:
@@ -77,7 +79,7 @@ MonoBehaviour:
       - frameDuration: 0.2
         audioActions: []
         logicActions: []
-        frameSprite: {fileID: 21300000, guid: 8f18b8c3bf7257a458862bb26d258091, type: 3}
+        frameSprite: {fileID: 791683643999286109, guid: f499439c4025d0b4094b9801773ad2e2, type: 3}
   - name: SW
     facing: 7
     branch:
@@ -86,4 +88,4 @@ MonoBehaviour:
       - frameDuration: 0.2
         audioActions: []
         logicActions: []
-        frameSprite: {fileID: 21300000, guid: 8f18b8c3bf7257a458862bb26d258091, type: 3}
+        frameSprite: {fileID: 2256749004777413085, guid: f499439c4025d0b4094b9801773ad2e2, type: 3}

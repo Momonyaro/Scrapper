@@ -14,6 +14,7 @@ namespace Scrapper.Animation
         
         public bool displayWeapons;
         public bool newFrame = false;
+        public bool loopFrame = false;
         public bool loopAnim = true;
         public string transitionTo = "";
         public BranchStruct[] branches = new BranchStruct[8]
@@ -34,10 +35,10 @@ namespace Scrapper.Animation
             {
                 if (branches[i].GetFacing() != facing) continue;
 
-                return branches[i].GetBranch().TickFrames(Time.deltaTime, out newFrame);
+                return branches[i].GetBranch().TickFrames(Time.deltaTime, out newFrame, out loopFrame);
             }
             
-            return branches[0].GetBranch().TickFrames(Time.deltaTime, out newFrame);
+            return branches[0].GetBranch().TickFrames(Time.deltaTime, out newFrame, out loopFrame);
         }
         
         

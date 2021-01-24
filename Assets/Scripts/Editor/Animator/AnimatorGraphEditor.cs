@@ -83,6 +83,23 @@ namespace Scrapper.Editor
             {
                 for (int j = 0; j < currentAnim.branches.Length; j++)
                 {
+                    if (currentAnim.branches[j].GetBranch() == null) currentAnim.branches[j].SetBranch(new AnimBranch() {frames = new List<AnimFrame>()});
+                    if (currentAnim.branches[j].GetBranch().frames == null) currentAnim.branches[j].SetBranch(new AnimBranch() {frames = new List<AnimFrame>()});
+                    if (currentAnim.branches[j].GetBranch().frames.Count < currentBranch.frames.Count)
+                        currentAnim.branches[j].SetBranch(new AnimBranch()
+                        {
+                            frames = new List<AnimFrame>(currentBranch.frames.Count)
+                            {
+                                new AnimFrame() {audioActions = new List<string>(), logicActions = new List<string>(), frameDuration = 0.2f},
+                                new AnimFrame() {audioActions = new List<string>(), logicActions = new List<string>(), frameDuration = 0.2f},
+                                new AnimFrame() {audioActions = new List<string>(), logicActions = new List<string>(), frameDuration = 0.2f},
+                                new AnimFrame() {audioActions = new List<string>(), logicActions = new List<string>(), frameDuration = 0.2f},
+                                new AnimFrame() {audioActions = new List<string>(), logicActions = new List<string>(), frameDuration = 0.2f},
+                                new AnimFrame() {audioActions = new List<string>(), logicActions = new List<string>(), frameDuration = 0.2f},
+                                new AnimFrame() {audioActions = new List<string>(), logicActions = new List<string>(), frameDuration = 0.2f},
+                                new AnimFrame() {audioActions = new List<string>(), logicActions = new List<string>(), frameDuration = 0.2f}
+                            }
+                        });
                     currentAnim.branches[j].GetBranch().frames[i].frameDuration = currentBranch.frames[i].frameDuration;
                     currentAnim.branches[j].GetBranch().frames[i].audioActions = currentBranch.frames[i].audioActions;
                     currentAnim.branches[j].GetBranch().frames[i].logicActions = currentBranch.frames[i].logicActions;
@@ -103,6 +120,8 @@ namespace Scrapper.Editor
                 for (int i = 0; i < currentAnim.branches.Length; i++)
                 {
                     AnimBranch branch = currentAnim.branches[i].GetBranch();
+                    if (branch == null) branch = new AnimBranch() {frames = new List<AnimFrame>()};
+                    if (branch.frames == null) branch.frames = new List<AnimFrame>(currentAnim.branches[0].GetBranch().frames);
                     branch.frames.Add(new AnimFrame()
                     {
                         frameDuration = 0.2f

@@ -33,6 +33,12 @@ public class Pathfinder : MonoBehaviour
     private void Update()
     {
         if (!enableController) return;
+
+        if (playerControlled && Input.GetKeyDown(KeyCode.A))
+        {
+            characterAnimator.PlayAnimFromKeyword("_punch");
+        }
+        
         if (playerControlled && Input.GetMouseButtonDown(0))
         {
             if (!IsPointerOverUIElement())
