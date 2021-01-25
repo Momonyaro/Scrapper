@@ -19,6 +19,7 @@ namespace Scrapper.Animation
                 if (animations[i].key != key) continue;
 
                 currentAnimIndex = i;
+                animations[currentAnimIndex].animation.ResetBranchIndices();
             }
             return false;
         }

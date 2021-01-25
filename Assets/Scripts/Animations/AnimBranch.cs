@@ -13,7 +13,7 @@ namespace Scrapper.Animation
             Weapons_Back
         }
 
-        private int currentFrame = 0;
+        public int currentFrame = 0;
         public WeaponOrdering weaponOrdering;
         public List<AnimFrame> frames;
 

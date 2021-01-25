@@ -60,7 +60,7 @@ namespace Srapper.Interaction
 
         public void OnPointerEnter(PointerEventData eventData)
         {
-            GetComponent<Entity>().EntityTakeDamage(1);
+            //GetComponent<Entity>().EntityTakeDamage(1); // Debug entities taking damage onHover
             
             activeHover = true;
             string title = entityComponent.entityName;

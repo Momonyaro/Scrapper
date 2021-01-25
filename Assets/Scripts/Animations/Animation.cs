@@ -40,6 +40,18 @@ namespace Scrapper.Animation
             
             return branches[0].GetBranch().TickFrames(Time.deltaTime, out newFrame, out loopFrame);
         }
+
+        public void ResetBranchIndices(int resetTo = 0)
+        {
+            for (int i = 0; i < branches.Length; i++)
+            {
+                AnimBranch branch = branches[i].GetBranch();
+
+                branch.currentFrame = resetTo;
+                
+                branches[i].SetBranch(branch);
+            }
+        }
         
         
     }
