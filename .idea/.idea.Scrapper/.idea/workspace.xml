@@ -20,11 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b667d6b-b66a-4052-a784-3d234f051598" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animations/AnimBranch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animations/AnimBranch.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animations/Animation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animations/Animation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animations/Animator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animations/Animator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/HoverOverEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/HoverOverEntity.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +36,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerControl/TestMouseController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Pathfinding/PolyNavObstacle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/FactionRelationEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerControl/TrackingCamera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/HoverOverEntity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Animations/AnimFrame.cs" root0="FORCE_HIGHLIGHTING" />
@@ -65,6 +63,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Animations/AnimBranch.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Animations/Animation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/HoverOverEntity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Factions/FactionRelations.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/FactionRelationEditor.cs" />
       </list>
     </option>
   </component>
@@ -130,6 +130,7 @@
       <workItem from="1611339635817" duration="7502000" />
       <workItem from="1611417887514" duration="480000" />
       <workItem from="1611527048908" duration="4774000" />
+      <workItem from="1611577582830" duration="7393000" />
     </task>
     <servers />
   </component>

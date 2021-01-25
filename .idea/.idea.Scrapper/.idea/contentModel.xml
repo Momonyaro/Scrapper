@@ -160,12 +160,16 @@
               <e p="AnimatorGraphEditor.cs" t="Include" />
             </e>
             <e p="EntityEditor.cs" t="Include" />
+            <e p="FactionRelationEditor.cs" t="Include" />
             <e p="Pathfinding" t="Include">
               <e p="PolyNavEditor.cs" t="Include" />
             </e>
           </e>
           <e p="Entities" t="Include">
             <e p="Entity.cs" t="Include" />
+          </e>
+          <e p="Factions" t="Include">
+            <e p="FactionRelations.cs" t="Include" />
           </e>
           <e p="Interaction" t="Include">
             <e p="HoverOverEntity.cs" t="Include" />
