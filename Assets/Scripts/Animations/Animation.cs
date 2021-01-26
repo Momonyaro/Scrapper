@@ -16,6 +16,8 @@ namespace Scrapper.Animation
         public bool newFrame = false;
         public bool loopFrame = false;
         public bool loopAnim = true;
+        public List<string> currentLogicActions = new List<string>();
+        public List<string> currentAudioActions = new List<string>();
         public string transitionTo = "";
         public BranchStruct[] branches = new BranchStruct[8]
         {
@@ -35,10 +37,31 @@ namespace Scrapper.Animation
             {
                 if (branches[i].GetFacing() != facing) continue;
 
+                
+                if (newFrame)
+                {
+                    currentLogicActions = branches[i].GetBranch().frames[branches[i].GetBranch().currentFrame]
+                        .logicActions;
+                    currentAudioActions = branches[i].GetBranch().frames[branches[i].GetBranch().currentFrame]
+                        .audioActions;
+                }
+                
                 return branches[i].GetBranch().TickFrames(Time.deltaTime, out newFrame, out loopFrame);
             }
             
             return branches[0].GetBranch().TickFrames(Time.deltaTime, out newFrame, out loopFrame);
+        }
+
+        public void ResetBranchIndices(int resetTo = 0)
+        {
+            for (int i = 0; i < branches.Length; i++)
+            {
+                AnimBranch branch = branches[i].GetBranch();
+
+                branch.currentFrame = resetTo;
+                
+                branches[i].SetBranch(branch);
+            }
         }
         
         

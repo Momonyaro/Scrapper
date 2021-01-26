@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a325a3da61dbc449ac265cc118e67c6, type: 3}
+  m_Name: BASE_RELATIONS
+  m_EditorClassIdentifier: 
+  factions:
+  - factionName: The Family
+    factionID: d8372c04-f84b-42d9-beaf-b63242684795
+    playerPartyOpinion: 0
+    folded: 0
+    relations: []
+  - factionName: Vegoniites
+    factionID: c85b6c34-cfa7-444c-aa8a-b81c38558312
+    playerPartyOpinion: 0
+    folded: 0
+    relations: []
+  - factionName: The Republic
+    factionID: 64727d5d-5734-4bda-ba3e-c2fa17018fc5
+    playerPartyOpinion: 0
+    folded: 0
+    relations: []
+  - factionName: Loners
+    factionID: 737916f2-9643-4e55-8ce6-bc1647b32664
+    playerPartyOpinion: 0
+    folded: 0
+    relations: []
+  - factionName: Porters
+    factionID: 59e4592a-3e33-44ef-9fb4-42e887ca7ef7
+    playerPartyOpinion: 0
+    folded: 0
+    relations: []
+  - factionName: GU Enforcers
+    factionID: aab26ce9-7b49-485f-bbd3-9c6b4a54731c
+    playerPartyOpinion: -5
+    folded: 0
+    relations: []
+  - factionName: FIC Agents
+    factionID: 89007a47-bcdc-44a4-8997-e72cb4963e83
+    playerPartyOpinion: -15
+    folded: 0
+    relations: []
+  - factionName: Scavengers
+    factionID: 6c8e3b9b-fd7e-4c9b-8d23-92363727a901
+    playerPartyOpinion: 0
+    folded: 0
+    relations: []

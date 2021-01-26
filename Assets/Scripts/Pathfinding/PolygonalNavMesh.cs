@@ -242,7 +242,7 @@ namespace Scrapper.Pathfinding
             }
         }
 
-        bool InLineOfSight(Vector2 start, Vector2 end)
+        public bool InLineOfSight(Vector2 start, Vector2 end)
         {
             // Not in LOS if any of the ends is outside the polygon
             if (!Inside(new List<Vector2>(polyCollider.points), start) || !Inside(new List<Vector2>(polyCollider.points), end)) return false;

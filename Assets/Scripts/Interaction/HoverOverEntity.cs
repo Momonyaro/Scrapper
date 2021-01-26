@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using Scrapper.Entities;
+using Scrapper.Managers;
+using Scrapper.Pathfinding;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -60,15 +62,40 @@ namespace Srapper.Interaction
 
         public void OnPointerEnter(PointerEventData eventData)
         {
-            GetComponent<Entity>().EntityTakeDamage(1);
+            //GetComponent<Entity>().EntityTakeDamage(1); // Debug entities taking damage onHover
+            
             
             activeHover = true;
             string title = entityComponent.entityName;
-            if (entityComponent.entityAltTitle.Length > 0) title += ", " + entityComponent.entityAltTitle;
-            string content = entityComponent.GetHealthPercentageStatus();
+            string content = "";
+            if (entityComponent.entityAltTitle.Length > 0) content += entityComponent.entityAltTitle + "\n";
+            content += "\n" + entityComponent.GetHealthPercentageStatus();
 
             if (!disableTooltipForEntity)
             {
+                // Create an alternate tooltip for when the player has toggled combatMode
+                if (CombatManager.playerCombatMode && entityComponent.healthPts[0] != 0)
+                {
+                    CombatManager.lastTarget = this.entityComponent;
+                    debugAggroHover = true;
+                    float distanceToPlayer = CombatManager.DistanceToPlayer(transform.position);
+                    content = "";
+                    if (FindObjectOfType<PolygonalNavMesh>()
+                        .InLineOfSight(CombatManager.playerEntity.transform.parent.position, transform.parent.position))
+                    {
+                        if (CombatManager.outOfReach)
+                        {
+                            content +=  "\n <color=red>Out of Reach!</color>";
+                        }
+                        else
+                            content +=  "\n " + distanceToPlayer + "m";
+                    }
+                    else 
+                        content +=  "\n <color=red>Can't see the Target</color>";
+                    //Insert AP cost here.
+                    content += "\n " + entityComponent.GetHealthPercentageStatus();
+                }
+                
                 cachedMouseTooltip.CreateTooltip(title, content);
                 cachedMouseTooltip.gameObject.SetActive(true);
             }
@@ -76,6 +103,7 @@ namespace Srapper.Interaction
 
         public void OnPointerExit(PointerEventData eventData)
         {
+            debugAggroHover = false;
             cachedMouseTooltip.DestroyTooltip();
             activeHover = false;
         }
