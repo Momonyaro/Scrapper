@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f171f80afa685e4991c5d45893bafc2, type: 3}
+  m_Name: HITDEAD
+  m_EditorClassIdentifier: 
+  displayWeapons: 0
+  newFrame: 0
+  loopFrame: 0
+  loopAnim: 1
+  transitionTo: 
+  branches:
+  - name: S
+    facing: 0
+    branch:
+      currentFrame: 0
+      weaponOrdering: 0
+      frames: []
+  - name: SE
+    facing: 1
+    branch:
+      currentFrame: 0
+      weaponOrdering: 0
+      frames: []
+  - name: E
+    facing: 2
+    branch:
+      currentFrame: 0
+      weaponOrdering: 0
+      frames: []
+  - name: NE
+    facing: 3
+    branch:
+      currentFrame: 0
+      weaponOrdering: 0
+      frames: []
+  - name: N
+    facing: 4
+    branch:
+      currentFrame: 0
+      weaponOrdering: 0
+      frames: []
+  - name: NW
+    facing: 5
+    branch:
+      currentFrame: 0
+      weaponOrdering: 0
+      frames: []
+  - name: W
+    facing: 6
+    branch:
+      currentFrame: 0
+      weaponOrdering: 0
+      frames: []
+  - name: SW
+    facing: 7
+    branch:
+      currentFrame: 0
+      weaponOrdering: 0
+      frames: []

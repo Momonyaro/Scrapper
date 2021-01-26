@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using Scrapper.Managers;
 using UnityEngine;
 using Scrapper.Pathfinding;
 using Srapper.Interaction;
@@ -34,12 +35,29 @@ public class Pathfinder : MonoBehaviour
     {
         if (!enableController) return;
 
-        if (playerControlled && Input.GetKeyDown(KeyCode.A))
+        if (playerControlled && !CombatManager.playerCombatMode && Input.GetKeyDown(KeyCode.A))
         {
-            characterAnimator.PlayAnimFromKeyword("_punch");
+            CombatManager.playerCombatMode = true;
         }
         
-        if (playerControlled && Input.GetMouseButtonDown(0))
+        if (playerControlled && CombatManager.playerCombatMode)
+        {
+            if (currentPath.Count > 0) currentPath.Clear();
+            lineRenderer.positionCount = 0;
+            
+            if (Input.GetMouseButtonDown(1))
+            {
+                CombatManager.playerCombatMode = false;
+            }
+            else if (Input.GetMouseButtonDown(0))
+            {
+                CombatManager.AttackLastTarget();
+            }
+
+            return;
+        }
+
+        if (playerControlled && !CombatManager.playerCombatMode && Input.GetMouseButtonDown(0))
         {
             if (!IsPointerOverUIElement())
             {

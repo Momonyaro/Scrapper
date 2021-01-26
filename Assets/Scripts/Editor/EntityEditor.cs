@@ -41,11 +41,14 @@ namespace Scrapper.Editor
 
             EditorGUILayout.BeginVertical("HelpBox");
 
-            for (int i = 0; i < entity.stats.Keys.Count; i++)
-            {
-                string key = entity.stats.ElementAt(i).Key;
-                entity.stats[key] = EditorGUILayout.IntField(key, entity.stats.ElementAt(i).Value);
-            }
+            entity.stats[0] = EditorGUILayout.IntField("Guns", entity.stats[0]);
+            entity.stats[1] = EditorGUILayout.IntField("Tech", entity.stats[1]);
+            entity.stats[2] = EditorGUILayout.IntField("Strength", entity.stats[2]);
+            entity.stats[3] = EditorGUILayout.IntField("Dexterity", entity.stats[3]);
+            entity.stats[4] = EditorGUILayout.IntField("Endurance", entity.stats[4]);
+            entity.stats[5] = EditorGUILayout.IntField("Charisma", entity.stats[5]);
+            entity.stats[6] = EditorGUILayout.IntField("Luck", entity.stats[6]);
+            
             EditorGUILayout.EndVertical();
             
             EditorGUILayout.EndVertical();

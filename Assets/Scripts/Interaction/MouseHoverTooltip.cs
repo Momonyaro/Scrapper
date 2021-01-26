@@ -1,13 +1,18 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Scrapper.Managers;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class MouseHoverTooltip : MonoBehaviour
 {
     public RectTransform tooltipContainer;
-    public Text tooltipTitle;
+    public TextMeshProUGUI tooltipTitle;
+    public TextMeshProUGUI tooltipContent;
+    public LayoutElement LayoutElement;
+    public int breakNewLineAt = 50;
     public bool drawTooltip = false;
 
     private void Update()
@@ -34,7 +39,10 @@ public class MouseHoverTooltip : MonoBehaviour
 
     public void CreateTooltip(string title, string content)
     {
-        tooltipTitle.text = title + "   (" + content + ")";
+        LayoutElement.enabled = (title.Length >= breakNewLineAt || content.Length >= breakNewLineAt);
+            
+        tooltipTitle.text = title;
+        tooltipContent.text = content;
         GetComponent<RectTransform>().position = Input.mousePosition;
         drawTooltip = true;
     }
@@ -42,6 +50,8 @@ public class MouseHoverTooltip : MonoBehaviour
     public void DestroyTooltip()
     {
         tooltipTitle.text = "";
+        tooltipContent.text = "";
         drawTooltip = false;
+        CombatManager.lastTarget = null;
     }
 }
