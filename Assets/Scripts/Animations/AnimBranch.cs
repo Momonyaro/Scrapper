@@ -35,6 +35,9 @@ namespace Scrapper.Animation
 
             loopFrame = false;
             newFrame = false;
+            
+            if (currentFrame >= frames.Count) currentFrame = 0;
+            
             return frames[currentFrame].GetSprite();
         }
         

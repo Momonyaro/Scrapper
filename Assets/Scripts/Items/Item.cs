@@ -29,6 +29,7 @@ namespace Scrapper.Items
         public string itemID = Guid.NewGuid().ToString();
         public ItemType ItemType = ItemType.Misc;
         public StatBase StatBase = StatBase.None;
+        public string itemCombatAnim = "";
 
         public int dam;
         public int dt;

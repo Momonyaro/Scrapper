@@ -52,6 +52,5 @@ public class MouseHoverTooltip : MonoBehaviour
         tooltipTitle.text = "";
         tooltipContent.text = "";
         drawTooltip = false;
-        CombatManager.lastTarget = null;
     }
 }

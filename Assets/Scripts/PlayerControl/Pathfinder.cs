@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using Scrapper.Entities;
 using Scrapper.Managers;
 using UnityEngine;
 using Scrapper.Pathfinding;
@@ -18,6 +19,7 @@ public class Pathfinder : MonoBehaviour
     public bool playerControlled = false;
     public bool useLineRenderer = false;
     public Animator characterAnimator;
+    public Entity pathingEntity;
     public UnityEngine.LineRenderer lineRenderer;
     public float playerSpeed = 2.5f;
     public float minNodeDistance = 0.2f;
@@ -49,9 +51,9 @@ public class Pathfinder : MonoBehaviour
             {
                 CombatManager.playerCombatMode = false;
             }
-            else if (Input.GetMouseButtonDown(0))
+            else if (Input.GetMouseButtonDown(0) && CombatManager.lastTarget != null && !CombatManager.outOfReach)
             {
-                CombatManager.AttackLastTarget();
+                characterAnimator.PlayAnimFromKeyword(CombatManager.GetPlayerWeapon().itemCombatAnim);
             }
 
             return;

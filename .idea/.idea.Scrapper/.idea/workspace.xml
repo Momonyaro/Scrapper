@@ -20,15 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b667d6b-b66a-4052-a784-3d234f051598" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Characters/DEBUG/RUN.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Characters/DEBUG/RUN.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/EntityEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/EntityEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Entity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/HoverOverEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/HoverOverEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Characters/DEBUG/HITDEAD.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Characters/DEBUG/HITDEAD.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Characters/DEBUG/PUNCH.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Characters/DEBUG/PUNCH.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Items/Fistecuffs.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Items/Fistecuffs.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animations/AnimBranch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animations/AnimBranch.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animations/Animation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animations/Animation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animations/Animator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animations/Animator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/MouseHoverTooltip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/MouseHoverTooltip.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pathfinding/PolygonalNavMesh.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pathfinding/PolygonalNavMesh.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/CombatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/CombatManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,19 +65,19 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/LayerManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/Animator/AnimatorGraphEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerControl/TrackingCamera.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Animations/Animator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Animations/AnimBranch.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Animations/Animation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Factions/FactionRelations.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/FactionRelationEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pathfinding/PolygonalNavMesh.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/MouseHoverTooltip.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/EntityEditor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Entities/Entity.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/CombatManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/HoverOverEntity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/CombatManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Animations/Animator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Animations/Animation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Animations/AnimBranch.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/MouseHoverTooltip.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" />
       </list>
     </option>
   </component>
@@ -144,6 +145,7 @@
       <workItem from="1611527048908" duration="4774000" />
       <workItem from="1611577582830" duration="7393000" />
       <workItem from="1611618558890" duration="10109000" />
+      <workItem from="1611672189816" duration="2245000" />
     </task>
     <servers />
   </component>

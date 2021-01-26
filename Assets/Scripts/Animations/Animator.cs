@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Scrapper.Managers;
 using UnityEngine;
 
 namespace Scrapper.Animation
@@ -34,8 +35,53 @@ namespace Scrapper.Animation
                 PlayAnimFromKeyword(animations[currentAnimIndex].animation.transitionTo);
                 sprRenderer.sprite = animations[currentAnimIndex].animation.GetFrameOfCurrentBranch(currentFacing);
             }
+
+            if (animations[currentAnimIndex].animation.newFrame)
+            {
+                //Check if we have a logic or audio actions to parse.
+                for (int i = 0; i < animations[currentAnimIndex].animation.currentLogicActions.Count; i++)
+                {
+                    ParseAnimLogicAction(animations[currentAnimIndex].animation.currentLogicActions[i]);   
+                }
+                for (int i = 0; i < animations[currentAnimIndex].animation.currentAudioActions.Count; i++)
+                {
+                    ParseAnimLogicAction(animations[currentAnimIndex].animation.currentLogicActions[i]);   
+                }
+            }
             
             //Based on the current animation's newFrame flag we can decide to execute frame-logic when it's first displayed!
+        }
+
+        private void ParseAnimLogicAction(string action)
+        {
+            switch (action)
+            {
+                case "dmgFrame":
+                {
+                    Debug.Log("Parsing attack");
+                    CombatManager.AttackLastTarget();
+                    break;
+                }
+            }
+        }
+
+        private void ParseAnimAudioAction(string action)
+        {
+            switch (action) //Perhaps revamp later depending on audio manager implementation!
+            {
+                case "playPunch":
+                {
+                    break;
+                }
+                case "playHit":
+                {
+                    break;
+                }
+                case "playDeath":
+                {
+                    break;
+                }
+            }
         }
     }
 

@@ -13,13 +13,17 @@ MonoBehaviour:
   m_Name: PUNCH
   m_EditorClassIdentifier: 
   displayWeapons: 0
-  newFrame: 0
+  newFrame: 1
+  loopFrame: 1
   loopAnim: 0
+  currentLogicActions: []
+  currentAudioActions: []
   transitionTo: _idle
   branches:
   - name: S
     facing: 0
     branch:
+      currentFrame: 0
       weaponOrdering: 0
       frames:
       - frameDuration: 0.2
@@ -28,7 +32,8 @@ MonoBehaviour:
         frameSprite: {fileID: -868728853040972118, guid: 857b4a407f4aa6f428a82d41acba0c58, type: 3}
       - frameDuration: 0.2
         audioActions: []
-        logicActions: []
+        logicActions:
+        - dmgFrame
         frameSprite: {fileID: 5839471890687545681, guid: 9dac7b651ff0d174cb614be45376816c, type: 3}
       - frameDuration: 0.2
         audioActions: []
@@ -37,6 +42,7 @@ MonoBehaviour:
   - name: SE
     facing: 1
     branch:
+      currentFrame: 0
       weaponOrdering: 0
       frames:
       - frameDuration: 0.2
@@ -45,7 +51,8 @@ MonoBehaviour:
         frameSprite: {fileID: 7289559027439781497, guid: 857b4a407f4aa6f428a82d41acba0c58, type: 3}
       - frameDuration: 0.2
         audioActions: []
-        logicActions: []
+        logicActions:
+        - dmgFrame
         frameSprite: {fileID: 8017686532290231354, guid: 9dac7b651ff0d174cb614be45376816c, type: 3}
       - frameDuration: 0.2
         audioActions: []
@@ -54,6 +61,7 @@ MonoBehaviour:
   - name: E
     facing: 2
     branch:
+      currentFrame: 0
       weaponOrdering: 0
       frames:
       - frameDuration: 0.2
@@ -62,7 +70,8 @@ MonoBehaviour:
         frameSprite: {fileID: -3053011435442646249, guid: 857b4a407f4aa6f428a82d41acba0c58, type: 3}
       - frameDuration: 0.2
         audioActions: []
-        logicActions: []
+        logicActions:
+        - dmgFrame
         frameSprite: {fileID: 1788875200348468309, guid: 9dac7b651ff0d174cb614be45376816c, type: 3}
       - frameDuration: 0.2
         audioActions: []
@@ -71,6 +80,7 @@ MonoBehaviour:
   - name: NE
     facing: 3
     branch:
+      currentFrame: 0
       weaponOrdering: 0
       frames:
       - frameDuration: 0.2
@@ -79,7 +89,8 @@ MonoBehaviour:
         frameSprite: {fileID: 7166638605046611876, guid: 857b4a407f4aa6f428a82d41acba0c58, type: 3}
       - frameDuration: 0.2
         audioActions: []
-        logicActions: []
+        logicActions:
+        - dmgFrame
         frameSprite: {fileID: 7468208252938068523, guid: 9dac7b651ff0d174cb614be45376816c, type: 3}
       - frameDuration: 0.2
         audioActions: []
@@ -88,6 +99,7 @@ MonoBehaviour:
   - name: N
     facing: 4
     branch:
+      currentFrame: 0
       weaponOrdering: 0
       frames:
       - frameDuration: 0.2
@@ -96,7 +108,8 @@ MonoBehaviour:
         frameSprite: {fileID: 1966645052339651271, guid: 857b4a407f4aa6f428a82d41acba0c58, type: 3}
       - frameDuration: 0.2
         audioActions: []
-        logicActions: []
+        logicActions:
+        - dmgFrame
         frameSprite: {fileID: -496357405237435703, guid: 9dac7b651ff0d174cb614be45376816c, type: 3}
       - frameDuration: 0.2
         audioActions: []
@@ -105,6 +118,7 @@ MonoBehaviour:
   - name: NW
     facing: 5
     branch:
+      currentFrame: 0
       weaponOrdering: 0
       frames:
       - frameDuration: 0.2
@@ -113,7 +127,8 @@ MonoBehaviour:
         frameSprite: {fileID: 8732744715833858174, guid: 857b4a407f4aa6f428a82d41acba0c58, type: 3}
       - frameDuration: 0.2
         audioActions: []
-        logicActions: []
+        logicActions:
+        - dmgFrame
         frameSprite: {fileID: -2357152859171975485, guid: 9dac7b651ff0d174cb614be45376816c, type: 3}
       - frameDuration: 0.2
         audioActions: []
@@ -122,6 +137,7 @@ MonoBehaviour:
   - name: W
     facing: 6
     branch:
+      currentFrame: 0
       weaponOrdering: 0
       frames:
       - frameDuration: 0.2
@@ -130,7 +146,8 @@ MonoBehaviour:
         frameSprite: {fileID: -3173984790947843437, guid: 857b4a407f4aa6f428a82d41acba0c58, type: 3}
       - frameDuration: 0.2
         audioActions: []
-        logicActions: []
+        logicActions:
+        - dmgFrame
         frameSprite: {fileID: 1447259825192065565, guid: 9dac7b651ff0d174cb614be45376816c, type: 3}
       - frameDuration: 0.2
         audioActions: []
@@ -139,6 +156,7 @@ MonoBehaviour:
   - name: SW
     facing: 7
     branch:
+      currentFrame: 0
       weaponOrdering: 0
       frames:
       - frameDuration: 0.2
@@ -147,7 +165,8 @@ MonoBehaviour:
         frameSprite: {fileID: -1694884878046644406, guid: 857b4a407f4aa6f428a82d41acba0c58, type: 3}
       - frameDuration: 0.2
         audioActions: []
-        logicActions: []
+        logicActions:
+        - dmgFrame
         frameSprite: {fileID: 2496505955185752407, guid: 9dac7b651ff0d174cb614be45376816c, type: 3}
       - frameDuration: 0.2
         audioActions: []

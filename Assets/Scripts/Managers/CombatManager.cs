@@ -58,10 +58,6 @@ namespace Scrapper.Managers
             //Debug.Log("Player str is: " + playerEntity.stats[2]);
             //Debug.Log("Dealt " + damage + " damage to: " + lastTarget.entityName);
             lastTarget.EntityTakeDamage(damage);
-
-            Animator animator = playerEntity.GetAnimator();
-            if (animator != null)
-                animator.PlayAnimFromKeyword("_punch");
             
             playerCombatMode = false;
             lastTarget = null;
