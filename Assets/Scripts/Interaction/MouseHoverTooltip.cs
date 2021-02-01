@@ -39,7 +39,7 @@ public class MouseHoverTooltip : MonoBehaviour
 
     public void CreateTooltip(string title, string content)
     {
-        LayoutElement.enabled = (title.Length >= breakNewLineAt || content.Length >= breakNewLineAt);
+        LayoutElement.enabled = (title.Length >= breakNewLineAt || content.Length >= breakNewLineAt * 2);
             
         tooltipTitle.text = title;
         tooltipContent.text = content;

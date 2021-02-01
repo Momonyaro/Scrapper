@@ -14,15 +14,15 @@ namespace Scrapper.Editor
         {
             Entity entity = (Entity) target;
 
-            if (GUILayout.Button("Set Current Values to Max"))
+            if (GUILayout.Button("Set HP Current Value to Max"))
             {
                 entity.healthPts[0] = entity.healthPts[1];
-                entity.actionPts[0] = entity.actionPts[1];
             }
             
             EditorGUILayout.BeginVertical("HelpBox");
             entity.entityName = EditorGUILayout.TextField("Entity Name: ", entity.entityName);
             entity.entityAltTitle = EditorGUILayout.TextField("Entity Alternate Title: ", entity.entityAltTitle);
+            entity.pPOpinion = EditorGUILayout.IntSlider("Player Opinion",entity.pPOpinion, -100, 100);
             
             EditorGUILayout.BeginHorizontal("HelpBox");
             entity.healthPts[0] = EditorGUILayout.IntField("Current HP:", entity.healthPts[0], GUILayout.MinWidth(150));

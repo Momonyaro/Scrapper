@@ -12,6 +12,8 @@ namespace Scrapper.Managers
 
         private static bool turnBasedStart = false;
         public static bool turnBasedEngaged = false;
+        public static bool playerTurnFlag = false;
+        public static bool endPlayerTurnFlag = false;
 
         public float waitTime = 0.15f; //To not just catapult between entities between turns.
 
@@ -31,25 +33,46 @@ namespace Scrapper.Managers
             }
         }
 
+        public void EndPlayerTurn()
+        {
+            if (playerTurnFlag)
+                endPlayerTurnFlag = true;
+        }
+
         private IEnumerator TurnBasedLoop()
         {
-            while (turnBasedEngaged)
+            while (EntityManager.turnBasedEngaged)
             {
                 bool stayInCombat = false;
-                Debug.Log(EntityManager.Entities.Count);
+                //Debug.Log(EntityManager.Entities.Count);
                 for (int i = 0; i < EntityManager.Entities.Count; i++)
                 {
+                    if (EntityManager.Entities[i]._pathfinder.playerControlled) playerTurnFlag = true; 
                     StartCoroutine(EntityManager.Entities[i].TakeTurn());
                     while (!EntityManager.Entities[i].eTFlag) yield return null;
-                    if (EntityManager.Entities[i].sICFlag) stayInCombat = true;
-                }
+                    for (int j = 0; j < EntityManager.Entities.Count; j++)
+                    {
+                        if (Entities[j].sICFlag)
+                        {
+                            Debug.Log(Entities[j].entityName + " still wants to fight!");
+                            stayInCombat = true;
+                        }
+                    }
 
-                yield return null;
+                    endPlayerTurnFlag = false;
+                    playerTurnFlag = false; 
+                    if (!stayInCombat) break;
+                }
 
                 if (!stayInCombat)
                 {
-                    
+                    EntityManager.turnBasedEngaged = false;
+                    EntityManager.turnBasedStart = false;
+                    Debug.Log("Exiting Turn based combat mode!");
+                    break;
                 }
+                
+                yield return null;
             }
             yield break;
         }
