@@ -16,7 +16,7 @@ MonoBehaviour:
   - factionName: The Family
     factionID: d8372c04-f84b-42d9-beaf-b63242684795
     playerPartyOpinion: 0
-    folded: 0
+    folded: 1
     relations: []
   - factionName: Vegoniites
     factionID: c85b6c34-cfa7-444c-aa8a-b81c38558312
@@ -39,7 +39,7 @@ MonoBehaviour:
     folded: 0
     relations: []
   - factionName: GU Enforcers
-    factionID: aab26ce9-7b49-485f-bbd3-9c6b4a54731c
+    factionID: d741c0d8-1ad3-491b-9063-271cc99416aa
     playerPartyOpinion: -5
     folded: 0
     relations: []

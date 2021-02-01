@@ -32,6 +32,7 @@ namespace Scrapper.Items
         public string itemCombatAnim = "";
 
         public int dam;
+        public int apCost;
         public int dt;
         public float maxReach;
         public int[] statChanges = new int[8];

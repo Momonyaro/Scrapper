@@ -59,7 +59,7 @@ namespace Scrapper.Animation
                 case "dmgFrame":
                 {
                     Debug.Log("Parsing attack");
-                    CombatManager.AttackLastTarget();
+                    CombatManager.AttackTarget(CombatManager.target);
                     break;
                 }
             }

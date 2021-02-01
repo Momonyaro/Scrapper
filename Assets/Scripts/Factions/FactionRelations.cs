@@ -86,18 +86,22 @@ namespace Scrapper.Factions
 
         public string GetSetFactionID(string newFactionID = "")
         {
-            return factionID;
+            string old = factionID;
             
             if (newFactionID.Length != 0)
                 factionID = newFactionID;
+            
+            return old;
         }
 
         public int GetSetFactionOpinion(int newOpinion = int.MinValue)
         {
-            return factionOpinion;
-
+            int old = factionOpinion;
+            
             if (newOpinion != int.MinValue)
                 factionOpinion = Mathf.Clamp(newOpinion, -100, 100);
+            
+            return old;
         }
     }
 }
