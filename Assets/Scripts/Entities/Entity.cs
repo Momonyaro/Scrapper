@@ -83,15 +83,25 @@ namespace Scrapper.Entities
         public IEnumerator TakeTurn()
         {
             eTFlag = false;
+            sICFlag = false;
             if (healthPts[0] <= 0) { eTFlag = true; yield break;}
             Debug.Log(entityName + " is currently parsing it's turn...");
             actionPts[0] = Mathf.Clamp(actionPts[0] + 4, 0, actionPts[1]);
             CombatManager.attacker = this;
+
+            if (pPOpinion < -92) sICFlag = true;
+            if (_hasPathfinder && _pathfinder.playerControlled) sICFlag = false;
             
             while (!eTFlag)
             {
                 if (_hasPathfinder && !_pathfinder.playerControlled) actionPts[0] = 0;
                 if (actionPts[0] <= 0) { eTFlag = true; }
+
+                if (EntityManager.endPlayerTurnFlag)
+                {
+                    eTFlag = true;
+                    yield break;
+                }
                 //Here the AI decides what to do. or if we're
                 // player controlled we enable the player controls in economy mode.
                 

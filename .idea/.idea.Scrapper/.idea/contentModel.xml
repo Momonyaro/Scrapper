@@ -192,6 +192,11 @@
             <e p="TestMouseController.cs" t="Include" />
             <e p="TrackingCamera.cs" t="Include" />
           </e>
+          <e p="UI" t="Include">
+            <e p="APPlayerBar.cs" t="Include" />
+            <e p="EndTurnBtn.cs" t="Include" />
+            <e p="PlayerStatusHUD.cs" t="Include" />
+          </e>
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
