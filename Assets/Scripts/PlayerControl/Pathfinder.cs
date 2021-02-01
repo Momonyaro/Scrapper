@@ -51,9 +51,10 @@ public class Pathfinder : MonoBehaviour
             {
                 CombatManager.playerCombatMode = false;
             }
-            else if (Input.GetMouseButtonDown(0) && CombatManager.lastTarget != null && !CombatManager.outOfReach)
+            else if (Input.GetMouseButtonDown(0) && CombatManager.target != null && !CombatManager.outOfReach)
             {
-                characterAnimator.PlayAnimFromKeyword(CombatManager.GetPlayerWeapon().itemCombatAnim);
+                CombatManager.attacker = pathingEntity;
+                characterAnimator.PlayAnimFromKeyword(CombatManager.GetEntityWeapon(pathingEntity).itemCombatAnim);
             }
 
             return;

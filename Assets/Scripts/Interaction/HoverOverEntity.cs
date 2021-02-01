@@ -76,9 +76,9 @@ namespace Srapper.Interaction
                 // Create an alternate tooltip for when the player has toggled combatMode
                 if (CombatManager.playerCombatMode && entityComponent.healthPts[0] != 0)
                 {
-                    CombatManager.lastTarget = this.entityComponent;
+                    CombatManager.target = this.entityComponent;
                     debugAggroHover = true;
-                    float distanceToPlayer = CombatManager.DistanceToPlayer(transform.position);
+                    float distance = CombatManager.DistanceToPlayer(transform.parent.position);
                     content = "";
                     if (FindObjectOfType<PolygonalNavMesh>()
                         .InLineOfSight(CombatManager.playerEntity.transform.parent.position, transform.parent.position))
@@ -88,7 +88,7 @@ namespace Srapper.Interaction
                             content +=  "\n <color=red>Out of Reach!</color>";
                         }
                         else
-                            content +=  "\n " + distanceToPlayer + "m";
+                            content +=  "\n " + distance + "m";
                     }
                     else 
                         content +=  "\n <color=red>Can't see the Target</color>";

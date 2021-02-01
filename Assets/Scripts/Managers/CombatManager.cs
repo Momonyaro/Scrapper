@@ -19,7 +19,8 @@ namespace Scrapper.Managers
         public Item fallbackWeapon; // Thee olde fistecuffs aye'?
         public static Item sFallbackWeapon;
         public static bool outOfReach = false;
-        public static Entity lastTarget;
+        public static Entity attacker;
+        public static Entity target;
 
         private void Awake()
         {
@@ -35,40 +36,57 @@ namespace Scrapper.Managers
             combatBorder.color = borderColor * Mathf.Clamp(Mathf.Sin(Time.time), 0.7f, 1.0f);
         }
 
+        public static float DistanceToTarget()
+        {
+            
+            float distance = Vector2.Distance(CombatManager.attacker.transform.position,
+                                              CombatManager.target.transform.position);
+
+            CombatManager.outOfReach = (distance >= GetEntityWeapon(attacker).maxReach);
+
+            return distance;
+        }
+        
         public static float DistanceToPlayer(Vector2 position)
         {
             Vector2 playerPos = playerEntity.transform.position;
             
             float distance = Vector2.Distance(playerPos, position);
 
-            CombatManager.outOfReach = (distance >= GetPlayerWeapon().maxReach);
+            CombatManager.outOfReach = (distance >= GetEntityWeapon(playerEntity).maxReach);
 
             return distance;
         }
 
-        public static void AttackLastTarget()
+        public static void AttackTarget(Entity target)
         {
+            CombatManager.target = target;
             if (outOfReach) return;
-            if (lastTarget == null) return;
-            if (lastTarget.healthPts[0] == 0) return;
+            if (CombatManager.target == null) return;
+            if (CombatManager.target.healthPts[0] == 0) return;
 
             //Unarmed damage for now is just item damage * entityStr + 1.
-            Item playerWeapon = GetPlayerWeapon();
+            Item playerWeapon = GetEntityWeapon(CombatManager.attacker);
             int damage = (playerWeapon.dam * playerEntity.stats[2]) + 1;
             //Debug.Log("Player str is: " + playerEntity.stats[2]);
             //Debug.Log("Dealt " + damage + " damage to: " + lastTarget.entityName);
-            lastTarget.EntityTakeDamage(damage);
+            CombatManager.target.EntityTakeDamage(damage);
             
+            if (EntityManager.turnBasedEngaged)
+            {
+                attacker.actionPts[0] = Mathf.Clamp(attacker.actionPts[0] - playerWeapon.apCost, 0, attacker.actionPts[1]);
+                Debug.Log("Decreased " + attacker.entityName + "'s AP with " + playerWeapon.apCost + ". It is now: " + attacker.actionPts[0]);
+            }
             playerCombatMode = false;
-            lastTarget = null;
+            CombatManager.target = null;
         }
 
-        public static Item GetPlayerWeapon()
+        public static Item GetEntityWeapon(Entity entity)
         {
-            if (playerEntity.currentWeapon == null)
+            if (entity.currentWeapon == null)
                 return CombatManager.sFallbackWeapon;
 
-            return playerEntity.currentWeapon;
+            return entity.currentWeapon;
         }
 
         public void TogglePlayerCombatMode()
