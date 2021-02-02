@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using FMOD;
 using Scrapper.Managers;
 using UnityEngine;
+using FMOD.Studio;
+using FMODUnity;
+using Debug = UnityEngine.Debug;
 
 namespace Scrapper.Animation
 {
@@ -12,6 +16,14 @@ namespace Scrapper.Animation
         [HideInInspector] public int currentAnimIndex = 0;
         public List<AnimationBlock> animations;
         public SpriteRenderer sprRenderer;
+        private bool _hasAudioEmitter = false;
+        public StudioEventEmitter EventEmitter = null;
+
+        private void Awake()
+        {
+            if (EventEmitter != null)
+                _hasAudioEmitter = true;
+        }
 
         public bool PlayAnimFromKeyword(string key, int frameOffset = 0)
         {
@@ -45,7 +57,7 @@ namespace Scrapper.Animation
                 }
                 for (int i = 0; i < animations[currentAnimIndex].animation.currentAudioActions.Count; i++)
                 {
-                    ParseAnimLogicAction(animations[currentAnimIndex].animation.currentLogicActions[i]);   
+                    ParseAnimAudioAction(animations[currentAnimIndex].animation.currentAudioActions[i]);   
                 }
             }
             
@@ -67,10 +79,17 @@ namespace Scrapper.Animation
 
         private void ParseAnimAudioAction(string action)
         {
+            if (!_hasAudioEmitter) return;
+            
             switch (action) //Perhaps revamp later depending on audio manager implementation!
             {
                 case "playPunch":
                 {
+                    if (AudioManager.events["event:/Ambience/Ambiance"].getPath(out var path) == RESULT.OK)
+                    {
+                        EventEmitter.Event = path;
+                        EventEmitter.PlayInstance();
+                    }
                     break;
                 }
                 case "playHit":

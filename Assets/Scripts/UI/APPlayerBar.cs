@@ -16,7 +16,10 @@ public class APPlayerBar : MonoBehaviour
     private void LateUpdate()
     {
         if (!EntityManager.turnBasedEngaged)
+        {
             apBarGraphic.fillAmount = 0f;
+            return;
+        }
         
         if (!playerNotNull)
             for (int i = 0; i < EntityManager.Entities.Count; i++)
