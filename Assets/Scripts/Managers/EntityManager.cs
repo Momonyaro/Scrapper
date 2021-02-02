@@ -14,6 +14,7 @@ namespace Scrapper.Managers
         public static bool turnBasedEngaged = false;
         public static bool playerTurnFlag = false;
         public static bool endPlayerTurnFlag = false;
+        public TurnPrompter TurnPrompter;
 
         public float waitTime = 0.15f; //To not just catapult between entities between turns.
 
@@ -47,18 +48,26 @@ namespace Scrapper.Managers
                 //Debug.Log(EntityManager.Entities.Count);
                 for (int i = 0; i < EntityManager.Entities.Count; i++)
                 {
-                    if (EntityManager.Entities[i]._pathfinder.playerControlled) playerTurnFlag = true; 
-                    StartCoroutine(EntityManager.Entities[i].TakeTurn());
-                    while (!EntityManager.Entities[i].eTFlag) yield return null;
+                    if (EntityManager.Entities[i]._pathfinder.playerControlled)
+                    {
+                        playerTurnFlag = true;
+                        TurnPrompter.PlayFadingPrompt();
+                    }
+                    
                     for (int j = 0; j < EntityManager.Entities.Count; j++)
                     {
-                        if (Entities[j].sICFlag)
+                        if (EntityManager.Entities[j]._pathfinder.playerControlled) continue;
+                        if (EntityManager.Entities[j].CheckForStillInCombat() && EntityManager.Entities[j].healthPts[0] > 0)
                         {
-                            Debug.Log(Entities[j].entityName + " still wants to fight!");
+                            Debug.Log(EntityManager.Entities[j].entityName + " still wants to fight!");
                             stayInCombat = true;
                         }
                     }
-
+                    
+                    StartCoroutine(EntityManager.Entities[i].TakeTurn());
+                    
+                    while (!EntityManager.Entities[i].eTFlag) yield return null;
+                    
                     endPlayerTurnFlag = false;
                     playerTurnFlag = false; 
                     if (!stayInCombat) break;

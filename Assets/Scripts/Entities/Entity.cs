@@ -13,6 +13,7 @@ namespace Scrapper.Entities
     {
         public string entityName;
         public string entityAltTitle;
+        public string entityID = Guid.NewGuid().ToString();
         public int[] healthPts = new int[2]; // [0] = Current HP, [1] = Max HP
         public int[] actionPts = new int[2]; // [0] = Current AP, [1] = Max AP
         public int[] expPts    = new int[2]; // [0] = current XP, [1] = Current Level
@@ -80,6 +81,14 @@ namespace Scrapper.Entities
                 EntityDeath();
         }
 
+        public bool CheckForStillInCombat()
+        {
+            if (pPOpinion < -92) return true;
+            if (_hasPathfinder && _pathfinder.playerControlled) return false;
+
+            return false;
+        }
+
         public IEnumerator TakeTurn()
         {
             eTFlag = false;
@@ -97,13 +106,28 @@ namespace Scrapper.Entities
                 if (_hasPathfinder && !_pathfinder.playerControlled) actionPts[0] = 0;
                 if (actionPts[0] <= 0) { eTFlag = true; }
 
-                if (EntityManager.endPlayerTurnFlag)
-                {
-                    eTFlag = true;
-                    yield break;
-                }
+                
                 //Here the AI decides what to do. or if we're
                 // player controlled we enable the player controls in economy mode.
+
+                if (EntityManager.playerTurnFlag)
+                {
+                    bool stayInCombat = false;
+                    for (int j = 0; j < EntityManager.Entities.Count; j++)
+                    {
+                        if (EntityManager.Entities[j]._pathfinder.playerControlled) continue;
+                        if (EntityManager.Entities[j].CheckForStillInCombat() && EntityManager.Entities[j].healthPts[0] > 0)
+                        {
+                            stayInCombat = true;
+                        }
+                    }
+                
+                    if (EntityManager.endPlayerTurnFlag || !stayInCombat)
+                    {
+                        eTFlag = true;
+                        yield break;
+                    }
+                }
                 
                 yield return null;
             }

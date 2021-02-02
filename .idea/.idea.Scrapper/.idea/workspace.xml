@@ -22,11 +22,14 @@
     <list default="true" id="4b667d6b-b66a-4052-a784-3d234f051598" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Characters/DEBUG/PUNCH.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Characters/DEBUG/PUNCH.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/EntityEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/EntityEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animations/Animator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animations/Animator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Entity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/MouseHoverTooltip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/MouseHoverTooltip.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/EntityManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/EntityManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/APPlayerBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/APPlayerBar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fmod_editor.log" beforeDir="false" afterPath="$PROJECT_DIR$/fmod_editor.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +43,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerControl/TrackingCamera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entities/Entity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/EntityEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerControl/TestMouseController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/EndTurnBtn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" root0="FORCE_HIGHLIGHTING" />
@@ -50,6 +54,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/HoverOverEntity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/PlayerStatusHUD.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Animations/AnimFrame.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://F:/Projects/Usurper/Assets/Scripts/Managers/AudioManager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -68,18 +73,20 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Animations/Animation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Animations/AnimBranch.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Factions/FactionRelations.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Animations/Animator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/HoverOverEntity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/CombatManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/APPlayerBar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/EntityEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/EndTurnBtn.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Entities/Entity.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/EntityManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/MouseHoverTooltip.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerStatusHUD.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/TurnPrompter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/APPlayerBar.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/EntityManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/AudioManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Animations/Animator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entities/Entity.cs" />
       </list>
     </option>
   </component>
@@ -150,6 +157,7 @@
       <workItem from="1611672189816" duration="2245000" />
       <workItem from="1612139477572" duration="4487000" />
       <workItem from="1612215501532" duration="3685000" />
+      <workItem from="1612287101069" duration="9164000" />
     </task>
     <servers />
   </component>
