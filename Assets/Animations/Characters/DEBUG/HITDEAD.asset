@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: HITDEAD
   m_EditorClassIdentifier: 
   displayWeapons: 0
-  newFrame: 0
-  loopFrame: 0
+  newFrame: 1
+  loopFrame: 1
   loopAnim: 0
   currentLogicActions: []
   currentAudioActions: []
@@ -26,6 +26,10 @@ MonoBehaviour:
       currentFrame: 0
       weaponOrdering: 0
       frames:
+      - frameDuration: 0.05
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: -7847660419660550892, guid: 9e9ce3cbe9dc1c2408973df31d8f997f, type: 3}
       - frameDuration: 0.2
         audioActions: []
         logicActions: []
@@ -36,6 +40,10 @@ MonoBehaviour:
       currentFrame: 0
       weaponOrdering: 0
       frames:
+      - frameDuration: 0.05
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 3715671306972958958, guid: 9e9ce3cbe9dc1c2408973df31d8f997f, type: 3}
       - frameDuration: 0.2
         audioActions: []
         logicActions: []
@@ -46,6 +54,10 @@ MonoBehaviour:
       currentFrame: 0
       weaponOrdering: 0
       frames:
+      - frameDuration: 0.05
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 5332054203408768807, guid: 9e9ce3cbe9dc1c2408973df31d8f997f, type: 3}
       - frameDuration: 0.2
         audioActions: []
         logicActions: []
@@ -56,6 +68,10 @@ MonoBehaviour:
       currentFrame: 0
       weaponOrdering: 0
       frames:
+      - frameDuration: 0.05
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 4955811605092530480, guid: 9e9ce3cbe9dc1c2408973df31d8f997f, type: 3}
       - frameDuration: 0.2
         audioActions: []
         logicActions: []
@@ -66,6 +82,10 @@ MonoBehaviour:
       currentFrame: 0
       weaponOrdering: 0
       frames:
+      - frameDuration: 0.05
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: -7392924801257841614, guid: 9e9ce3cbe9dc1c2408973df31d8f997f, type: 3}
       - frameDuration: 0.2
         audioActions: []
         logicActions: []
@@ -76,6 +96,10 @@ MonoBehaviour:
       currentFrame: 0
       weaponOrdering: 0
       frames:
+      - frameDuration: 0.05
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 4761574233190512692, guid: 9e9ce3cbe9dc1c2408973df31d8f997f, type: 3}
       - frameDuration: 0.2
         audioActions: []
         logicActions: []
@@ -86,6 +110,10 @@ MonoBehaviour:
       currentFrame: 0
       weaponOrdering: 0
       frames:
+      - frameDuration: 0.05
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: -1218663900099437348, guid: 9e9ce3cbe9dc1c2408973df31d8f997f, type: 3}
       - frameDuration: 0.2
         audioActions: []
         logicActions: []
@@ -96,6 +124,10 @@ MonoBehaviour:
       currentFrame: 0
       weaponOrdering: 0
       frames:
+      - frameDuration: 0.05
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: -1572986860304311046, guid: 9e9ce3cbe9dc1c2408973df31d8f997f, type: 3}
       - frameDuration: 0.2
         audioActions: []
         logicActions: []

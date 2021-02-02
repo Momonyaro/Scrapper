@@ -14,78 +14,130 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayWeapons: 0
   newFrame: 0
+  loopFrame: 0
   loopAnim: 1
+  currentLogicActions: []
+  currentAudioActions:
+  - playDeath
   transitionTo: 
   branches:
   - name: S
     facing: 0
     branch:
+      currentFrame: 0
       weaponOrdering: 0
       frames:
       - frameDuration: 0.2
+        audioActions:
+        - playDeath
+        logicActions: []
+        frameSprite: {fileID: 5504609564245305671, guid: f499439c4025d0b4094b9801773ad2e2, type: 3}
+      - frameDuration: 0.06
         audioActions: []
         logicActions: []
         frameSprite: {fileID: 5504609564245305671, guid: f499439c4025d0b4094b9801773ad2e2, type: 3}
   - name: SE
     facing: 1
     branch:
+      currentFrame: 0
       weaponOrdering: 0
       frames:
       - frameDuration: 0.2
+        audioActions:
+        - playDeath
+        logicActions: []
+        frameSprite: {fileID: 4408621797799669356, guid: f499439c4025d0b4094b9801773ad2e2, type: 3}
+      - frameDuration: 0.06
         audioActions: []
         logicActions: []
         frameSprite: {fileID: 4408621797799669356, guid: f499439c4025d0b4094b9801773ad2e2, type: 3}
   - name: E
     facing: 2
     branch:
+      currentFrame: 0
       weaponOrdering: 0
       frames:
       - frameDuration: 0.2
+        audioActions:
+        - playDeath
+        logicActions: []
+        frameSprite: {fileID: -1926685085238327952, guid: f499439c4025d0b4094b9801773ad2e2, type: 3}
+      - frameDuration: 0.06
         audioActions: []
         logicActions: []
         frameSprite: {fileID: -1926685085238327952, guid: f499439c4025d0b4094b9801773ad2e2, type: 3}
   - name: NE
     facing: 3
     branch:
+      currentFrame: 0
       weaponOrdering: 0
       frames:
       - frameDuration: 0.2
+        audioActions:
+        - playDeath
+        logicActions: []
+        frameSprite: {fileID: 1458052294990732975, guid: f499439c4025d0b4094b9801773ad2e2, type: 3}
+      - frameDuration: 0.06
         audioActions: []
         logicActions: []
         frameSprite: {fileID: 1458052294990732975, guid: f499439c4025d0b4094b9801773ad2e2, type: 3}
   - name: N
     facing: 4
     branch:
+      currentFrame: 0
       weaponOrdering: 0
       frames:
       - frameDuration: 0.2
+        audioActions:
+        - playDeath
+        logicActions: []
+        frameSprite: {fileID: -5544284184854764915, guid: f499439c4025d0b4094b9801773ad2e2, type: 3}
+      - frameDuration: 0.06
         audioActions: []
         logicActions: []
         frameSprite: {fileID: -5544284184854764915, guid: f499439c4025d0b4094b9801773ad2e2, type: 3}
   - name: NW
     facing: 5
     branch:
+      currentFrame: 0
       weaponOrdering: 0
       frames:
       - frameDuration: 0.2
+        audioActions:
+        - playDeath
+        logicActions: []
+        frameSprite: {fileID: 7067906665633302220, guid: f499439c4025d0b4094b9801773ad2e2, type: 3}
+      - frameDuration: 0.06
         audioActions: []
         logicActions: []
         frameSprite: {fileID: 7067906665633302220, guid: f499439c4025d0b4094b9801773ad2e2, type: 3}
   - name: W
     facing: 6
     branch:
+      currentFrame: 0
       weaponOrdering: 0
       frames:
       - frameDuration: 0.2
+        audioActions:
+        - playDeath
+        logicActions: []
+        frameSprite: {fileID: 791683643999286109, guid: f499439c4025d0b4094b9801773ad2e2, type: 3}
+      - frameDuration: 0.06
         audioActions: []
         logicActions: []
         frameSprite: {fileID: 791683643999286109, guid: f499439c4025d0b4094b9801773ad2e2, type: 3}
   - name: SW
     facing: 7
     branch:
+      currentFrame: 0
       weaponOrdering: 0
       frames:
       - frameDuration: 0.2
+        audioActions:
+        - playDeath
+        logicActions: []
+        frameSprite: {fileID: 2256749004777413085, guid: f499439c4025d0b4094b9801773ad2e2, type: 3}
+      - frameDuration: 0.06
         audioActions: []
         logicActions: []
         frameSprite: {fileID: 2256749004777413085, guid: f499439c4025d0b4094b9801773ad2e2, type: 3}

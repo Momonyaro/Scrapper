@@ -85,19 +85,36 @@ namespace Scrapper.Animation
             {
                 case "playPunch":
                 {
-                    if (AudioManager.events["event:/Ambience/Ambiance"].getPath(out var path) == RESULT.OK)
+                    if (AudioManager.events["event:/SFX/Weapons/Melee"].getPath(out var path) == RESULT.OK)
                     {
                         EventEmitter.Event = path;
-                        EventEmitter.PlayInstance();
+                        EventEmitter.Play();
                     }
                     break;
                 }
                 case "playHit":
                 {
+                    if (AudioManager.events["event:/SFX/Characters/Hurt"].getPath(out var path) == RESULT.OK)
+                    {
+                        EventEmitter.Event = path;
+                        EventEmitter.Play();
+                    }
                     break;
                 }
                 case "playDeath":
                 {
+                    if (AudioManager.events["event:/SFX/Characters/Death"].getPath(out var path) == RESULT.OK)
+                    {
+                            if(EventEmitter.Event != path)
+                            {
+                                EventEmitter.Event = path;
+                                EventEmitter.Play();
+                            }
+                    }
+                    else
+                    {
+                        Debug.Log("Couldn't get path of playDeath");
+                    }
                     break;
                 }
             }
