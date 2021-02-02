@@ -16,6 +16,7 @@ MonoBehaviour:
   newFrame: 1
   loopFrame: 1
   loopAnim: 0
+  firstLoop: 1
   currentLogicActions: []
   currentAudioActions: []
   transitionTo: _idle

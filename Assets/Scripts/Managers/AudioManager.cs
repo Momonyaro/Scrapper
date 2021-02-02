@@ -33,7 +33,9 @@ public class AudioManager : MonoBehaviour
 
             foreach(KeyValuePair<string,EventDescription> eventDescription in events)
             {
-                Debug.Log(eventDescription.Key);
+                string value = "";
+                eventDescription.Value.getPath(out value);
+                Debug.Log(eventDescription.Key + ", Holds: " + value);
             }
         }
     }

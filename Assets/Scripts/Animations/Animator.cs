@@ -17,12 +17,17 @@ namespace Scrapper.Animation
         public List<AnimationBlock> animations;
         public SpriteRenderer sprRenderer;
         private bool _hasAudioEmitter = false;
+        private bool _hasDeathEmitter = false;
         public StudioEventEmitter EventEmitter = null;
+        public StudioEventEmitter DeathEmitter = null;
 
         private void Awake()
         {
             if (EventEmitter != null)
                 _hasAudioEmitter = true;
+
+            if (DeathEmitter != null)
+                _hasDeathEmitter = true;
         }
 
         public bool PlayAnimFromKeyword(string key, int frameOffset = 0)
@@ -45,11 +50,12 @@ namespace Scrapper.Animation
             if (animations[currentAnimIndex].animation.loopFrame && !animations[currentAnimIndex].animation.loopAnim)
             {
                 PlayAnimFromKeyword(animations[currentAnimIndex].animation.transitionTo);
-                sprRenderer.sprite = animations[currentAnimIndex].animation.GetFrameOfCurrentBranch(currentFacing);
+                return;
             }
 
-            if (animations[currentAnimIndex].animation.newFrame)
+            if (animations[currentAnimIndex].animation.newFrame || animations[currentAnimIndex].animation.firstLoop)
             {
+                //Debug.Log("Parsing anim actions for " + animations[currentAnimIndex].key);
                 //Check if we have a logic or audio actions to parse.
                 for (int i = 0; i < animations[currentAnimIndex].animation.currentLogicActions.Count; i++)
                 {
@@ -80,6 +86,9 @@ namespace Scrapper.Animation
         private void ParseAnimAudioAction(string action)
         {
             if (!_hasAudioEmitter) return;
+            //EventEmitter.Event = null;
+            //EventEmitter.Stop();
+            //EventEmitter.StopInstance();
             
             switch (action) //Perhaps revamp later depending on audio manager implementation!
             {
@@ -103,18 +112,8 @@ namespace Scrapper.Animation
                 }
                 case "playDeath":
                 {
-                    if (AudioManager.events["event:/SFX/Characters/Death"].getPath(out var path) == RESULT.OK)
-                    {
-                            if(EventEmitter.Event != path)
-                            {
-                                EventEmitter.Event = path;
-                                EventEmitter.Play();
-                            }
-                    }
-                    else
-                    {
-                        Debug.Log("Couldn't get path of playDeath");
-                    }
+                    if (!_hasDeathEmitter) return; 
+                    DeathEmitter.Play();
                     break;
                 }
             }
