@@ -871,7 +871,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4588939}
   m_HandleRect: {fileID: 4588938}
   m_Direction: 2
-  m_Value: 1.0000002
+  m_Value: 1
   m_Size: 0.62722045
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1387,10 +1387,10 @@ RectTransform:
   m_Father: {fileID: 1672930947}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 497.98, y: -7.62}
-  m_SizeDelta: {x: 283.62704, y: 145.16643}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -141.81, y: 72.583}
+  m_SizeDelta: {x: 283.62708, y: 145.16643}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &267561515
 MonoBehaviour:
@@ -4836,6 +4836,7 @@ MonoBehaviour:
   dottedLineRenderer: {fileID: 0}
   playerSpeed: 2.5
   minNodeDistance: 0.16
+  currentPath: []
 --- !u!114 &1376904880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6548,6 +6549,7 @@ MonoBehaviour:
   dottedLineRenderer: {fileID: 0}
   playerSpeed: 2.5
   minNodeDistance: 0.16
+  currentPath: []
 --- !u!114 &1787220867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7057,6 +7059,7 @@ MonoBehaviour:
   dottedLineRenderer: {fileID: 0}
   playerSpeed: 2.5
   minNodeDistance: 0.16
+  currentPath: []
 --- !u!1 &1919395823
 GameObject:
   m_ObjectHideFlags: 0
@@ -7568,6 +7571,7 @@ MonoBehaviour:
   dottedLineRenderer: {fileID: 1252986718}
   playerSpeed: 2.5
   minNodeDistance: 0.16
+  currentPath: []
 --- !u!1 &1989126771
 GameObject:
   m_ObjectHideFlags: 0
@@ -8032,6 +8036,7 @@ MonoBehaviour:
   dottedLineRenderer: {fileID: 0}
   playerSpeed: 2.5
   minNodeDistance: 0.16
+  currentPath: []
 --- !u!114 &2052962855
 MonoBehaviour:
   m_ObjectHideFlags: 0

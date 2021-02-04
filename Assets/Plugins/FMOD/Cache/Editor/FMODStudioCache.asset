@@ -166,6 +166,46 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-7372750898487993509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Shotgun/Reload
+  m_EditorClassIdentifier: 
+  Name: Reload
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-7243383819517877528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Shotgun/Crit
+  m_EditorClassIdentifier: 
+  Name: Crit
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-7038345035552367179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309,8 +349,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 6937686194348433448}
-  - {fileID: -7415263397088591188}
+  - {fileID: -7243383819517877528}
+  - {fileID: -7372750898487993509}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -454,8 +494,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -7490427115619474743}
-  - {fileID: 6018794203521211491}
+  - {fileID: -733652576593053457}
+  - {fileID: 9212849942558807783}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -472,6 +512,26 @@ MonoBehaviour:
   m_Name: parameter:/Smg/Reload
   m_EditorClassIdentifier: 
   Name: Reload
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-1603317142640931597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Melee/Weight
+  m_EditorClassIdentifier: 
+  Name: Weight
   Min: 0
   Max: 1
   Default: 0
@@ -522,6 +582,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-733652576593053457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Smg/Crit
+  m_EditorClassIdentifier: 
+  Name: Crit
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-662336040336552889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,11 +617,31 @@ MonoBehaviour:
   Path: FMOD_Scrapper/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637479020261211114
+  lastModified: 637480420865445431
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 1738
+  Exists: 1
+--- !u!114 &-33782868225272773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/Surface
+  m_EditorClassIdentifier: 
+  Name: Surface
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -581,7 +681,7 @@ MonoBehaviour:
   - {fileID: 36949330640296928}
   StringsBanks:
   - {fileID: -662336040336552889}
-  stringsBankWriteTime: 637479020261211114
+  stringsBankWriteTime: 637480420865445431
   cacheVersion: 6
 --- !u!114 &36949330640296928
 MonoBehaviour:
@@ -598,7 +698,7 @@ MonoBehaviour:
   Path: FMOD_Scrapper/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637479020261221111
+  lastModified: 637480420865601717
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -682,6 +782,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &1561409141283952113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Pistol/Crit
+  m_EditorClassIdentifier: 
+  Name: Crit
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &1675952408385436888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -703,6 +823,26 @@ MonoBehaviour:
     data2: 0
   Exists: 1
 --- !u!114 &2142925724679234341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Melee/Crit
+  m_EditorClassIdentifier: 
+  Name: Crit
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &2217904839092236374
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -758,6 +898,26 @@ MonoBehaviour:
   m_Name: parameter:/Rifle/Crit
   m_EditorClassIdentifier: 
   Name: Crit
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &2735285619623401928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Pistol/Reload
+  m_EditorClassIdentifier: 
+  Name: Reload
   Min: 0
   Max: 1
   Default: 0
@@ -828,10 +988,30 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -5754611748477995991}
+  - {fileID: -33782868225272773}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &3897552655634501971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Rifle/Reload
+  m_EditorClassIdentifier: 
+  Name: Reload
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &4036519272699955114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -852,8 +1032,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 202137496315693444}
-  - {fileID: -4374081699122446441}
+  - {fileID: 2735285619623401928}
+  - {fileID: 1561409141283952113}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -877,8 +1057,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -2288884041690442600}
-  - {fileID: 1675952408385436888}
+  - {fileID: 7145808689782956658}
+  - {fileID: 3897552655634501971}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -1045,6 +1225,46 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &7145808689782956658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Rifle/Crit
+  m_EditorClassIdentifier: 
+  Name: Crit
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &7252226677946418801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Melee/Blunt or Sharp
+  m_EditorClassIdentifier: 
+  Name: Blunt or Sharp
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &7525070218246851533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1154,9 +1374,9 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 5091697677901501317}
-  - {fileID: 822743478153507178}
-  - {fileID: -6372530173987532375}
+  - {fileID: -1603317142640931597}
+  - {fileID: 7252226677946418801}
+  - {fileID: 2217904839092236374}
   MinDistance: 0
   MaxDistance: 0
   Length: 315
@@ -1196,6 +1416,26 @@ MonoBehaviour:
   m_Name: parameter:/Shotgun/Crit
   m_EditorClassIdentifier: 
   Name: Crit
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &9212849942558807783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Smg/Reload
+  m_EditorClassIdentifier: 
+  Name: Reload
   Min: 0
   Max: 1
   Default: 0
