@@ -14,7 +14,13 @@ public class PlayerStatusHUD : MonoBehaviour, IPointerEnterHandler, IPointerExit
     public Gradient healthGradient = new Gradient();
     public Color deadColor = new Color();
     public Image healthBorderImg;
-    public MouseHoverTooltip Tooltip;
+    public MouseHoverTooltip Tooltip; //Not a great way to handle it...
+    public static bool drawingTooltip = false;
+
+    private void Awake()
+    {
+        Tooltip = FindObjectOfType<MouseHoverTooltip>();
+    }
 
     private void LateUpdate()
     {
@@ -37,6 +43,7 @@ public class PlayerStatusHUD : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        PlayerStatusHUD.drawingTooltip = true;
         Tooltip.CreateTooltip(player.entityName, $"Health: {player.healthPts[0]}/{player.healthPts[1]} ({player.GetHealthPercentageStatus()})\n" +
                                                             $"Level: {player.expPts[1]}, XP to next level: {player.expPts[0]}");
         Tooltip.gameObject.SetActive(true);
@@ -46,5 +53,6 @@ public class PlayerStatusHUD : MonoBehaviour, IPointerEnterHandler, IPointerExit
     {
         Tooltip.gameObject.SetActive(false);
         Tooltip.DestroyTooltip();
+        PlayerStatusHUD.drawingTooltip = false;
     }
 }

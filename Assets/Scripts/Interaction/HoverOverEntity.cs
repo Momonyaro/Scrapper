@@ -19,7 +19,7 @@ namespace Srapper.Interaction
         [SerializeField] public bool activeHover = false;
         [SerializeField] public bool debugAggroHover = false;
         [SerializeField] public bool disableTooltipForEntity = false;
-        private MouseHoverTooltip cachedMouseTooltip;
+        public MouseHoverTooltip cachedMouseTooltip;
         
         [SerializeField] private SpriteRenderer circleRenderer;
 
@@ -63,9 +63,15 @@ namespace Srapper.Interaction
         public void OnPointerEnter(PointerEventData eventData)
         {
             //GetComponent<Entity>().EntityTakeDamage(1); // Debug entities taking damage onHover
-            
-            
             activeHover = true;
+
+            if (EntityManager.playerTurnFlag && !entityComponent._pathfinder.playerControlled)
+            {
+                CombatManager.target = this.entityComponent;
+                debugAggroHover = true;
+                return;
+            }
+            
             string title = entityComponent.entityName;
             string content = "";
             if (entityComponent.entityAltTitle.Length > 0) content += entityComponent.entityAltTitle + "\n";

@@ -33,6 +33,7 @@ namespace Scrapper.Entities
 
         public int pPOpinion = 0; // -100 to 100, the NPCs current personal opinion of the player party.
 
+        public bool hTFlag = false; // Has Turn Flag
         public bool eTFlag = false; // End Turn Flag 
         public bool sICFlag = false; // Stay in Combat Flag
             
@@ -42,7 +43,7 @@ namespace Scrapper.Entities
         private Animator _animator;
         private bool _hasAnimator = false;
         
-        private HoverOverEntity _hoverOverEntity;
+        public HoverOverEntity _hoverOverEntity { get; private set; }
         private bool _hasEntityHover = false;
 
         private void Awake()
@@ -93,7 +94,8 @@ namespace Scrapper.Entities
         {
             eTFlag = false;
             sICFlag = false;
-            if (healthPts[0] <= 0) { eTFlag = true; yield break;}
+            hTFlag = true;
+            if (healthPts[0] <= 0) { eTFlag = true; hTFlag = false; yield break;}
             Debug.Log(entityName + " is currently parsing it's turn...");
             actionPts[0] = Mathf.Clamp(actionPts[0] + 4, 0, actionPts[1]);
             CombatManager.attacker = this;
@@ -104,7 +106,7 @@ namespace Scrapper.Entities
             while (!eTFlag)
             {
                 if (_hasPathfinder && !_pathfinder.playerControlled) actionPts[0] = 0;
-                if (actionPts[0] <= 0) { eTFlag = true; }
+                if (actionPts[0] <= 0 && _pathfinder.currentPath.Count == 0) { eTFlag = true; }
 
                 
                 //Here the AI decides what to do. or if we're
@@ -125,13 +127,15 @@ namespace Scrapper.Entities
                     if (EntityManager.endPlayerTurnFlag || !stayInCombat)
                     {
                         eTFlag = true;
+                        hTFlag = false;
                         yield break;
                     }
                 }
                 
                 yield return null;
             }
-            
+
+            hTFlag = false;
             yield break;
         }
 

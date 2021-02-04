@@ -29,7 +29,7 @@ namespace Scrapper.Pathfinding
             if (cachedMapGraph.Count > 0) mapBaked = true;
         }
 
-        [BurstCompile]
+        [BurstCompile(FloatPrecision.Medium, FloatMode.Fast, CompileSynchronously = true, Debug = true)]
         public Vector2[] GetShortestPath(Vector2 start, Vector2 end)
         {
 
@@ -37,10 +37,11 @@ namespace Scrapper.Pathfinding
             {
                 if (Inside(obstacles[i].polyCollider.points.ToList(), end))
                     return new Vector2[0];
-                if (Inside(obstacles[i].polyCollider.points.ToList(), start))
-                {
-                    //Find the nearest node?
-                }
+            }
+
+            if (InLineOfSight(start, end))
+            {
+                return new Vector2[2] {start, end};
             }
             
             List<DijkstraNode> vertexSet = new List<DijkstraNode>();

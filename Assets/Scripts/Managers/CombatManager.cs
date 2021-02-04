@@ -67,6 +67,7 @@ namespace Scrapper.Managers
 
             //Unarmed damage for now is just item damage * entityStr + 1.
             Item playerWeapon = GetEntityWeapon(CombatManager.attacker);
+            
             int damage = (playerWeapon.dam * playerEntity.stats[2]) + 1;
             //Debug.Log("Player str is: " + playerEntity.stats[2]);
             //Debug.Log("Dealt " + damage + " damage to: " + lastTarget.entityName);
@@ -91,6 +92,7 @@ namespace Scrapper.Managers
 
         public void TogglePlayerCombatMode()
         {
+            if (playerEntity._pathfinder.currentPath.Count > 0) return;
             //Later we have to check if the player is in combat and if it's their turn.
             CombatManager.playerCombatMode = !CombatManager.playerCombatMode;
         }

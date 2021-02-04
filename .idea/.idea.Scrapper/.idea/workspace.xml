@@ -21,14 +21,13 @@
   <component name="ChangeListManager">
     <list default="true" id="4b667d6b-b66a-4052-a784-3d234f051598" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Characters/DEBUG/DEAD.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Characters/DEBUG/DEAD.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Characters/DEBUG/HIT.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Characters/DEBUG/HIT.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animations/Animation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animations/Animation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animations/Animator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animations/Animator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/AudioManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fmod_editor.log" beforeDir="false" afterPath="$PROJECT_DIR$/fmod_editor.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Entity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/HoverOverEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/HoverOverEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/CombatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/CombatManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pathfinding/PolygonalNavMesh.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pathfinding/PolygonalNavMesh.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerStatusHUD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerStatusHUD.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,25 +67,25 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/Animator/AnimatorGraphEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerControl/TrackingCamera.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/FactionRelationEditor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Pathfinding/PolygonalNavMesh.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Animations/AnimBranch.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Factions/FactionRelations.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/HoverOverEntity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/CombatManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/EntityEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/EndTurnBtn.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/MouseHoverTooltip.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerStatusHUD.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/TurnPrompter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/APPlayerBar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/EntityManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Entities/Entity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/AudioManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Animations/Animation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/FMODExtendedEmitterEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Animations/Animator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerStatusHUD.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/HoverOverEntity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Pathfinding/PolygonalNavMesh.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entities/Entity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/CombatManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" />
       </list>
     </option>
   </component>
@@ -159,6 +158,7 @@
       <workItem from="1612215501532" duration="3685000" />
       <workItem from="1612287101069" duration="9164000" />
       <workItem from="1612301749863" duration="2994000" />
+      <workItem from="1612394534419" duration="8160000" />
     </task>
     <servers />
   </component>
@@ -195,10 +195,10 @@
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="616" y="258" key="run.anything.popup/-1680.56.1680.1020/0.30.1920.1050@0.30.1920.1050" timestamp="1610966307761" />
-    <state x="623" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1611341967114">
+    <state x="623" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1612397022112">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="623" y="257" width="672" height="678" key="search.everywhere.popup/-1680.56.1680.1020/0.30.1920.1050@0.30.1920.1050" timestamp="1610964071642" />
-    <state x="623" y="257" width="672" height="678" key="search.everywhere.popup/0.30.1920.1050/-1680.56.1680.1020@0.30.1920.1050" timestamp="1611341967114" />
+    <state x="623" y="257" width="672" height="678" key="search.everywhere.popup/0.30.1920.1050/-1680.56.1680.1020@0.30.1920.1050" timestamp="1612397022112" />
   </component>
 </project>
