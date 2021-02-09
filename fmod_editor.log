@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000001F9F7A18C08 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 00000132BFF456F8 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -15,597 +15,189 @@
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] SystemI::createSound                     : filename = FMOD_Scrapper\Build\Desktop/Master.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F9B25FD3C8 : node = 000001F99705BAF0
-[LOG] SystemI::createSound                     : add node to async list : head = 000001FA361E0F68.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F9B25FD3C8
+[LOG] SystemI::createSound                     : setdata soundi = 000001323B5DFD18 : node = 00000131D6201270
+[LOG] SystemI::createSound                     : add node to async list : head = 00000132BFF5C838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001323B5DFD18
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Scrapper\Build\Desktop/Master.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 620384
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15808
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F99705BC00
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000131D6201380
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3814
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Swosh_1', format=5, channels=2, frequency=48000, lengthbytes=261760, lengthpcm=995718, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.609668.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F9B25FD3C8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001323B5DFD18
 [LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
 [LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 620384
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 15808
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000AC67EAF468
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000260C0FEE38
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFA5A087B10
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFA5A087AE0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFA5A087BE0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFA5A087CA0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001F9AC63DAC8
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE19717B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE19717AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE19717BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE19717CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001323845E8D8
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='PlayerHurt', format=5, channels=2, frequency=48000, lengthbytes=18400, lengthpcm=92160, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.191864.
-[LOG] SoundI::release                          : Swosh_1 (000001F9B25FD3C8)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9AD96BDB8)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9B25FC2E8)
+[LOG] SoundI::release                          : Swosh_1 (000001323B5DFD18)
+[LOG] SoundI::release                          :     Swosh_1 (00000131D581E8D8)
+[LOG] SoundI::release                          :     Swosh_1 (000001323B5DE3C8)
+[LOG] SystemI::createSound                     : filename = FMOD_Scrapper\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001323C329888 : node = 00000131D6201270
+[LOG] SystemI::createSound                     : add node to async list : head = 00000132BFF5C838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001323C329888
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Scrapper\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 620384
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15808
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000131D6201380
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3814
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Swosh_1', format=5, channels=2, frequency=48000, lengthbytes=261760, lengthpcm=995718, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.609668.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001323C329888
+[LOG] SoundI::release                          : Swosh_1 (000001323C329888)
+[LOG] SoundI::release                          :     Swosh_1 (00000131D581DBD8)
+[LOG] SoundI::release                          :     Swosh_1 (000001323C328E68)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] SystemI::createSound                     : filename = FMOD_Scrapper\Build\Desktop/Master.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F9B25FC7F8 : node = 000001F99705BD70
-[LOG] SystemI::createSound                     : add node to async list : head = 000001FA361E0F68.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F9B25FC7F8
+[LOG] SystemI::createSound                     : setdata soundi = 000001323C3285F8 : node = 00000131D6201270
+[LOG] SystemI::createSound                     : add node to async list : head = 00000132BFF5C838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001323C3285F8
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Scrapper\Build\Desktop/Master.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 620384
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15808
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F99705BE80
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000131D6201380
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3814
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Swosh_1', format=5, channels=2, frequency=48000, lengthbytes=261760, lengthpcm=995718, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.609668.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F9B25FC7F8
-[LOG] SoundI::release                          : Swosh_1 (000001F9B25FC7F8)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9AD96A6F8)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9B25FC9A8)
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001323C3285F8
+[LOG] SoundI::release                          : Swosh_1 (000001323C3285F8)
+[LOG] SoundI::release                          :     Swosh_1 (00000131D581D218)
+[LOG] SoundI::release                          :     Swosh_1 (000001323C328CB8)
 [LOG] SystemI::createSound                     : filename = FMOD_Scrapper\Build\Desktop/Master.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F9B25FD068 : node = 000001F99705B730
-[LOG] SystemI::createSound                     : add node to async list : head = 000001FA361E0F68.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F9B25FD068
+[LOG] SystemI::createSound                     : setdata soundi = 000001323C3285F8 : node = 00000131D6201270
+[LOG] SystemI::createSound                     : add node to async list : head = 00000132BFF5C838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001323C3285F8
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Scrapper\Build\Desktop/Master.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 620384
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15808
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F99705B840
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000131D6201380
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3814
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Swosh_1', format=5, channels=2, frequency=48000, lengthbytes=261760, lengthpcm=995718, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.609668.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F9B25FD068
-[LOG] SoundI::release                          : Swosh_1 (000001F9B25FD068)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9AD96A218)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9B25FC2E8)
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001323C3285F8
+[LOG] SoundI::release                          : Swosh_1 (000001323C3285F8)
+[LOG] SoundI::release                          :     Swosh_1 (00000131D581DD78)
+[LOG] SoundI::release                          :     Swosh_1 (000001323C328CB8)
 [LOG] SystemI::createSound                     : filename = FMOD_Scrapper\Build\Desktop/Master.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F9B25FD728 : node = 000001F99705BD70
-[LOG] SystemI::createSound                     : add node to async list : head = 000001FA361E0F68.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F9B25FD728
+[LOG] SystemI::createSound                     : setdata soundi = 000001323C329018 : node = 00000131D3F97980
+[LOG] SystemI::createSound                     : add node to async list : head = 00000132BFF5C838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001323C329018
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Scrapper\Build\Desktop/Master.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 620384
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15808
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F99705BE80
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000131D3F97A90
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3814
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Swosh_1', format=5, channels=2, frequency=48000, lengthbytes=261760, lengthpcm=995718, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.609668.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F9B25FD728
-[LOG] SoundI::release                          : Swosh_1 (000001F9B25FD728)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9AD96DAF8)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9B25FC2E8)
-[LOG] SystemI::createSound                     : filename = FMOD_Scrapper\Build\Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F9B25FC9A8 : node = 000001FA357515B0
-[LOG] SystemI::createSound                     : add node to async list : head = 000001FA361E0F68.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F9B25FC9A8
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Scrapper\Build\Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 620384
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15808
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001FA357516C0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3814
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Swosh_1', format=5, channels=2, frequency=48000, lengthbytes=261760, lengthpcm=995718, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.609668.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F9B25FC9A8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001323C329018
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] SoundI::release                          : Swosh_1 (000001F9B25FC9A8)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9AD96DAF8)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9B25FDC38)
+[LOG] SoundI::release                          : Swosh_1 (000001323C329018)
+[LOG] SoundI::release                          :     Swosh_1 (00000131D581E8D8)
+[LOG] SoundI::release                          :     Swosh_1 (000001323C3285F8)
 [LOG] SystemI::createSound                     : filename = FMOD_Scrapper\Build\Desktop/Master.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F9B25FCEB8 : node = 000001F99705C130
-[LOG] SystemI::createSound                     : add node to async list : head = 000001FA361E0F68.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F9B25FCEB8
+[LOG] SystemI::createSound                     : setdata soundi = 000001321A800068 : node = 00000131D3F984C0
+[LOG] SystemI::createSound                     : add node to async list : head = 00000132BFF5C838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001321A800068
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Scrapper\Build\Desktop/Master.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 620384
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15808
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F99705C240
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000131D3F985D0
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3814
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Swosh_1', format=5, channels=2, frequency=48000, lengthbytes=261760, lengthpcm=995718, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.609668.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F9B25FCEB8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001321A800068
 [LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
 [LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 620384
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 15808
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000AC67EAF468
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000260C0FEE38
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFA5A087B10
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFA5A087AE0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFA5A087BE0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFA5A087CA0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001F9AC63DAC8
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE19717B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE19717AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE19717BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE19717CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001323C218A58
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Wilhelm scream', format=5, channels=2, frequency=48000, lengthbytes=9600, lengthpcm=53608, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.580322.
-[LOG] SoundI::release                          : Swosh_1 (000001F9B25FCEB8)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9AD96DAF8)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9B25FD3C8)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] SoundI::release                          : Swosh_1 (000001321A800068)
+[LOG] SoundI::release                          :     Swosh_1 (00000131D581DD78)
+[LOG] SoundI::release                          :     Swosh_1 (000001321A8014A8)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] SystemI::createSound                     : filename = FMOD_Scrapper\Build\Desktop/Master.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F9B25FDC38 : node = 000001F94ACAA5C0
-[LOG] SystemI::createSound                     : add node to async list : head = 000001FA361E0F68.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F9B25FDC38
+[LOG] SystemI::createSound                     : setdata soundi = 000001321A800F98 : node = 00000131D3F97980
+[LOG] SystemI::createSound                     : add node to async list : head = 00000132BFF5C838.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001321A800F98
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Scrapper\Build\Desktop/Master.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 620384
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15808
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F94ACAA6D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000131D3F97A90
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Ambiance_Wind_Powerfull_Nonlinier', format=5, channels=2, frequency=48000, lengthbytes=310720, lengthpcm=1198151, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F9B25FDC38
-[LOG] SystemI::createSound                     : filename = FMOD_Scrapper\Build\Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F9B25FC648 : node = 000001F94ACAA700
-[LOG] SystemI::createSound                     : add node to async list : head = 000001FA361E0F68.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F9B25FC648
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Scrapper\Build\Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 620384
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15808
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F94ACAA810
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3814
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Swosh_1', format=5, channels=2, frequency=48000, lengthbytes=261760, lengthpcm=995718, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.609668.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F9B25FC648
-[LOG] SoundI::release                          : Ambiance_Wind_Powerfull_Nonlinier (000001F9B30ECAE8)
-[LOG] SoundI::release                          :     Ambiance_Wind_Powerfull_Nonlinier (000001F9AD96AA38)
-[LOG] SoundI::release                          :     Ambiance_Wind_Powerfull_Nonlinier (000001F9B30EBF18)
-[LOG] SoundI::release                          : Swosh_1 (000001F9B25FC648)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9AD96AF18)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9B25FD728)
-[LOG] SystemI::createSound                     : filename = FMOD_Scrapper\Build\Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F9B25FCEB8 : node = 000001FA35D92B50
-[LOG] SystemI::createSound                     : add node to async list : head = 000001FA361E0F68.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F9B25FCEB8
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Scrapper\Build\Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 620384
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15808
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001FA35D92C60
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3814
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Swosh_1', format=5, channels=2, frequency=48000, lengthbytes=261760, lengthpcm=995718, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.609668.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F9B25FCEB8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001321A800F98
+[LOG] SoundI::release                          : Ambiance_Wind_Powerfull_Nonlinier (00000131D61CEA18)
+[LOG] SoundI::release                          :     Ambiance_Wind_Powerfull_Nonlinier (00000131D581F778)
+[LOG] SoundI::release                          :     Ambiance_Wind_Powerfull_Nonlinier (00000131D61CED78)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] SoundI::release                          : Swosh_1 (000001F9B25FCEB8)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9AD96C438)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9B25FC648)
-[LOG] SystemI::createSound                     : filename = FMOD_Scrapper\Build\Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F9B25FD068 : node = 000001F94ACAA700
-[LOG] SystemI::createSound                     : add node to async list : head = 000001FA361E0F68.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F9B25FD068
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Scrapper\Build\Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 620384
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15808
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F94ACAA810
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3814
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Swosh_1', format=5, channels=2, frequency=48000, lengthbytes=261760, lengthpcm=995718, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.609668.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F9B25FD068
-[LOG] SoundI::release                          : Swosh_1 (000001F9B25FD068)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9AD96C438)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9B25FC2E8)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] SystemI::createSound                     : filename = FMOD_Scrapper\Build\Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F9B25FC2E8 : node = 000001F99705BEB0
-[LOG] SystemI::createSound                     : add node to async list : head = 000001FA361E0F68.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F9B25FC2E8
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Scrapper\Build\Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 620384
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15808
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F99705BFC0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3814
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Swosh_1', format=5, channels=2, frequency=48000, lengthbytes=261760, lengthpcm=995718, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.609668.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F9B25FC2E8
-[LOG] SoundI::release                          : Swosh_1 (000001F9B25FC2E8)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9AD96C438)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9B25FD068)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] SystemI::createSound                     : filename = FMOD_Scrapper\Build\Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F9B25FC2E8 : node = 000001F99705B9B0
-[LOG] SystemI::createSound                     : add node to async list : head = 000001FA361E0F68.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F9B25FC2E8
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Scrapper\Build\Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 620384
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15808
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F99705BAC0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3814
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Swosh_1', format=5, channels=2, frequency=48000, lengthbytes=261760, lengthpcm=995718, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.609668.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F9B25FC2E8
-[LOG] SoundI::release                          : Swosh_1 (000001F9B25FC2E8)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9AD96C438)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9B25FD728)
-[LOG] SystemI::createSound                     : filename = FMOD_Scrapper\Build\Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F9B25FCEB8 : node = 000001F99705C270
-[LOG] SystemI::createSound                     : add node to async list : head = 000001FA361E0F68.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F9B25FCEB8
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Scrapper\Build\Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 620384
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15808
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F99705C380
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3814
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Swosh_1', format=5, channels=2, frequency=48000, lengthbytes=261760, lengthpcm=995718, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.609668.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F9B25FCEB8
-[LOG] SoundI::release                          : Swosh_1 (000001F9B25FCEB8)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9AD96C438)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9B25FD3C8)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] SystemI::createSound                     : filename = FMOD_Scrapper\Build\Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F9B25FD728 : node = 000001F99705BD70
-[LOG] SystemI::createSound                     : add node to async list : head = 000001FA361E0F68.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F9B25FD728
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Scrapper\Build\Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 620384
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15808
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F99705BE80
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3814
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Swosh_1', format=5, channels=2, frequency=48000, lengthbytes=261760, lengthpcm=995718, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.609668.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F9B25FD728
-[LOG] SoundI::release                          : Swosh_1 (000001F9B25FD728)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9AD96AF18)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9B25FC2E8)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] SystemI::createSound                     : filename = FMOD_Scrapper\Build\Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F9B25FC2E8 : node = 000001F99705C130
-[LOG] SystemI::createSound                     : add node to async list : head = 000001FA361E0F68.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F9B25FC2E8
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Scrapper\Build\Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 620384
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15808
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F99705C240
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3814
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Swosh_1', format=5, channels=2, frequency=48000, lengthbytes=261760, lengthpcm=995718, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.609668.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F9B25FC2E8
-[LOG] SoundI::release                          : Swosh_1 (000001F9B25FC2E8)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9AD96C438)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9B25FCEB8)
-[LOG] SystemI::createSound                     : filename = FMOD_Scrapper\Build\Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F9B25FC648 : node = 000001FA35751D30
-[LOG] SystemI::createSound                     : add node to async list : head = 000001FA361E0F68.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F9B25FC648
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Scrapper\Build\Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 620384
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15808
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001FA35751E40
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3814
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Swosh_1', format=5, channels=2, frequency=48000, lengthbytes=261760, lengthpcm=995718, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.609668.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F9B25FC648
-[LOG] SystemI::createSound                     : filename = FMOD_Scrapper\Build\Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F9B25FD218 : node = 000001F99705BD70
-[LOG] SystemI::createSound                     : add node to async list : head = 000001FA361E0F68.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F9B25FD218
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Scrapper\Build\Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 620384
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15808
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F99705BE80
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Ambiance_Wind_Powerfull_Nonlinier', format=5, channels=2, frequency=48000, lengthbytes=310720, lengthpcm=1198151, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F9B25FD218
-[LOG] SoundI::release                          : Swosh_1 (000001F9B25FC648)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9AD96C438)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9B25FD3C8)
-[LOG] SoundI::release                          : Ambiance_Wind_Powerfull_Nonlinier (000001F9B25FDC38)
-[LOG] SoundI::release                          :     Ambiance_Wind_Powerfull_Nonlinier (000001F9AD96BDB8)
-[LOG] SoundI::release                          :     Ambiance_Wind_Powerfull_Nonlinier (000001F9B25FC9A8)
-[LOG] SystemI::createSound                     : filename = FMOD_Scrapper\Build\Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F9B25FDC38 : node = 000001F94ACAA5C0
-[LOG] SystemI::createSound                     : add node to async list : head = 000001FA361E0F68.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F9B25FDC38
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Scrapper\Build\Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 620384
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15808
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F94ACAA6D0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3814
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Swosh_1', format=5, channels=2, frequency=48000, lengthbytes=261760, lengthpcm=995718, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.609668.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F9B25FDC38
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] SoundI::release                          : Swosh_1 (000001F9B25FDC38)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9AD96CF98)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9B25FC2E8)
-[LOG] SystemI::createSound                     : filename = FMOD_Scrapper\Build\Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F9B25FDC38 : node = 000001FA35D92150
-[LOG] SystemI::createSound                     : add node to async list : head = 000001FA361E0F68.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F9B25FDC38
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Scrapper\Build\Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 620384
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15808
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001FA35D92260
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3814
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Swosh_1', format=5, channels=2, frequency=48000, lengthbytes=261760, lengthpcm=995718, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.609668.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F9B25FDC38
-[LOG] SoundI::release                          : Swosh_1 (000001F9B25FDC38)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9AD96DAF8)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9B25FC2E8)
-[LOG] SystemI::createSound                     : filename = FMOD_Scrapper\Build\Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F9B25FDC38 : node = 000001F99705BEB0
-[LOG] SystemI::createSound                     : add node to async list : head = 000001FA361E0F68.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F9B25FDC38
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Scrapper\Build\Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 620384
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15808
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F99705BFC0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3814
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Swosh_1', format=5, channels=2, frequency=48000, lengthbytes=261760, lengthpcm=995718, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.609668.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F9B25FDC38
-[LOG] SoundI::release                          : Swosh_1 (000001F9B25FDC38)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9AD96B3F8)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9B25FD578)
-[LOG] SystemI::createSound                     : filename = FMOD_Scrapper\Build\Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F9B25FD578 : node = 000001F94ACAA5C0
-[LOG] SystemI::createSound                     : add node to async list : head = 000001FA361E0F68.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F9B25FD578
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Scrapper\Build\Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 620384
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15808
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F94ACAA6D0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3814
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Swosh_1', format=5, channels=2, frequency=48000, lengthbytes=261760, lengthpcm=995718, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.609668.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F9B25FD578
-[LOG] SoundI::release                          : Swosh_1 (000001F9B25FD578)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9AD96D2D8)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9B25FDC38)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] SystemI::createSound                     : filename = FMOD_Scrapper\Build\Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F9B25FD3C8 : node = 000001F99705B730
-[LOG] SystemI::createSound                     : add node to async list : head = 000001FA361E0F68.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F9B25FD3C8
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Scrapper\Build\Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 620384
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15808
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F99705B840
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3814
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Swosh_1', format=5, channels=2, frequency=48000, lengthbytes=261760, lengthpcm=995718, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.609668.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F9B25FD3C8
-[LOG] SoundI::release                          : Swosh_1 (000001F9B25FD3C8)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9AD96C438)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9B25FC648)
-[LOG] SystemI::createSound                     : filename = FMOD_Scrapper\Build\Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F9B25FD578 : node = 000001F99705C130
-[LOG] SystemI::createSound                     : add node to async list : head = 000001FA361E0F68.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F9B25FD578
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Scrapper\Build\Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 620384
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15808
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F99705C240
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3814
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Swosh_1', format=5, channels=2, frequency=48000, lengthbytes=261760, lengthpcm=995718, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.609668.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F9B25FD578
-[LOG] SoundI::release                          : Swosh_1 (000001F9B25FD578)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9AD96BDB8)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9B25FC7F8)
-[LOG] SystemI::createSound                     : filename = FMOD_Scrapper\Build\Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F9B25FDC38 : node = 000001F94ACAA5C0
-[LOG] SystemI::createSound                     : add node to async list : head = 000001FA361E0F68.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F9B25FDC38
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Scrapper\Build\Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 620384
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15808
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F94ACAA6D0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3814
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Swosh_1', format=5, channels=2, frequency=48000, lengthbytes=261760, lengthpcm=995718, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.609668.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F9B25FDC38
-[LOG] SoundI::release                          : Swosh_1 (000001F9B25FDC38)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9AD96BDB8)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9B25FC648)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] SystemI::createSound                     : filename = FMOD_Scrapper\Build\Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F9B25FD578 : node = 000001FA35D92A10
-[LOG] SystemI::createSound                     : add node to async list : head = 000001FA361E0F68.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F9B25FD578
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Scrapper\Build\Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 620384
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15808
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001FA35D92B20
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3814
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Swosh_1', format=5, channels=2, frequency=48000, lengthbytes=261760, lengthpcm=995718, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.609668.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F9B25FD578
-[LOG] SoundI::release                          : Swosh_1 (000001F9B25FD578)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9AD96B3F8)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9B25FC7F8)
-[LOG] SystemI::createSound                     : filename = FMOD_Scrapper\Build\Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F9B25FD3C8 : node = 000001F99705BEB0
-[LOG] SystemI::createSound                     : add node to async list : head = 000001FA361E0F68.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F9B25FD3C8
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Scrapper\Build\Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 620384
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15808
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F99705BFC0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3814
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Swosh_1', format=5, channels=2, frequency=48000, lengthbytes=261760, lengthpcm=995718, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.609668.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F9B25FD3C8
-[LOG] SoundI::release                          : Swosh_1 (000001F9B25FD3C8)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9AD96CF98)
-[LOG] SoundI::release                          :     Swosh_1 (000001F9B25FDC38)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] SystemI::createSound                     : filename = FMOD_Scrapper\Build\Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F9B25FC2E8 : node = 000001F94ACAA5C0
-[LOG] SystemI::createSound                     : add node to async list : head = 000001FA361E0F68.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F9B25FC2E8
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Scrapper\Build\Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 620384
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15808
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F94ACAA6D0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Ambiance_Wind_Powerfull_Nonlinier', format=5, channels=2, frequency=48000, lengthbytes=310720, lengthpcm=1198151, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F9B25FC2E8
-[LOG] SoundI::release                          : Ambiance_Wind_Powerfull_Nonlinier (000001F9B25FD218)
-[LOG] SoundI::release                          :     Ambiance_Wind_Powerfull_Nonlinier (000001F9AD96CAB8)
-[LOG] SoundI::release                          :     Ambiance_Wind_Powerfull_Nonlinier (000001F9B25FCEB8)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] SoundI::release                          : Ambiance_Wind_Powerfull_Nonlinier (000001F9B25FC2E8)
-[LOG] SoundI::release                          :     Ambiance_Wind_Powerfull_Nonlinier (000001F9AD96D2D8)
-[LOG] SoundI::release                          :     Ambiance_Wind_Powerfull_Nonlinier (000001F9B25FC9A8)
-[LOG] SoundI::release                          :  (000001F7AA5858A8)
-[LOG] SoundI::release                          :     Wilhelm scream (000001F9AD96C778)
-[LOG] SoundI::release                          :  (000001F94BFB1868)
-[LOG] SoundI::release                          :     PlayerHurt (000001F9AD96C298)
+[LOG] SoundI::release                          : Ambiance_Wind_Powerfull_Nonlinier (000001321A800F98)
+[LOG] SoundI::release                          :     Ambiance_Wind_Powerfull_Nonlinier (00000131D58202D8)
+[LOG] SoundI::release                          :     Ambiance_Wind_Powerfull_Nonlinier (000001321A8014A8)
+[LOG] SoundI::release                          :  (00000132BFF2D5D8)
+[LOG] SoundI::release                          :     Wilhelm scream (00000131D581E8D8)
+[LOG] SoundI::release                          :  (00000132BFF2C498)
+[LOG] SoundI::release                          :     PlayerHurt (00000131D5820AF8)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
