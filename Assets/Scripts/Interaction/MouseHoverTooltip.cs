@@ -14,6 +14,7 @@ public class MouseHoverTooltip : MonoBehaviour
     public LayoutElement LayoutElement;
     public int breakNewLineAt = 50;
     public bool drawTooltip = false;
+    [SerializeField]private int currentID = -1;
 
     private void Update()
     {
@@ -37,8 +38,11 @@ public class MouseHoverTooltip : MonoBehaviour
         GetComponent<RectTransform>().position = Input.mousePosition;
     }
 
-    public void CreateTooltip(string title, string content)
+    public void CreateTooltip(int tooltipID, string title, string content)
     {
+        if (currentID != -1 && currentID != tooltipID) return;
+        gameObject.SetActive(true);
+        currentID = tooltipID;
         LayoutElement.enabled = (title.Length >= breakNewLineAt || content.Length >= breakNewLineAt * 2);
             
         tooltipTitle.text = title;
@@ -47,10 +51,13 @@ public class MouseHoverTooltip : MonoBehaviour
         drawTooltip = true;
     }
 
-    public void DestroyTooltip()
+    public void DestroyTooltip(int tooltipID)
     {
+        if (currentID != tooltipID) return;
+        gameObject.SetActive(false);
         tooltipTitle.text = "";
         tooltipContent.text = "";
         drawTooltip = false;
+        currentID = -1;
     }
 }

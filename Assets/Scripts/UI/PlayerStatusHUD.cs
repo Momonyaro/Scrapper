@@ -44,7 +44,7 @@ public class PlayerStatusHUD : MonoBehaviour, IPointerEnterHandler, IPointerExit
     public void OnPointerEnter(PointerEventData eventData)
     {
         PlayerStatusHUD.drawingTooltip = true;
-        Tooltip.CreateTooltip(player.entityName, $"Health: {player.healthPts[0]}/{player.healthPts[1]} ({player.GetHealthPercentageStatus()})\n" +
+        Tooltip.CreateTooltip(12, player.entityName, $"Health: {player.healthPts[0]}/{player.healthPts[1]} ({player.GetHealthPercentageStatus()})\n" +
                                                             $"Level: {player.expPts[1]}, XP to next level: {player.expPts[0]}");
         Tooltip.gameObject.SetActive(true);
     }
@@ -52,7 +52,7 @@ public class PlayerStatusHUD : MonoBehaviour, IPointerEnterHandler, IPointerExit
     public void OnPointerExit(PointerEventData eventData)
     {
         Tooltip.gameObject.SetActive(false);
-        Tooltip.DestroyTooltip();
+        Tooltip.DestroyTooltip(12);
         PlayerStatusHUD.drawingTooltip = false;
     }
 }

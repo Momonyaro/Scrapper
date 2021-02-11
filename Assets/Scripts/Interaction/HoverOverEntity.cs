@@ -102,7 +102,7 @@ namespace Srapper.Interaction
                     content += "\n " + entityComponent.GetHealthPercentageStatus();
                 }
                 
-                cachedMouseTooltip.CreateTooltip(title, content);
+                cachedMouseTooltip.CreateTooltip(31, title, content);
                 cachedMouseTooltip.gameObject.SetActive(true);
             }
         }
@@ -110,7 +110,7 @@ namespace Srapper.Interaction
         public void OnPointerExit(PointerEventData eventData)
         {
             debugAggroHover = false;
-            cachedMouseTooltip.DestroyTooltip();
+            cachedMouseTooltip.DestroyTooltip(31);
             activeHover = false;
         }
     }

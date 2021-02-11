@@ -711,6 +711,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TurnPrompter: {fileID: 1802783970}
+  cachedMouseTooltip: {fileID: 0}
   waitTime: 0.15
 --- !u!114 &107495357
 MonoBehaviour:
@@ -872,7 +873,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 4588938}
   m_Direction: 2
   m_Value: 1.0000002
-  m_Size: 0.6272204
+  m_Size: 0.62722045
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3770,6 +3771,7 @@ MonoBehaviour:
   LayoutElement: {fileID: 1235163220}
   breakNewLineAt: 50
   drawTooltip: 0
+  currentID: -1
 --- !u!1 &1099036380
 GameObject:
   m_ObjectHideFlags: 0

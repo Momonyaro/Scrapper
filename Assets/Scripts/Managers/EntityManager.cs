@@ -15,8 +15,14 @@ namespace Scrapper.Managers
         public static bool playerTurnFlag = false;
         public static bool endPlayerTurnFlag = false;
         public TurnPrompter TurnPrompter;
+        public MouseHoverTooltip cachedMouseTooltip;
 
         public float waitTime = 0.15f; //To not just catapult between entities between turns.
+
+        private void Awake()
+        {
+            cachedMouseTooltip = FindObjectOfType<MouseHoverTooltip>();
+        }
 
         public static void ActivateTurnBased()
         {
@@ -83,6 +89,9 @@ namespace Scrapper.Managers
                 
                 yield return null;
             }
+            
+            cachedMouseTooltip.DestroyTooltip(21);
+            cachedMouseTooltip.gameObject.SetActive(false);
             yield break;
         }
     }

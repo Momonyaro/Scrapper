@@ -106,7 +106,11 @@ namespace Scrapper.Entities
             while (!eTFlag)
             {
                 if (_hasPathfinder && !_pathfinder.playerControlled) actionPts[0] = 0;
-                if (actionPts[0] <= 0 && _pathfinder.currentPath.Count == 0) { eTFlag = true; }
+                if (actionPts[0] <= 0 && _pathfinder.currentPath.Count == 0)
+                {
+                    yield return new WaitForSeconds(0.2f);
+                    eTFlag = true; 
+                }
 
                 
                 //Here the AI decides what to do. or if we're

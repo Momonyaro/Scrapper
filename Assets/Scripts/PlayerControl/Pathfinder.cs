@@ -86,8 +86,17 @@ public class Pathfinder : MonoBehaviour
                     Vector2[] path = new Vector2[0];
                     if (hit2D.collider.GetComponent<HoverOverEntity>() != null)
                     {
-                        path = FindObjectOfType<PolygonalNavMesh>().GetShortestPath(transform.position, hit2D.collider.transform.parent.position);
-                        stopShort = true;
+                        if (pathingEntity.hTFlag)
+                        {
+                            CombatManager.attacker = pathingEntity;
+                            if (!EntityManager.turnBasedEngaged || CombatManager.GetEntityWeapon(pathingEntity).apCost <= pathingEntity.actionPts[0])
+                                characterAnimator.PlayAnimFromKeyword(CombatManager.GetEntityWeapon(pathingEntity).itemCombatAnim);
+                        }
+                        else
+                        {
+                            path = FindObjectOfType<PolygonalNavMesh>().GetShortestPath(transform.position, hit2D.collider.transform.parent.position);
+                            stopShort = true;
+                        }
                     }
                     else if (hit2D.collider.GetComponent<PolygonCollider2D>() == null) return;
                     else if (hit2D.collider.GetComponent<PolygonalNavMesh>() != null)
@@ -132,14 +141,15 @@ public class Pathfinder : MonoBehaviour
                     {
                         if (EventSystem.current.currentSelectedGameObject.GetComponent<PolygonalNavMesh>() == null)
                         {
-                            pathingEntity._hoverOverEntity.cachedMouseTooltip.gameObject.SetActive(false);
+                            pathingEntity._hoverOverEntity.cachedMouseTooltip.DestroyTooltip(21);
                             return;
                         }
                     }
                 }
                 else
                 {
-                    if (!PlayerStatusHUD.drawingTooltip) pathingEntity._hoverOverEntity.cachedMouseTooltip.gameObject.SetActive(false); 
+                    if (!PlayerStatusHUD.drawingTooltip)
+                        pathingEntity._hoverOverEntity.cachedMouseTooltip.DestroyTooltip(21);
                     return;
                 }
             
@@ -173,8 +183,6 @@ public class Pathfinder : MonoBehaviour
                         distance += Vector2.Distance(path[i - 1], path[i]);
                     }
                     int cost = Mathf.FloorToInt(distance / 2f) + 1;
-                    
-                    pathingEntity._hoverOverEntity.cachedMouseTooltip.gameObject.SetActive(true);
 
                     
 
@@ -186,7 +194,7 @@ public class Pathfinder : MonoBehaviour
                         {
                             costTitle += (cost > pathingEntity.actionPts[0]) ? "<color=red>Too Expensive!</color>" : cost.ToString();
                             
-                            pathingEntity._hoverOverEntity.cachedMouseTooltip.CreateTooltip(costTitle, 
+                            pathingEntity._hoverOverEntity.cachedMouseTooltip.CreateTooltip(21, costTitle, 
                                 "distance: " + distance.ToString("F1") + "m");
                         }
                         else
@@ -220,7 +228,7 @@ public class Pathfinder : MonoBehaviour
                                 content +=  "\n" + distance.ToString("F1") + "m";
                             content += "\n" + entityComponent.GetHealthPercentageStatus();
                         
-                            pathingEntity._hoverOverEntity.cachedMouseTooltip.CreateTooltip(title, content);
+                            pathingEntity._hoverOverEntity.cachedMouseTooltip.CreateTooltip(21, title, content);
                         }
                         
                         List<Vector3> vec3Casted = new List<Vector3>();
