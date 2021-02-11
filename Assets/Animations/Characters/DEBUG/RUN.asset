@@ -13,108 +13,248 @@ MonoBehaviour:
   m_Name: RUN
   m_EditorClassIdentifier: 
   displayWeapons: 0
+  newFrame: 0
+  loopFrame: 0
+  loopAnim: 1
+  transitionTo: 
   branches:
   - name: S
     facing: 0
     branch:
+      currentFrame: 0
       weaponOrdering: 0
       frames:
       - frameDuration: 0.2
-        frameSprite: {fileID: 7545847621374866370, guid: 4a7db23ce15db154fb3b7fcdec2be703, type: 3}
-      - frameDuration: 0.2
-        frameSprite: {fileID: 9071613638423656698, guid: a628f6b3abcb52c469c6277fb90ca5d0, type: 3}
-      - frameDuration: 0.2
-        frameSprite: {fileID: 1854506366158576333, guid: cd99f50621fd17a46848c17053ff59d1, type: 3}
-      - frameDuration: 0.2
-        frameSprite: {fileID: -8278062572222566947, guid: 2da7abef6b60d4f47b1799a1b342148a, type: 3}
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: -8241991466668090301, guid: 3edfb36a9cc11ce418ab7fa534fdd711, type: 3}
+      - frameDuration: 0.18
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: -8951341565799297151, guid: 3f78f9802e3620640a51c4d6dd90e864, type: 3}
+      - frameDuration: 0.13
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 8002075832076079276, guid: 0720f65cdb74ea145a1c6d2df5ffab49, type: 3}
+      - frameDuration: 0.27
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: -7734592601738267015, guid: 2a2c327db978aee40876035ef8595ee7, type: 3}
+      - frameDuration: 0.18
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 4463667681796946375, guid: 3014f3416ae5117418116f152974d4da, type: 3}
+      - frameDuration: 0.13
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: -4997982329477527031, guid: 3c7590d9ff69a8e458e390eeac935f49, type: 3}
   - name: SE
     facing: 1
     branch:
+      currentFrame: 0
       weaponOrdering: 0
       frames:
       - frameDuration: 0.2
-        frameSprite: {fileID: -4240456906859068710, guid: 4a7db23ce15db154fb3b7fcdec2be703, type: 3}
-      - frameDuration: 0.2
-        frameSprite: {fileID: -5085285418696496306, guid: a628f6b3abcb52c469c6277fb90ca5d0, type: 3}
-      - frameDuration: 0.2
-        frameSprite: {fileID: 2253634143084347755, guid: cd99f50621fd17a46848c17053ff59d1, type: 3}
-      - frameDuration: 0.2
-        frameSprite: {fileID: -5947357657572634656, guid: 2da7abef6b60d4f47b1799a1b342148a, type: 3}
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: -8868816862543455773, guid: 3edfb36a9cc11ce418ab7fa534fdd711, type: 3}
+      - frameDuration: 0.18
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 1689392254100352432, guid: 3f78f9802e3620640a51c4d6dd90e864, type: 3}
+      - frameDuration: 0.13
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 2123166713966151963, guid: 0720f65cdb74ea145a1c6d2df5ffab49, type: 3}
+      - frameDuration: 0.27
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: -9037159996410463173, guid: 2a2c327db978aee40876035ef8595ee7, type: 3}
+      - frameDuration: 0.18
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: -4889187734215046691, guid: 3014f3416ae5117418116f152974d4da, type: 3}
+      - frameDuration: 0.13
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: -3865155554861929914, guid: 3c7590d9ff69a8e458e390eeac935f49, type: 3}
   - name: E
     facing: 2
     branch:
+      currentFrame: 5
       weaponOrdering: 0
       frames:
       - frameDuration: 0.2
-        frameSprite: {fileID: 7709138515797732567, guid: 4a7db23ce15db154fb3b7fcdec2be703, type: 3}
-      - frameDuration: 0.2
-        frameSprite: {fileID: 356819637195675575, guid: a628f6b3abcb52c469c6277fb90ca5d0, type: 3}
-      - frameDuration: 0.2
-        frameSprite: {fileID: 2005567496362622498, guid: cd99f50621fd17a46848c17053ff59d1, type: 3}
-      - frameDuration: 0.2
-        frameSprite: {fileID: 7119779097506938328, guid: 2da7abef6b60d4f47b1799a1b342148a, type: 3}
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: -1907680395460947651, guid: 3edfb36a9cc11ce418ab7fa534fdd711, type: 3}
+      - frameDuration: 0.18
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: -3253753087836361947, guid: 3f78f9802e3620640a51c4d6dd90e864, type: 3}
+      - frameDuration: 0.13
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: -3276431482272301779, guid: 0720f65cdb74ea145a1c6d2df5ffab49, type: 3}
+      - frameDuration: 0.27
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: -967315726408405385, guid: 2a2c327db978aee40876035ef8595ee7, type: 3}
+      - frameDuration: 0.18
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: -2474100563031226648, guid: 3014f3416ae5117418116f152974d4da, type: 3}
+      - frameDuration: 0.13
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: -3445487024635100091, guid: 3c7590d9ff69a8e458e390eeac935f49, type: 3}
   - name: NE
     facing: 3
     branch:
+      currentFrame: 0
       weaponOrdering: 0
       frames:
       - frameDuration: 0.2
-        frameSprite: {fileID: -8187004985708364068, guid: 4a7db23ce15db154fb3b7fcdec2be703, type: 3}
-      - frameDuration: 0.2
-        frameSprite: {fileID: -9211543468627053359, guid: a628f6b3abcb52c469c6277fb90ca5d0, type: 3}
-      - frameDuration: 0.2
-        frameSprite: {fileID: 5386358271643727661, guid: cd99f50621fd17a46848c17053ff59d1, type: 3}
-      - frameDuration: 0.2
-        frameSprite: {fileID: -8140994883242012213, guid: 2da7abef6b60d4f47b1799a1b342148a, type: 3}
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 8610371991504186425, guid: 3edfb36a9cc11ce418ab7fa534fdd711, type: 3}
+      - frameDuration: 0.18
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: -1111726269568809898, guid: 3f78f9802e3620640a51c4d6dd90e864, type: 3}
+      - frameDuration: 0.13
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 3959698642307775312, guid: 0720f65cdb74ea145a1c6d2df5ffab49, type: 3}
+      - frameDuration: 0.27
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 2695448918862211083, guid: 2a2c327db978aee40876035ef8595ee7, type: 3}
+      - frameDuration: 0.18
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 2137930118841406087, guid: 3014f3416ae5117418116f152974d4da, type: 3}
+      - frameDuration: 0.13
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 2735348001289777894, guid: 3c7590d9ff69a8e458e390eeac935f49, type: 3}
   - name: N
     facing: 4
     branch:
+      currentFrame: 0
       weaponOrdering: 0
       frames:
       - frameDuration: 0.2
-        frameSprite: {fileID: -2106676642406308643, guid: 4a7db23ce15db154fb3b7fcdec2be703, type: 3}
-      - frameDuration: 0.2
-        frameSprite: {fileID: -5955860750619873753, guid: a628f6b3abcb52c469c6277fb90ca5d0, type: 3}
-      - frameDuration: 0.2
-        frameSprite: {fileID: 2603656401948791994, guid: cd99f50621fd17a46848c17053ff59d1, type: 3}
-      - frameDuration: 0.2
-        frameSprite: {fileID: -5232583987415223245, guid: 2da7abef6b60d4f47b1799a1b342148a, type: 3}
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: -4888236574075497160, guid: 3edfb36a9cc11ce418ab7fa534fdd711, type: 3}
+      - frameDuration: 0.18
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 3457969784714497276, guid: 3f78f9802e3620640a51c4d6dd90e864, type: 3}
+      - frameDuration: 0.13
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 8247956308742215750, guid: 0720f65cdb74ea145a1c6d2df5ffab49, type: 3}
+      - frameDuration: 0.27
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: -8579098445553921710, guid: 2a2c327db978aee40876035ef8595ee7, type: 3}
+      - frameDuration: 0.18
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 4503988636331190968, guid: 3014f3416ae5117418116f152974d4da, type: 3}
+      - frameDuration: 0.13
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: -4554010878212837429, guid: 3c7590d9ff69a8e458e390eeac935f49, type: 3}
   - name: NW
     facing: 5
     branch:
+      currentFrame: 0
       weaponOrdering: 0
       frames:
       - frameDuration: 0.2
-        frameSprite: {fileID: 7210796532638780212, guid: 4a7db23ce15db154fb3b7fcdec2be703, type: 3}
-      - frameDuration: 0.2
-        frameSprite: {fileID: 1521797569964085344, guid: a628f6b3abcb52c469c6277fb90ca5d0, type: 3}
-      - frameDuration: 0.2
-        frameSprite: {fileID: -3077723449184694813, guid: cd99f50621fd17a46848c17053ff59d1, type: 3}
-      - frameDuration: 0.2
-        frameSprite: {fileID: -1906263302209174148, guid: 2da7abef6b60d4f47b1799a1b342148a, type: 3}
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 7279816796955396390, guid: 3edfb36a9cc11ce418ab7fa534fdd711, type: 3}
+      - frameDuration: 0.18
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 2412032018090601697, guid: 3f78f9802e3620640a51c4d6dd90e864, type: 3}
+      - frameDuration: 0.13
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 381800640888739132, guid: 0720f65cdb74ea145a1c6d2df5ffab49, type: 3}
+      - frameDuration: 0.27
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 5753925684049863287, guid: 2a2c327db978aee40876035ef8595ee7, type: 3}
+      - frameDuration: 0.18
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 645036581572444490, guid: 3014f3416ae5117418116f152974d4da, type: 3}
+      - frameDuration: 0.13
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 9186528107759162198, guid: 3c7590d9ff69a8e458e390eeac935f49, type: 3}
   - name: W
     facing: 6
     branch:
+      currentFrame: 0
       weaponOrdering: 0
       frames:
       - frameDuration: 0.2
-        frameSprite: {fileID: -1574191247434516276, guid: 4a7db23ce15db154fb3b7fcdec2be703, type: 3}
-      - frameDuration: 0.2
-        frameSprite: {fileID: 8988776185769976238, guid: a628f6b3abcb52c469c6277fb90ca5d0, type: 3}
-      - frameDuration: 0.2
-        frameSprite: {fileID: -5511310914076151052, guid: cd99f50621fd17a46848c17053ff59d1, type: 3}
-      - frameDuration: 0.2
-        frameSprite: {fileID: -4683627218258450441, guid: 2da7abef6b60d4f47b1799a1b342148a, type: 3}
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 2880328304542906047, guid: 3edfb36a9cc11ce418ab7fa534fdd711, type: 3}
+      - frameDuration: 0.18
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: -2412413577779206298, guid: 3f78f9802e3620640a51c4d6dd90e864, type: 3}
+      - frameDuration: 0.13
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 7394345558607897432, guid: 0720f65cdb74ea145a1c6d2df5ffab49, type: 3}
+      - frameDuration: 0.27
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: -1753545144147740129, guid: 2a2c327db978aee40876035ef8595ee7, type: 3}
+      - frameDuration: 0.18
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 2664496317854152415, guid: 3014f3416ae5117418116f152974d4da, type: 3}
+      - frameDuration: 0.13
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: -62987030019098707, guid: 3c7590d9ff69a8e458e390eeac935f49, type: 3}
   - name: SW
     facing: 7
     branch:
+      currentFrame: 0
       weaponOrdering: 0
       frames:
       - frameDuration: 0.2
-        frameSprite: {fileID: -8673288523822120938, guid: 4a7db23ce15db154fb3b7fcdec2be703, type: 3}
-      - frameDuration: 0.2
-        frameSprite: {fileID: 5903929444691025093, guid: a628f6b3abcb52c469c6277fb90ca5d0, type: 3}
-      - frameDuration: 0.2
-        frameSprite: {fileID: 4790683650770918097, guid: cd99f50621fd17a46848c17053ff59d1, type: 3}
-      - frameDuration: 0.2
-        frameSprite: {fileID: 22857152703236324, guid: 2da7abef6b60d4f47b1799a1b342148a, type: 3}
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 7168558469593768648, guid: 3edfb36a9cc11ce418ab7fa534fdd711, type: 3}
+      - frameDuration: 0.18
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 6603050908439319748, guid: 3f78f9802e3620640a51c4d6dd90e864, type: 3}
+      - frameDuration: 0.13
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: -6632800711844428003, guid: 0720f65cdb74ea145a1c6d2df5ffab49, type: 3}
+      - frameDuration: 0.27
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 4804086484436891322, guid: 2a2c327db978aee40876035ef8595ee7, type: 3}
+      - frameDuration: 0.18
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: 2987639066236949150, guid: 3014f3416ae5117418116f152974d4da, type: 3}
+      - frameDuration: 0.13
+        audioActions: []
+        logicActions: []
+        frameSprite: {fileID: -7929179180033282924, guid: 3c7590d9ff69a8e458e390eeac935f49, type: 3}

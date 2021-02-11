@@ -13,20 +13,31 @@ namespace Scrapper.Animation
             Weapons_Back
         }
 
-        private int currentFrame = 0;
+        public int currentFrame = 0;
         public WeaponOrdering weaponOrdering;
         public List<AnimFrame> frames;
 
-        public Sprite TickFrames(float deltaTime)
+        public Sprite TickFrames(float deltaTime, out bool newFrame, out bool loopFrame)
         {
             if (!frames[currentFrame].TickFrame(deltaTime))
             {
                 currentFrame++;
                 if (currentFrame >= frames.Count)
+                {
                     currentFrame = 0;
+                    loopFrame = true;
+                }
+                else
+                    loopFrame = false;
+                newFrame = true;
                 return frames[currentFrame].SetActiveFrame();
             }
 
+            loopFrame = false;
+            newFrame = false;
+            
+            if (currentFrame >= frames.Count) currentFrame = 0;
+            
             return frames[currentFrame].GetSprite();
         }
         

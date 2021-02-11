@@ -15,6 +15,7 @@ namespace Scrapper.Pathfinding
         public bool drawNavMesh = true;
         public List<PolyNavObstacle> obstacles;
         private List<DijkstraNode> cachedMapGraph;
+        public List<Vector2> navNodes = new List<Vector2>();
         public bool mapBaked = false;
         
         [SerializeField] private Vector2[] path = new Vector2[0];
@@ -23,11 +24,12 @@ namespace Scrapper.Pathfinding
         void Start()
         {
             if (polyCollider == null) polyCollider = GetComponent<PolygonCollider2D>();
+            if (navNodes.Count == 0) CreateNavNodes();
             cachedMapGraph = BuildGraph(Vector2.zero, Vector2.one, true);
             if (cachedMapGraph.Count > 0) mapBaked = true;
         }
 
-        [BurstCompile]
+        [BurstCompile(FloatPrecision.Medium, FloatMode.Fast, CompileSynchronously = true, Debug = true)]
         public Vector2[] GetShortestPath(Vector2 start, Vector2 end)
         {
 
@@ -35,10 +37,11 @@ namespace Scrapper.Pathfinding
             {
                 if (Inside(obstacles[i].polyCollider.points.ToList(), end))
                     return new Vector2[0];
-                if (Inside(obstacles[i].polyCollider.points.ToList(), start))
-                {
-                    //Find the nearest node?
-                }
+            }
+
+            if (InLineOfSight(start, end))
+            {
+                return new Vector2[2] {start, end};
             }
             
             List<DijkstraNode> vertexSet = new List<DijkstraNode>();
@@ -138,31 +141,10 @@ namespace Scrapper.Pathfinding
         {
             List<DijkstraNode> toReturn = new List<DijkstraNode>();
 
-            List<Vector2> points = polyCollider.points.ToList();
-
-            List<Vector2> concavePoints = new List<Vector2>();
+            List<Vector2> concavePoints = new List<Vector2>(navNodes);
             
             if (!buildForCache)
                 concavePoints.Add(start);
-            
-            for (int i = 0; i < points.Count; i++)
-            {
-                if (IsVertexConcave(points, i))
-                {
-                    concavePoints.Add(points[i]);
-                }
-            }
-
-            for (int i = 0; i < obstacles.Count; i++)
-            {
-                for (int j = 0; j < obstacles[i].polyCollider.points.Length; j++)
-                {
-                    if (IsVertexConvex(obstacles[i].polyCollider.points.ToList(), j))
-                    {
-                        concavePoints.Add(obstacles[i].polyCollider.points[j]);
-                    }
-                }
-            }
             
             if (!buildForCache)
                 concavePoints.Add(end);
@@ -188,6 +170,31 @@ namespace Scrapper.Pathfinding
             }
 
             return toReturn;
+        }
+
+        public void CreateNavNodes()
+        {
+            navNodes.Clear();
+            
+            List<Vector2> points = polyCollider.points.ToList();
+            for (int i = 0; i < points.Count; i++)
+            {
+                if (IsVertexConcave(points, i))
+                {
+                    navNodes.Add(points[i]);
+                }
+            }
+            
+            for (int i = 0; i < obstacles.Count; i++)
+            {
+                for (int j = 0; j < obstacles[i].polyCollider.points.Length; j++)
+                {
+                    if (IsVertexConvex(obstacles[i].polyCollider.points.ToList(), j))
+                    {
+                        navNodes.Add(obstacles[i].polyCollider.points[j]);
+                    }
+                }
+            }
         }
 
         private void OnDrawGizmos()
@@ -218,49 +225,25 @@ namespace Scrapper.Pathfinding
             if (drawVisibilityLines)
             {
                 drawVisibilityLines = false;
-                List<Vector2> points = polyCollider.points.ToList();
-                List<Vector2> concavePoints = new List<Vector2>();
+                if (navNodes.Count == 0) CreateNavNodes();
+                List<Vector2> points = navNodes;
+                
                 for (int i = 0; i < points.Count; i++)
                 {
-                    if (IsVertexConcave(points, i))
-                    {
-                        concavePoints.Add(points[i]);
-                    }
-                }
-                
-                for (int i = 0; i < obstacles.Count; i++)
-                {
-                    for (int j = 0; j < obstacles[i].polyCollider.points.Length; j++)
-                    {
-                        if (IsVertexConvex(obstacles[i].polyCollider.points.ToList(), j))
-                        {
-                            concavePoints.Add(obstacles[i].polyCollider.points[j]);
-                        }
-                    }
-                }
-                
-                for (int i = 0; i < concavePoints.Count; i++)
-                {
-                    for (int j = 0; j < concavePoints.Count; j++)
+                    for (int j = 0; j < points.Count; j++)
                     {
                         if (i == j) continue;
 
-                        if (InLineOfSight(concavePoints[i], concavePoints[j]))
+                        if (InLineOfSight(points[i], points[j]))
                         {
-                            Gizmos.DrawLine(concavePoints[i], concavePoints[j]);
+                            Gizmos.DrawLine(points[i], points[j]);
                         }
                     }
                 }
             }
-            
-            Gizmos.color = Color.green;
-            for (int i = 1; i < path.Length; i++)
-            {
-                Gizmos.DrawLine(path[i], path[i - 1]);
-            }
         }
 
-        bool InLineOfSight(Vector2 start, Vector2 end)
+        public bool InLineOfSight(Vector2 start, Vector2 end)
         {
             // Not in LOS if any of the ends is outside the polygon
             if (!Inside(new List<Vector2>(polyCollider.points), start) || !Inside(new List<Vector2>(polyCollider.points), end)) return false;

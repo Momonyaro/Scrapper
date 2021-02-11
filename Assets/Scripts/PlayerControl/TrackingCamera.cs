@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Srapper.Interaction;
 using UnityEngine;
 
 public class TrackingCamera : MonoBehaviour

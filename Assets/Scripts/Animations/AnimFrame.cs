@@ -9,6 +9,8 @@ namespace Scrapper.Animation
     {
         public float frameDuration = 1;
         private float currentFrameDuration = 0;
+        public List<string> audioActions = new List<string>();
+        public List<string> logicActions = new List<string>();
         [SerializeField] private Sprite frameSprite;
 
         public bool TickFrame(float deltaTime)
