@@ -79,7 +79,6 @@ namespace Scrapper.Managers
                 Debug.Log("Decreased " + attacker.entityName + "'s AP with " + playerWeapon.apCost + ". It is now: " + attacker.actionPts[0]);
             }
             playerCombatMode = false;
-            CombatManager.target = null;
         }
 
         public static Item GetEntityWeapon(Entity entity)
