@@ -89,9 +89,9 @@ public class Pathfinder : MonoBehaviour
             
             if (!CombatManager.playerCombatMode && Input.GetMouseButtonDown(0))
             {
-                path = GetPath();
+                path = GetPath(noCost: false);
                 
-                if (path.Length > 0)
+                if (path.Length > 0 && !pathingEntity.hTFlag)
                 {
                     //Set Movement end point to hit.point and calculate path
                     currentPath.Clear();
@@ -103,7 +103,7 @@ public class Pathfinder : MonoBehaviour
             
             if (pathingEntity.hTFlag)
             {
-                path = GetPath();
+                path = GetPath(noCost: true);
                 
                 if (path.Length > 0)
                 {
@@ -213,7 +213,7 @@ public class Pathfinder : MonoBehaviour
         }
     }
 
-    private Vector2[] GetPath()
+    private Vector2[] GetPath(bool noCost = false)
     {
         Vector2[] path = new Vector2[0];
         _drawEntityToolTip = false;
@@ -249,11 +249,13 @@ public class Pathfinder : MonoBehaviour
                 _stopShort = true;
             }
         }
-        else if (hitCollider.gameObject.name.Equals(_navMesh.gameObject.name))
+        else if (hitCollider.GetComponent<PolygonalNavMesh>() != null)
         {
             path = _navMesh.GetShortestPath(transform.position, hit2D.point);
         }
 
+        if (path.Length == 0) return new Vector2[0];
+        
         if (parsingTurn)
         {
             
@@ -268,7 +270,8 @@ public class Pathfinder : MonoBehaviour
             int cost = CalculateMoveCost(dist);
             if (cost > pathingEntity.actionPts[0])
                 return new Vector2[0];
-            pathingEntity.actionPts[0] -= cost;
+            if (noCost == false)
+                pathingEntity.actionPts[0] -= cost;
         }
         
         return path;
