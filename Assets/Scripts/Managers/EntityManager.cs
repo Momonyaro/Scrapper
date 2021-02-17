@@ -36,6 +36,10 @@ namespace Scrapper.Managers
             {
                 EntityManager.turnBasedEngaged = true;
                 EntityManager.turnBasedStart = false;
+                for (int i = 0; i < Entities.Count; i++)
+                {
+                    Entities[i].actionPts[0] = 0;
+                }
                 StartCoroutine(TurnBasedLoop());
             }
         }
@@ -54,8 +58,12 @@ namespace Scrapper.Managers
                 //Debug.Log(EntityManager.Entities.Count);
                 for (int i = 0; i < EntityManager.Entities.Count; i++)
                 {
-                    if (EntityManager.Entities[i]._pathfinder.playerControlled)
+                    Entity entity = EntityManager.Entities[i];
+                    
+                    if (entity._pathfinder.playerControlled)
                     {
+                        if (entity.healthPts[0] <= 0) yield break; //PLAYER DEAD
+                        
                         playerTurnFlag = true;
                         TurnPrompter.PlayFadingPrompt();
                     }
@@ -70,9 +78,9 @@ namespace Scrapper.Managers
                         }
                     }
                     
-                    StartCoroutine(EntityManager.Entities[i].TakeTurn());
+                    StartCoroutine(entity.TakeTurn());
                     
-                    while (!EntityManager.Entities[i].eTFlag) yield return null;
+                    while (!entity.eTFlag) yield return null;
                     
                     endPlayerTurnFlag = false;
                     playerTurnFlag = false; 

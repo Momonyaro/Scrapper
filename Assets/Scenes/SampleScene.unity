@@ -873,7 +873,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 4588938}
   m_Direction: 2
   m_Value: 1.0000002
-  m_Size: 0.6272204
+  m_Size: 0.62722045
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1691,7 +1691,7 @@ MonoBehaviour:
   entityAltTitle: Test Dummy
   entityID: 767259cd-789e-49d9-a5bd-d6b1df90163f
   healthPts: 1200000019000000
-  actionPts: 0a0000000a000000
+  actionPts: 000000000a000000
   expPts: 6400000001000000
   inventory:
   - {fileID: 0}
@@ -7108,6 +7108,8 @@ MonoBehaviour:
     animation: {fileID: 11400000, guid: b6faf92f6c9cc1d4fbd932c40d6fb073, type: 2}
   - key: _punch
     animation: {fileID: 11400000, guid: 28e82aba20d5c8545826c4206ace7777, type: 2}
+  - key: _hitdead
+    animation: {fileID: 11400000, guid: c9a1adc19fb3fa8419feaec8de97939e, type: 2}
   sprRenderer: {fileID: 1919395825}
   EventEmitter: {fileID: 1973519949}
   DeathEmitter: {fileID: 2054759387}

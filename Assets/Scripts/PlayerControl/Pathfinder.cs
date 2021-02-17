@@ -91,7 +91,7 @@ public class Pathfinder : MonoBehaviour
             {
                 path = GetPath(noCost: false);
                 
-                if (path.Length > 0 && !pathingEntity.hTFlag)
+                if (path.Length > 0)
                 {
                     //Set Movement end point to hit.point and calculate path
                     currentPath.Clear();
@@ -226,39 +226,32 @@ public class Pathfinder : MonoBehaviour
         if (hit2D.collider == null) return path;
         
         Collider2D hitCollider = hit2D.collider;
-        Debug.Log(hitCollider.gameObject.name);
         if (hitCollider.GetComponent<HoverOverEntity>() != null) //Either go to or attack the NPC
         {
-            Debug.Log("We Found an Entity!");
             Item entityWeapon = CombatManager.GetEntityWeapon(pathingEntity);
             bool canAttack = entityWeapon.apCost <= pathingEntity.actionPts[0];
-            path = _navMesh.GetShortestPath(transform.position, hitCollider.transform.parent.position);
+            if (!CombatManager.playerCombatMode)
+            {
+                path = _navMesh.GetShortestPath(transform.position, hitCollider.transform.parent.position);
+                _stopShort = true;
+            }
+            
             if (parsingTurn)
             {
                 CombatManager.attacker = pathingEntity;
-                if (canAttack && Input.GetMouseButtonDown(0))
-                {
-                    characterAnimator.PlayAnimFromKeyword(entityWeapon.itemCombatAnim);
-                }
+                noCost = true;
 
                 if (hit2D.collider.gameObject != pathingEntity.gameObject)
                     _drawEntityToolTip = true;
-            }
-            else
-            {
-                _stopShort = true;
             }
         }
         else if (hitCollider.GetComponent<PolygonalNavMesh>() != null)
         {
             path = _navMesh.GetShortestPath(transform.position, hit2D.point);
         }
-
-        if (path.Length == 0) return new Vector2[0];
         
         if (parsingTurn)
         {
-            
             float dist = 0;
             for (int i = 1; i < path.Length; i++)
             {
@@ -267,9 +260,12 @@ public class Pathfinder : MonoBehaviour
             
             PrintTooltip(dist, CombatManager.target);
 
+            if (path.Length == 0) return new Vector2[0];
+            
             int cost = CalculateMoveCost(dist);
             if (cost > pathingEntity.actionPts[0])
                 return new Vector2[0];
+            
             if (noCost == false)
                 pathingEntity.actionPts[0] -= cost;
         }
@@ -299,10 +295,20 @@ public class Pathfinder : MonoBehaviour
             content += "\n" + "AP Cost: ";
 
             Item weapon = CombatManager.GetEntityWeapon(pathingEntity);
+
+            if (CombatManager.playerCombatMode)
+            {
+                content += (CombatManager.playerCombatMode && weapon.apCost > pathingEntity.actionPts[0])
+                    ? "<color=red>Not Enough AP!</color>"
+                    : weapon.apCost.ToString();
+            }
+            else
+            {
+                content += (cost > pathingEntity.actionPts[0])
+                    ? "<color=red>Not Enough AP!</color>"
+                    : cost.ToString();
+            }
             
-            content += (CombatManager.playerCombatMode && weapon.apCost > pathingEntity.actionPts[0])
-                ? "<color=red>Not Enough AP!</color>"
-                : weapon.apCost.ToString();
             
             Vector3 entityPos = entity.transform.parent.position;
             Vector3 playerPos = CombatManager.playerEntity.transform.parent.position;
@@ -312,7 +318,7 @@ public class Pathfinder : MonoBehaviour
                 content += "\n <color=red>Can't see the Target</color>";
             else if (CombatManager.outOfReach)
                 content += "\n <color=red>Out of Reach!</color>";
-            else
+            else if (distance > 0.0f)
                 content += "\n" + distance.ToString("F1") + "m";
 
             content += "\n" + entity.GetHealthPercentageStatus();

@@ -32,7 +32,7 @@ namespace Scrapper.Managers
 
         private void Update()
         {
-            combatBorder.gameObject.SetActive(CombatManager.playerCombatMode || EntityManager.playerTurnFlag);
+            combatBorder.gameObject.SetActive(CombatManager.playerCombatMode);
             combatBorder.color = borderColor * Mathf.Clamp(Mathf.Sin(Time.time), 0.7f, 1.0f);
         }
 

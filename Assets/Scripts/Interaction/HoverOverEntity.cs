@@ -94,7 +94,7 @@ namespace Srapper.Interaction
                             content +=  "\n <color=red>Out of Reach!</color>";
                         }
                         else
-                            content +=  "\n " + distance + "m";
+                            content +=  "\n " + distance.ToString("F1") + "m";
                     }
                     else 
                         content +=  "\n <color=red>Can't see the Target</color>";
@@ -110,6 +110,7 @@ namespace Srapper.Interaction
         public void OnPointerExit(PointerEventData eventData)
         {
             debugAggroHover = false;
+            //CombatManager.target = null;
             cachedMouseTooltip.DestroyTooltip(31);
             activeHover = false;
         }

@@ -101,21 +101,21 @@ namespace Scrapper.Entities
             CombatManager.attacker = this;
 
             if (pPOpinion < -92) sICFlag = true;
+            else { eTFlag = true; hTFlag = false; yield break;}
             if (_hasPathfinder && _pathfinder.playerControlled) sICFlag = false;
             
             while (!eTFlag)
             {
-                if (_hasPathfinder && !_pathfinder.playerControlled) actionPts[0] = 0;
                 if (actionPts[0] <= 0 && _pathfinder.currentPath.Count == 0)
                 {
-                    yield return new WaitForSeconds(0.2f);
                     eTFlag = true; 
                 }
 
-                
                 //Here the AI decides what to do. or if we're
                 // player controlled we enable the player controls in economy mode.
-
+                // DEBUG AI SHITTY, PLEASE ACTUALLY MAKE SOME AI
+                
+                
                 if (EntityManager.playerTurnFlag)
                 {
                     bool stayInCombat = false;
@@ -135,6 +135,26 @@ namespace Scrapper.Entities
                         yield break;
                     }
                 }
+                else
+                {
+                    yield return new WaitForSeconds(0.4f);
+                    Item weapon = CombatManager.GetEntityWeapon(this);
+                    if (weapon.maxReach > Vector2.Distance(_pathfinder.transform.position,
+                        CombatManager.playerEntity._pathfinder.transform.position))
+                    {
+                        if (weapon.apCost <= actionPts[0])
+                        {
+                            CombatManager.attacker = this;
+                            CombatManager.target = CombatManager.playerEntity;
+                            _animator.PlayAnimFromKeyword(weapon.itemCombatAnim);
+                            yield return new WaitForSeconds(1.2f);
+                            if (CombatManager.playerEntity.healthPts[0] <= 0) eTFlag = true;
+                        }
+                        else { eTFlag = true; }
+                    }
+                    else { eTFlag = true; }
+                }
+                
                 
                 yield return null;
             }
