@@ -72,6 +72,7 @@ namespace Scrapper.Managers
             //Debug.Log("Player str is: " + playerEntity.stats[2]);
             //Debug.Log("Dealt " + damage + " damage to: " + lastTarget.entityName);
             CombatManager.target.EntityTakeDamage(damage);
+            EventLog.Instance.Print($"<color=red>{attacker.entityName}</color> dealt {damage} damage to {target.entityName}");
             
             if (EntityManager.turnBasedEngaged)
             {

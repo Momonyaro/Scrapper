@@ -196,6 +196,7 @@
           <e p="UI" t="Include">
             <e p="APPlayerBar.cs" t="Include" />
             <e p="EndTurnBtn.cs" t="Include" />
+            <e p="EventLog.cs" t="Include" />
             <e p="PlayerStatusHUD.cs" t="Include" />
             <e p="TurnPrompter.cs" t="Include" />
           </e>
