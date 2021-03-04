@@ -21,9 +21,13 @@
   <component name="ChangeListManager">
     <list default="true" id="4b667d6b-b66a-4052-a784-3d234f051598" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Items/Fistecuffs.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Items/Fistecuffs.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/CombatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/CombatManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/ui_end_turn_bgr.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/ui_end_turn_bgr.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/ui_log_border.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/ui_log_border.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/ui_wpn_border_bgr.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/ui_wpn_border_bgr.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +87,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/HoverOverEntity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/EventLog.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/CombatManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/DialogueMenu.cs" />
       </list>
     </option>
   </component>
@@ -161,6 +166,7 @@
       <workItem from="1613417908273" duration="1542000" />
       <workItem from="1613589930918" duration="2650000" />
       <workItem from="1614187641176" duration="2427000" />
+      <workItem from="1614893835364" duration="691000" />
     </task>
     <servers />
   </component>
