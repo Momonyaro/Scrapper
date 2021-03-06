@@ -146,6 +146,7 @@ namespace Scrapper.Entities
                         {
                             CombatManager.attacker = this;
                             CombatManager.target = CombatManager.playerEntity;
+                            _pathfinder.LookAtEntity(CombatManager.target);
                             _animator.PlayAnimFromKeyword(weapon.itemCombatAnim);
                             yield return new WaitForSeconds(1.2f);
                             if (CombatManager.playerEntity.healthPts[0] <= 0) eTFlag = true;

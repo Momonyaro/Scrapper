@@ -72,6 +72,8 @@ public class Pathfinder : MonoBehaviour
                 else if (Input.GetMouseButtonDown(0) && CombatManager.target != null && !CombatManager.outOfReach)
                 {
                     CombatManager.attacker = pathingEntity;
+                    Vector3 ab = CombatManager.target.transform.parent.position - transform.position;
+                    _currentAngle = AngleBetweenVector2(_magicZeroVector, ab);
                     if (!EntityManager.turnBasedEngaged || CombatManager.GetEntityWeapon(pathingEntity).apCost <= pathingEntity.actionPts[0])
                         characterAnimator.PlayAnimFromKeyword(CombatManager.GetEntityWeapon(pathingEntity).itemCombatAnim);
                 }
@@ -161,7 +163,7 @@ public class Pathfinder : MonoBehaviour
                 currentPath.RemoveAt(0);
                 if (currentPath.Count > 0)
                 {
-                    Vector2 targetDir = currentPath[0] - new Vector2(transform.position.x, position.y);
+                    Vector2 targetDir = currentPath[0] - new Vector2(transform.position.x, position.y); //OA - OB = BA
                     _currentAngle = AngleBetweenVector2(_magicZeroVector, targetDir); //Give it a direction that results in 30deg being the new "0"
                 }
             }
@@ -192,6 +194,12 @@ public class Pathfinder : MonoBehaviour
         return Vector2.Angle(vec1, vec2) * sign;
     }
 
+    public void LookAtEntity(Entity target)
+    {
+        Vector3 ab = target.transform.parent.position - transform.position;
+        _currentAngle = AngleBetweenVector2(_magicZeroVector, ab);
+    }
+    
     private void RotatePlayerFacing()
     {
         //Set the facing based on the currentAngle.

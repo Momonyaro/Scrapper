@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b3fd9154634ebdb8c8a48960b9a16a, type: 3}
+  m_Name: TESTTHREAD
+  m_EditorClassIdentifier: 
+  NodeLinks:
+  - BaseNodeGUID: b56c8c54-79d2-430f-96e8-5dc80c51970a
+    PortName: $EntryPoint
+    TargetNodeGUID: fc8da236-8d1f-4411-afd6-7385c5753a7a
+  - BaseNodeGUID: 9bb5db5d-a31f-4b0c-9447-4d95f2fd7a30
+    PortName: It's going alright.
+    TargetNodeGUID: 1bcad95a-1e5d-480c-b72a-9b8db03722d4
+  - BaseNodeGUID: 9bb5db5d-a31f-4b0c-9447-4d95f2fd7a30
+    PortName: It's going to hell.
+    TargetNodeGUID: 1bcad95a-1e5d-480c-b72a-9b8db03722d4
+  - BaseNodeGUID: 6c736210-aab2-431a-9a3c-8c7475aed349
+    PortName: Don't tempt us.
+    TargetNodeGUID: 7bf385f9-d619-450c-99de-6746bfeb4d1d
+  - BaseNodeGUID: fc8da236-8d1f-4411-afd6-7385c5753a7a
+    PortName: Shouldn't you be like really dead from how many times we've killed
+      you to try our combat systems?
+    TargetNodeGUID: 6c736210-aab2-431a-9a3c-8c7475aed349
+  - BaseNodeGUID: fc8da236-8d1f-4411-afd6-7385c5753a7a
+    PortName: Hello!
+    TargetNodeGUID: 9bb5db5d-a31f-4b0c-9447-4d95f2fd7a30
+  DialogueNodeData:
+  - NodeGUID: 9bb5db5d-a31f-4b0c-9447-4d95f2fd7a30
+    DialogueText: So how is the game coming along?
+    Position: {x: 1098, y: 53}
+  - NodeGUID: 6c736210-aab2-431a-9a3c-8c7475aed349
+    DialogueText: You know... I try to forget but honestly, I'm just happy that since
+      games aren't sophisticated enough to where NPCs feel actual pain it's really
+      just a bother and nothing more.
+    Position: {x: 1058, y: 277}
+  - NodeGUID: 1bcad95a-1e5d-480c-b72a-9b8db03722d4
+    DialogueText: Nice.
+    Position: {x: 1518, y: 67}
+  - NodeGUID: 7bf385f9-d619-450c-99de-6746bfeb4d1d
+    DialogueText: fuck.
+    Position: {x: 2166, y: 393}
+  - NodeGUID: fc8da236-8d1f-4411-afd6-7385c5753a7a
+    DialogueText: Hello <P_NAME>!
+    Position: {x: 272, y: 200}
+  ExposedProperties:
+  - PropertyName: P_NAME
+    PropertyValue: Player
+  CommentBlockData:
+  - ChildNodes:
+    - fc8da236-8d1f-4411-afd6-7385c5753a7a
+    Position: {x: 247, y: 141}
+    Title: Introductions

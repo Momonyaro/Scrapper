@@ -6,15 +6,14 @@ public class DialogueMenu : MonoBehaviour
 {
     public bool showMenu = false;
     public Animator animator;
-    private bool _lastState = false;
 
     // Update is called once per frame
     void Update()
     {
-        if (_lastState != showMenu)
+        if (Input.GetKeyDown(KeyCode.Keypad0))
         {
+            showMenu = !showMenu;
             animator.SetBool("SHOW_MENU", showMenu);
-            _lastState = showMenu;
         }
     }
 }

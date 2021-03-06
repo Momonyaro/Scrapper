@@ -20,14 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b667d6b-b66a-4052-a784-3d234f051598" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/ui_end_turn_bgr.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/ui_end_turn_bgr.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/ui_log_border.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/ui_log_border.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/ui_wpn_border_bgr.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/ui_wpn_border_bgr.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/UI/--DIALOGUE PANEL--.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/UI/--DIALOGUE PANEL--.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/Graph/StoryGraphView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/Graph/StoryGraphView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/GraphSaveUtility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/GraphSaveUtility.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Entity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DialogueMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DialogueMenu.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,13 +81,15 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Pathfinding/PolygonalNavMesh.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerStatusHUD.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/MouseHoverTooltip.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/EntityManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Entities/Entity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/HoverOverEntity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/EventLog.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/CombatManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entities/Entity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/DialogueMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/GraphSaveUtility.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/Graph/StoryGraphView.cs" />
       </list>
     </option>
   </component>
@@ -167,6 +169,7 @@
       <workItem from="1613589930918" duration="2650000" />
       <workItem from="1614187641176" duration="2427000" />
       <workItem from="1614893835364" duration="691000" />
+      <workItem from="1615046523971" duration="2717000" />
     </task>
     <servers />
   </component>

@@ -40,13 +40,21 @@ namespace Subtegral.DialogueSystem.Editor
             SaveCommentBlocks(dialogueContainerObject);
 
             if (!AssetDatabase.IsValidFolder("Assets/Resources"))
+            {
                 AssetDatabase.CreateFolder("Assets", "Resources");
+            }
+            
+            if (!AssetDatabase.IsValidFolder("Assets/Resources/DialogueThreads"))
+            {
+                Debug.Log("Creating DialogueThreads folder");
+                AssetDatabase.CreateFolder("Assets/Resources", "DialogueThreads");
+            }
 
-            UnityEngine.Object loadedAsset = AssetDatabase.LoadAssetAtPath($"Assets/Resources/{fileName}.asset", typeof(DialogueContainer));
+            UnityEngine.Object loadedAsset = AssetDatabase.LoadAssetAtPath($"Assets/Resources/DialogueThreads/{fileName}.asset", typeof(DialogueContainer));
 
             if (loadedAsset == null || !AssetDatabase.Contains(loadedAsset)) 
 			{
-                AssetDatabase.CreateAsset(dialogueContainerObject, $"Assets/Resources/{fileName}.asset");
+                AssetDatabase.CreateAsset(dialogueContainerObject, $"Assets/Resources/DialogueThreads/{fileName}.asset");
             }
             else 
 			{
@@ -114,7 +122,7 @@ namespace Subtegral.DialogueSystem.Editor
 
         public void LoadNarrative(string fileName)
         {
-            _dialogueContainer = Resources.Load<DialogueContainer>(fileName);
+            _dialogueContainer = Resources.Load<DialogueContainer>("DialogueThreads/" + fileName);
             if (_dialogueContainer == null)
             {
                 EditorUtility.DisplayDialog("File Not Found", "Target Narrative Data does not exist!", "OK");

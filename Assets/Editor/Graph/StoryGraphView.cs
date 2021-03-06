@@ -222,7 +222,7 @@ namespace Subtegral.DialogueSystem.Editor
             };
 
             var generatedPort = GetPortInstance(nodeCache, Direction.Output);
-            generatedPort.portName = "Next";
+            generatedPort.portName = "$EntryPoint";
             nodeCache.outputContainer.Add(generatedPort);
 
             nodeCache.capabilities &= ~Capabilities.Movable;
