@@ -13,7 +13,7 @@ namespace Subtegral.DialogueSystem.Editor
 {
     public class StoryGraph : EditorWindow
     {
-        private string _fileName = "New Narrative";
+        private string _fileName = "New Thread";
 
         private StoryGraphView _graphView;
         private DialogueContainer _dialogueContainer;

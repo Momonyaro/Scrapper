@@ -155,6 +155,10 @@
             <e p="AnimBranch.cs" t="Include" />
             <e p="AnimFrame.cs" t="Include" />
           </e>
+          <e p="Dialogue" t="Include">
+            <e p="DialogueThread.cs" t="Include" />
+            <e p="ThreadNode.cs" t="Include" />
+          </e>
           <e p="Editor" t="Include">
             <e p="Animator" t="Include">
               <e p="AnimatorGraphEditor.cs" t="Include" />
@@ -196,6 +200,7 @@
           <e p="UI" t="Include">
             <e p="APPlayerBar.cs" t="Include" />
             <e p="DialogueMenu.cs" t="Include" />
+            <e p="DialogueOption.cs" t="Include" />
             <e p="EndTurnBtn.cs" t="Include" />
             <e p="EventLog.cs" t="Include" />
             <e p="PlayerStatusHUD.cs" t="Include" />

@@ -22,9 +22,6 @@ MonoBehaviour:
   - BaseNodeGUID: 9bb5db5d-a31f-4b0c-9447-4d95f2fd7a30
     PortName: It's going to hell.
     TargetNodeGUID: 1bcad95a-1e5d-480c-b72a-9b8db03722d4
-  - BaseNodeGUID: 6c736210-aab2-431a-9a3c-8c7475aed349
-    PortName: Don't tempt us.
-    TargetNodeGUID: 7bf385f9-d619-450c-99de-6746bfeb4d1d
   - BaseNodeGUID: fc8da236-8d1f-4411-afd6-7385c5753a7a
     PortName: Shouldn't you be like really dead from how many times we've killed
       you to try our combat systems?
@@ -32,29 +29,45 @@ MonoBehaviour:
   - BaseNodeGUID: fc8da236-8d1f-4411-afd6-7385c5753a7a
     PortName: Hello!
     TargetNodeGUID: 9bb5db5d-a31f-4b0c-9447-4d95f2fd7a30
+  - BaseNodeGUID: 6c736210-aab2-431a-9a3c-8c7475aed349
+    PortName: Don't tempt us.
+    TargetNodeGUID: 7bf385f9-d619-450c-99de-6746bfeb4d1d
+  - BaseNodeGUID: 6c736210-aab2-431a-9a3c-8c7475aed349
+    PortName: You know, you really just sound like some asshole guy is trying too
+      hard to be "philosophical".
+    TargetNodeGUID: b7261f7d-9c9b-4f23-b44e-1275ff8fd233
+  - BaseNodeGUID: b7261f7d-9c9b-4f23-b44e-1275ff8fd233
+    PortName: uhhh.
+    TargetNodeGUID: 53149065-78b5-41d7-8ed7-dfdde5769faf
   DialogueNodeData:
   - NodeGUID: 9bb5db5d-a31f-4b0c-9447-4d95f2fd7a30
     DialogueText: So how is the game coming along?
-    Position: {x: 1098, y: 53}
-  - NodeGUID: 6c736210-aab2-431a-9a3c-8c7475aed349
-    DialogueText: You know... I try to forget but honestly, I'm just happy that since
-      games aren't sophisticated enough to where NPCs feel actual pain it's really
-      just a bother and nothing more.
-    Position: {x: 1058, y: 277}
-  - NodeGUID: 1bcad95a-1e5d-480c-b72a-9b8db03722d4
-    DialogueText: Nice.
-    Position: {x: 1518, y: 67}
-  - NodeGUID: 7bf385f9-d619-450c-99de-6746bfeb4d1d
-    DialogueText: fuck.
-    Position: {x: 2166, y: 393}
+    Position: {x: 1032, y: 319}
   - NodeGUID: fc8da236-8d1f-4411-afd6-7385c5753a7a
     DialogueText: Hello <P_NAME>!
-    Position: {x: 272, y: 200}
+    Position: {x: 251, y: 207}
+  - NodeGUID: 1bcad95a-1e5d-480c-b72a-9b8db03722d4
+    DialogueText: Nice.
+    Position: {x: 1319, y: 331}
+  - NodeGUID: 7bf385f9-d619-450c-99de-6746bfeb4d1d
+    DialogueText: fuck.
+    Position: {x: 1773, y: -6}
+  - NodeGUID: 6c736210-aab2-431a-9a3c-8c7475aed349
+    DialogueText: "You know... I try to forget but honestly, I'm just happy that
+      since games aren't sophisticated enough to \nwhere NPCs feel actual pain it's
+      really just a bother and nothing more."
+    Position: {x: 1037, y: 94}
+  - NodeGUID: b7261f7d-9c9b-4f23-b44e-1275ff8fd233
+    DialogueText: Well... Didn't you write this?
+    Position: {x: 1757, y: 193}
+  - NodeGUID: 53149065-78b5-41d7-8ed7-dfdde5769faf
+    DialogueText: mhm...
+    Position: {x: 2020, y: 195}
   ExposedProperties:
   - PropertyName: P_NAME
     PropertyValue: Player
   CommentBlockData:
   - ChildNodes:
     - fc8da236-8d1f-4411-afd6-7385c5753a7a
-    Position: {x: 247, y: 141}
+    Position: {x: 226, y: 148}
     Title: Introductions

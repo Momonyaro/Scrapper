@@ -14,8 +14,8 @@ namespace Subtegral.DialogueSystem.Editor
 {
     public class StoryGraphView : GraphView
     {
-        public readonly Vector2 DefaultNodeSize = new Vector2(200, 150);
-        public readonly Vector2 DefaultCommentBlockSize = new Vector2(300, 200);
+        public readonly Vector2 DefaultNodeSize = new Vector2(200, 200);
+        public readonly Vector2 DefaultCommentBlockSize = new Vector2(300, 300);
         public DialogueNode EntryPointNode;
         public Blackboard Blackboard = new Blackboard();
         public List<ExposedProperty> ExposedProperties { get; private set; } = new List<ExposedProperty>();
@@ -127,11 +127,13 @@ namespace Subtegral.DialogueSystem.Editor
         {
             var tempDialogueNode = new DialogueNode()
             {
-                title = nodeName,
+                title = "Dialogue Node",
                 DialogueText = nodeName,
                 GUID = Guid.NewGuid().ToString()
             };
+            
             tempDialogueNode.styleSheets.Add(Resources.Load<StyleSheet>("Node"));
+            tempDialogueNode.IsResizable();
             var inputPort = GetPortInstance(tempDialogueNode, Direction.Input, Port.Capacity.Multi);
             inputPort.portName = "Input";
             tempDialogueNode.inputContainer.Add(inputPort);
@@ -139,14 +141,15 @@ namespace Subtegral.DialogueSystem.Editor
             tempDialogueNode.RefreshPorts();
             tempDialogueNode.SetPosition(new Rect(position,
                 DefaultNodeSize)); //To-Do: implement screen center instantiation positioning
+            
 
             var textField = new TextField("");
+            textField.multiline = true;
             textField.RegisterValueChangedCallback(evt =>
             {
                 tempDialogueNode.DialogueText = evt.newValue;
-                tempDialogueNode.title = evt.newValue;
             });
-            textField.SetValueWithoutNotify(tempDialogueNode.title);
+            textField.SetValueWithoutNotify(tempDialogueNode.DialogueText);
             tempDialogueNode.mainContainer.Add(textField);
 
             var button = new Button(() => { AddChoicePort(tempDialogueNode); })
@@ -154,6 +157,8 @@ namespace Subtegral.DialogueSystem.Editor
                 text = "Add Choice"
             };
             tempDialogueNode.titleButtonContainer.Add(button);
+            tempDialogueNode.RefreshExpandedState();
+            tempDialogueNode.RefreshPorts();
             return tempDialogueNode;
         }
 
@@ -169,14 +174,15 @@ namespace Subtegral.DialogueSystem.Editor
                 ? $"Option {outputPortCount + 1}"
                 : overriddenPortName;
 
-
+            generatedPort.IsResizable();
             var textField = new TextField()
             {
                 name = string.Empty,
-                value = outputPortName
+                value = outputPortName,
+                multiline = true
             };
             textField.RegisterValueChangedCallback(evt => generatedPort.portName = evt.newValue);
-            generatedPort.contentContainer.Add(new Label("  "));
+            //generatedPort.contentContainer.Add(new Label("  "));
             generatedPort.contentContainer.Add(textField);
             var deleteButton = new Button(() => RemovePort(nodeCache, generatedPort))
             {
@@ -227,6 +233,7 @@ namespace Subtegral.DialogueSystem.Editor
 
             nodeCache.capabilities &= ~Capabilities.Movable;
             nodeCache.capabilities &= ~Capabilities.Deletable;
+            nodeCache.capabilities &= ~Capabilities.Resizable;
 
             nodeCache.RefreshExpandedState();
             nodeCache.RefreshPorts();

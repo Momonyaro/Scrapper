@@ -1,6 +1,11 @@
 GridBackground {
     --grid-background-color: #282828;
-    --line-color: rgba(193, 196, 192, 0.1);
-    --thick-line-color: rgba(193, 196, 192, 0.1);
+    --line-color: rgb(60, 60, 60);
+    --thick-line-color: rgb(74, 74, 74);
     --spacing: 10;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
 }

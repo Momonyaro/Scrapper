@@ -20,14 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b667d6b-b66a-4052-a784-3d234f051598" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animations/UI/--DIALOGUE PANEL--.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/UI/--DIALOGUE PANEL--.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/Graph/StoryGraph.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/Graph/StoryGraph.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Editor/Graph/StoryGraphView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/Graph/StoryGraphView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/GraphSaveUtility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/GraphSaveUtility.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Entity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/Resources/NarrativeGraph.uss" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/Resources/NarrativeGraph.uss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/Resources/Node.uss" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/Resources/Node.uss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/DialogueThreads/TESTTHREAD.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DialogueThreads/TESTTHREAD.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DialogueMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DialogueMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +41,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/DialogueOption.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerControl/TrackingCamera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entities/Entity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/EntityEditor.cs" root0="FORCE_HIGHLIGHTING" />
@@ -53,6 +57,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/PlayerStatusHUD.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Animations/AnimFrame.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://F:/Projects/Usurper/Assets/Scripts/Managers/AudioManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueThread.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -87,9 +92,15 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/CombatManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Entities/Entity.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/DialogueMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/Editor/GraphSaveUtility.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/Graph/StoryGraph.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/Resources/NarrativeGraph.uss" />
         <option value="$PROJECT_DIR$/Assets/Editor/Graph/StoryGraphView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/Resources/Node.uss" />
+        <option value="$PROJECT_DIR$/Assets/Editor/GraphSaveUtility.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/ThreadNode.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueThread.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/DialogueOption.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/DialogueMenu.cs" />
       </list>
     </option>
   </component>
@@ -170,6 +181,8 @@
       <workItem from="1614187641176" duration="2427000" />
       <workItem from="1614893835364" duration="691000" />
       <workItem from="1615046523971" duration="2717000" />
+      <workItem from="1616585371631" duration="11186000" />
+      <workItem from="1616598962624" duration="3918000" />
     </task>
     <servers />
   </component>
