@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Scrapper.Entities;
+using Scrapper.Items;
 using UnityEditor;
 using UnityEngine;
 
@@ -49,6 +50,13 @@ namespace Scrapper.Editor
             entity.stats[5] = EditorGUILayout.IntField("Charisma", entity.stats[5]);
             entity.stats[6] = EditorGUILayout.IntField("Luck", entity.stats[6]);
             
+            EditorGUILayout.EndVertical();
+            
+            EditorGUILayout.BeginVertical("HelpBox");
+
+                entity.currentWeapon = (Item) EditorGUILayout.ObjectField("Current Weapon", entity.currentWeapon, typeof(Item), true);
+                entity.currentArmor = (Item) EditorGUILayout.ObjectField("Current Armor", entity.currentArmor, typeof(Item), true);
+                        
             EditorGUILayout.EndVertical();
             
             EditorGUILayout.EndVertical();
