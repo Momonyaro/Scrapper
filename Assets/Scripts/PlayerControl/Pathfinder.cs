@@ -240,7 +240,7 @@ public class Pathfinder : MonoBehaviour
             bool canAttack = entityWeapon.apCost <= pathingEntity.actionPts[0];
             if (!CombatManager.playerCombatMode)
             {
-                path = _navMesh.GetShortestPath(transform.position, hitCollider.transform.parent.position);
+                path = _navMesh.GetShortestPathAStar(transform.position, hitCollider.transform.parent.position);
                 _stopShort = true;
             }
             
@@ -255,7 +255,11 @@ public class Pathfinder : MonoBehaviour
         }
         else if (hitCollider.GetComponent<PolygonalNavMesh>() != null)
         {
-            path = _navMesh.GetShortestPath(transform.position, hit2D.point);
+            DateTime before = DateTime.Now;
+            path = _navMesh.GetShortestPathAStar(transform.position, hit2D.point);
+            DateTime after = DateTime.Now; 
+            TimeSpan duration = after.Subtract(before);
+            Debug.Log("Duration in milliseconds: " + duration.Milliseconds);
         }
         
         if (parsingTurn)

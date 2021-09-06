@@ -19,11 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b667d6b-b66a-4052-a784-3d234f051598" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scrapper/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/EntityEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/EntityEditor.cs" afterDir="false" />
-    </list>
+    <list default="true" id="4b667d6b-b66a-4052-a784-3d234f051598" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,68 +29,29 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/DialogueOption.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerControl/TrackingCamera.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entities/Entity.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/EntityEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerControl/TestMouseController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/EndTurnBtn.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/CombatManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Animations/AnimFrame.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/EntityEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://F:/Projects/Usurper/Assets/Scripts/Managers/AudioManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Pathfinding/PolyNavObstacle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/FactionRelationEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/CombatManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/HoverOverEntity.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/PlayerStatusHUD.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Animations/AnimFrame.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://F:/Projects/Usurper/Assets/Scripts/Managers/AudioManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerControl/TestMouseController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueThread.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerControl/TrackingCamera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/PlayerStatusHUD.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entities/Entity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/EndTurnBtn.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/DialogueOption.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/Assets/PathTest.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerControl/TestMouseController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Pathfinding/PolyNavObstacle.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Animations/AnimFrame.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/Pathfinding/PolyNavEditor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/SprLayerObject.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/LayerManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/Animator/AnimatorGraphEditor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerControl/TrackingCamera.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/FactionRelationEditor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Animations/AnimBranch.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Factions/FactionRelations.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/EndTurnBtn.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/TurnPrompter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/APPlayerBar.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/AudioManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Animations/Animation.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/FMODExtendedEmitterEditor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Animations/Animator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Pathfinding/PolygonalNavMesh.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerStatusHUD.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/MouseHoverTooltip.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/EntityManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/HoverOverEntity.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/EventLog.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/CombatManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Entities/Entity.cs" />
-        <option value="$PROJECT_DIR$/Assets/Editor/Graph/StoryGraph.cs" />
-        <option value="$PROJECT_DIR$/Assets/Editor/Resources/NarrativeGraph.uss" />
-        <option value="$PROJECT_DIR$/Assets/Editor/Graph/StoryGraphView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Editor/Resources/Node.uss" />
-        <option value="$PROJECT_DIR$/Assets/Editor/GraphSaveUtility.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/ThreadNode.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueThread.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/DialogueOption.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/DialogueMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/EntityEditor.cs" />
-      </list>
-    </option>
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerControl/Pathfinder.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Pathfinding/PolygonalNavMesh.cs" />
+    </changedPaths>
   </component>
   <component name="ProjectId" id="1n7dKjL5jsPZ6LU6PX5PH6jsKT4" />
   <component name="ProjectViewState">
@@ -105,6 +62,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -122,8 +80,9 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
-        <set />
+        <list />
       </option>
       <method v="2" />
     </configuration>
@@ -131,8 +90,9 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
-        <set />
+        <list />
       </option>
       <method v="2" />
     </configuration>
@@ -176,6 +136,7 @@
       <workItem from="1616585371631" duration="11186000" />
       <workItem from="1616598962624" duration="3918000" />
       <workItem from="1619893478665" duration="800000" />
+      <workItem from="1630943565690" duration="2513000" />
     </task>
     <servers />
   </component>

@@ -103,9 +103,90 @@ namespace Scrapper.Pathfinding
             return new Vector2[0];
         }
 
+        [BurstCompile(FloatPrecision.Medium, FloatMode.Fast, CompileSynchronously = true, Debug = true)]
+        public Vector2[] GetShortestPathAStar(Vector2 start, Vector2 end)
+        {
+            for (int i = 0; i < obstacles.Count; i++)
+            {
+                if (Inside(obstacles[i].polyCollider.points.ToList(), end))
+                    return new Vector2[0];
+            }
+
+            if (InLineOfSight(start, end))
+            {
+                return new Vector2[2] {start, end};
+            }
+            
+            List<DijkstraNode> vertexSet = new List<DijkstraNode>();
+            List<DijkstraNode> graph = UseCachedGraph(start, end);
+
+            //Set node max distance
+            for (int i = 0; i < graph.Count; i++)
+            {
+                DijkstraNode v = graph[i];
+                v.SetNodeDistance(float.MaxValue);
+                //If node == start, set distance to zero since we want to start there
+                if (v.GetPosition() == start)
+                {
+                    v.SetNodeDistance(0);
+                }
+                v.SetPrevious(null);
+                vertexSet.Add(v);
+            }
+
+            //Search all the graph nodes.
+            while (vertexSet.Count > 0)
+            {
+                //Find the next node with the shortest distance
+                DijkstraNode u = vertexSet[0];
+                for (int i = 0; i < vertexSet.Count; i++)
+                {
+                    float distance = vertexSet[i].GetDistance();
+                    if (distance < u.GetDistance())
+                        u = vertexSet[i];
+                }
+                vertexSet.Remove(u);
+                
+                //If we found the goal, navigate the route and return it.
+                if (u.GetPosition() == end)
+                {
+                    Stack<DijkstraNode> s = new Stack<DijkstraNode>();
+
+                    while (true)
+                    {
+                        s.Push(u);
+                        if (u.GetPrevious() == null) break;
+                        u = u.GetPrevious();
+                    }
+
+                    List<Vector2> path = new List<Vector2>();
+                    while (s.Count > 0)
+                    {
+                        path.Add(s.Pop().GetPosition());
+                    }
+
+                    return path.ToArray();
+                }
+                
+                foreach (var neighbor in u.GetNeighbors())
+                {
+                    float distFromUToNeighbor = Vector2.Distance(u.GetPosition(), neighbor.GetPosition());
+                    float distFromNeighborToGoal = Vector2.Distance(neighbor.GetPosition(), end);
+                    float alt = u.GetDistance() + distFromUToNeighbor + distFromNeighborToGoal;
+                    if (alt < neighbor.GetDistance())
+                    {
+                        neighbor.SetNodeDistance(alt);
+                        neighbor.SetPrevious(u);
+                    }
+                }
+            }
+            
+            return new Vector2[0];
+        }
+
         private List<DijkstraNode> UseCachedGraph(Vector2 start, Vector2 end)
         {
-            if (!mapBaked) Debug.LogError("MAP GRAPH NOT BAKED! CHECK WITH SEBASTIAN!");
+            if (!mapBaked) return new List<DijkstraNode>(); 
             List<DijkstraNode> toReturn = new List<DijkstraNode>(cachedMapGraph);
 
             DijkstraNode startNode = new DijkstraNode(start, new List<DijkstraNode>());
@@ -224,7 +305,7 @@ namespace Scrapper.Pathfinding
 
             if (drawVisibilityLines)
             {
-                drawVisibilityLines = false;
+                //drawVisibilityLines = false;
                 if (navNodes.Count == 0) CreateNavNodes();
                 List<Vector2> points = navNodes;
                 
